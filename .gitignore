@@ -1,0 +1,22 @@
+# Raw data (too large for git)
+data/raw/
+
+# R session artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Quarto render output
+/_site/
+/docs/_freeze/
+*.html
+!shiny/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Sensitive / environment
+.env
+*.secret
