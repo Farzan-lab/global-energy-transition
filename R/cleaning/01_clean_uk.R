@@ -8,10 +8,9 @@
 library(tidyverse)
 library(lubridate)
 library(janitor)
-library(here)
 
 # Load -------------------------------------------------------------------------
-raw_uk <- read_csv(here("data/raw/gridwatch.csv")) |>
+raw_uk <- read_csv("data/raw/gridwatch.csv") |>
   clean_names()
 
 # Transform --------------------------------------------------------------------
@@ -31,9 +30,9 @@ uk_clean <- raw_uk |>
   mutate(
     gwh = mw * (5 / 60) / 1000,
     source = recode(source,
-      ccgt   = "Gas",
-      ocgt   = "Gas",
-      pumped = "Hydro"
+                    ccgt   = "Gas",
+                    ocgt   = "Gas",
+                    pumped = "Hydro"
     ) |> str_to_title()
   ) |>
   group_by(country, date, source) |>
@@ -43,5 +42,5 @@ uk_clean <- raw_uk |>
   )
 
 # Save -------------------------------------------------------------------------
-write_csv(uk_clean, here("data/processed/uk_monthly.csv"))
+write_csv(uk_clean, "data/processed/uk_monthly.csv")
 message("UK data cleaned: ", nrow(uk_clean), " rows written.")
