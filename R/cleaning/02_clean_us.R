@@ -8,7 +8,6 @@
 library(tidyverse)
 library(lubridate)
 library(janitor)
-library(here)
 
 # EIA fuel type → readable label
 fuel_map <- c(
@@ -24,14 +23,15 @@ fuel_map <- c(
 )
 
 # Load -------------------------------------------------------------------------
-raw_us <- read_csv(here("data/raw/US_Energy_generation_dataset.csv")) |>
+raw_us <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/raw/US Energy generation dataset.csv") |>
   clean_names()
-
 # Transform --------------------------------------------------------------------
 us_clean <- raw_us |>
   filter(!is.na(value)) |>
   mutate(
-    timestamp      = ymd_h(period),
+    # Period format: "2019-01-01 00:00:00 UTC"
+    # Remove " UTC" suffix and parse as datetime
+    timestamp      = ymd_hms(str_remove(period, " UTC")),
     date           = floor_date(timestamp, "month"),
     country        = "United States",
     source         = recode(fueltype, !!!fuel_map, .default = "Other"),
@@ -44,6 +44,7 @@ us_clean <- raw_us |>
     .groups        = "drop"
   )
 
+
 # Save -------------------------------------------------------------------------
-write_csv(us_clean, here("data/processed/us_monthly.csv"))
+write_csv(us_clean, "data/processed/us_monthly.csv")
 message("US data cleaned: ", nrow(us_clean), " rows written.")

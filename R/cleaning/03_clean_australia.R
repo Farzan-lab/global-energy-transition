@@ -8,11 +8,9 @@
 library(tidyverse)
 library(lubridate)
 library(janitor)
-library(here)
 
 # Load -------------------------------------------------------------------------
-raw_au <- read_csv(here("data/raw/19990101_All_Regions_Australia.csv")) |>
-  clean_names()
+raw_au <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/raw/19990101 All Regions Australia.csv") |>clean_names()
 
 # Transform --------------------------------------------------------------------
 au_clean <- raw_au |>
@@ -20,6 +18,7 @@ au_clean <- raw_au |>
     date    = ymd(date),
     country = "Australia"
   ) |>
+  filter(date <= as.Date("2025-12-31")) |>
   select(
     country, date,
     Coal       = coal_g_wh,
@@ -45,5 +44,5 @@ au_clean <- raw_au |>
   )
 
 # Save -------------------------------------------------------------------------
-write_csv(au_clean, here("data/processed/australia_monthly.csv"))
+write_csv(au_clean, "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/uk_monthly.csv")
 message("Australia data cleaned: ", nrow(au_clean), " rows written.")
