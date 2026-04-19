@@ -8,11 +8,10 @@
 # =============================================================================
 
 library(tidyverse)
-library(here)
 
-uk <- read_csv(here("data/processed/uk_monthly.csv"))
-us <- read_csv(here("data/processed/us_monthly.csv"))
-au <- read_csv(here("data/processed/australia_monthly.csv"))
+uk <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/uk_monthly.csv")
+us <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/us_monthly.csv")
+au <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/au_monthly.csv")
 
 combined <- bind_rows(uk, us, au) |>
   filter(
@@ -22,12 +21,12 @@ combined <- bind_rows(uk, us, au) |>
   mutate(
     renewable = source %in% c("Wind", "Solar", "Hydro", "Bioenergy"),
     country   = factor(country,
-      levels = c("United Kingdom", "United States", "Australia")
+                       levels = c("United Kingdom", "United States", "Australia")
     )
   ) |>
   arrange(country, date, source)
 
-write_csv(combined, here("data/processed/combined_energy.csv"))
+write_csv(combined, "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/combined_energy.csv")
 
 message(
   "Combined dataset written: ", nrow(combined), " rows | ",

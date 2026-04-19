@@ -1,2269 +1,505 @@
 country,date,source,generation_gwh
-Australia,1999-01-01,Bioenergy,0
-Australia,1999-01-01,Coal,12497.4
-Australia,1999-01-01,Distillate,3.58
-Australia,1999-01-01,Gas,674.49
-Australia,1999-01-01,Hydro,723.95
-Australia,1999-01-01,Solar,0
-Australia,1999-01-01,Wind,0
-Australia,1999-02-01,Bioenergy,0
-Australia,1999-02-01,Coal,11698.84
-Australia,1999-02-01,Distillate,2.11
-Australia,1999-02-01,Gas,663.53
-Australia,1999-02-01,Hydro,597.19
-Australia,1999-02-01,Solar,0
-Australia,1999-02-01,Wind,0
-Australia,1999-03-01,Bioenergy,0
-Australia,1999-03-01,Coal,12838.51
-Australia,1999-03-01,Distillate,11.15
-Australia,1999-03-01,Gas,613.44
-Australia,1999-03-01,Hydro,555.48
-Australia,1999-03-01,Solar,0
-Australia,1999-03-01,Wind,0
-Australia,1999-04-01,Bioenergy,0
-Australia,1999-04-01,Coal,11910.98
-Australia,1999-04-01,Distillate,1.74
-Australia,1999-04-01,Gas,659.95
-Australia,1999-04-01,Hydro,515.2
-Australia,1999-04-01,Solar,0
-Australia,1999-04-01,Wind,0
-Australia,1999-05-01,Bioenergy,0
-Australia,1999-05-01,Coal,12804.47
-Australia,1999-05-01,Distillate,3.68
-Australia,1999-05-01,Gas,710.02
-Australia,1999-05-01,Hydro,502.29
-Australia,1999-05-01,Solar,0
-Australia,1999-05-01,Wind,0
-Australia,1999-06-01,Bioenergy,0
-Australia,1999-06-01,Coal,13300.87
-Australia,1999-06-01,Distillate,0.31
-Australia,1999-06-01,Gas,653.98
-Australia,1999-06-01,Hydro,480.15
-Australia,1999-06-01,Solar,0
-Australia,1999-06-01,Wind,0
-Australia,1999-07-01,Bioenergy,0
-Australia,1999-07-01,Coal,13649.36
-Australia,1999-07-01,Distillate,0
-Australia,1999-07-01,Gas,699.01
-Australia,1999-07-01,Hydro,565.83
-Australia,1999-07-01,Solar,0
-Australia,1999-07-01,Wind,0
-Australia,1999-08-01,Bioenergy,0
-Australia,1999-08-01,Coal,13297.39
-Australia,1999-08-01,Distillate,6.66
-Australia,1999-08-01,Gas,814.3
-Australia,1999-08-01,Hydro,523.46
-Australia,1999-08-01,Solar,0
-Australia,1999-08-01,Wind,0
-Australia,1999-09-01,Bioenergy,0
-Australia,1999-09-01,Coal,12404.34
-Australia,1999-09-01,Distillate,0
-Australia,1999-09-01,Gas,672.29
-Australia,1999-09-01,Hydro,450.28
-Australia,1999-09-01,Solar,0
-Australia,1999-09-01,Wind,0
-Australia,1999-10-01,Bioenergy,0
-Australia,1999-10-01,Coal,12497.51
-Australia,1999-10-01,Distillate,5.88
-Australia,1999-10-01,Gas,738.39
-Australia,1999-10-01,Hydro,495.74
-Australia,1999-10-01,Solar,0
-Australia,1999-10-01,Wind,0
-Australia,1999-11-01,Bioenergy,0
-Australia,1999-11-01,Coal,12226.21
-Australia,1999-11-01,Distillate,3.06
-Australia,1999-11-01,Gas,674.56
-Australia,1999-11-01,Hydro,516.78
-Australia,1999-11-01,Solar,0
-Australia,1999-11-01,Wind,0
-Australia,1999-12-01,Bioenergy,0
-Australia,1999-12-01,Coal,12574.07
-Australia,1999-12-01,Distillate,0.82
-Australia,1999-12-01,Gas,712.09
-Australia,1999-12-01,Hydro,505.68
-Australia,1999-12-01,Solar,0
-Australia,1999-12-01,Wind,0
-Australia,2000-01-01,Bioenergy,0
-Australia,2000-01-01,Coal,12376.52
-Australia,2000-01-01,Distillate,16.09
-Australia,2000-01-01,Gas,1003.78
-Australia,2000-01-01,Hydro,524.27
-Australia,2000-01-01,Solar,0
-Australia,2000-01-01,Wind,0
-Australia,2000-02-01,Bioenergy,0
-Australia,2000-02-01,Coal,12268.59
-Australia,2000-02-01,Distillate,5.53
-Australia,2000-02-01,Gas,1170.08
-Australia,2000-02-01,Hydro,683.46
-Australia,2000-02-01,Solar,0
-Australia,2000-02-01,Wind,0
-Australia,2000-03-01,Bioenergy,0
-Australia,2000-03-01,Coal,13169.45
-Australia,2000-03-01,Distillate,22.93
-Australia,2000-03-01,Gas,819.93
-Australia,2000-03-01,Hydro,638.92
-Australia,2000-03-01,Solar,0
-Australia,2000-03-01,Wind,0
-Australia,2000-04-01,Bioenergy,0
-Australia,2000-04-01,Coal,12239.28
-Australia,2000-04-01,Distillate,3.94
-Australia,2000-04-01,Gas,576.84
-Australia,2000-04-01,Hydro,464.85
-Australia,2000-04-01,Solar,0
-Australia,2000-04-01,Wind,0
-Australia,2000-05-01,Bioenergy,0
-Australia,2000-05-01,Coal,13322.49
-Australia,2000-05-01,Distillate,2
-Australia,2000-05-01,Gas,820.17
-Australia,2000-05-01,Hydro,509.29
-Australia,2000-05-01,Solar,0
-Australia,2000-05-01,Wind,0
-Australia,2000-06-01,Bioenergy,0
-Australia,2000-06-01,Coal,13390.51
-Australia,2000-06-01,Distillate,6.5
-Australia,2000-06-01,Gas,1080.67
-Australia,2000-06-01,Hydro,633.46
-Australia,2000-06-01,Solar,0
-Australia,2000-06-01,Wind,0
-Australia,2000-07-01,Bioenergy,0
-Australia,2000-07-01,Coal,13941.79
-Australia,2000-07-01,Distillate,4.64
-Australia,2000-07-01,Gas,780.74
-Australia,2000-07-01,Hydro,727.64
-Australia,2000-07-01,Solar,0
-Australia,2000-07-01,Wind,0
-Australia,2000-08-01,Bioenergy,0
-Australia,2000-08-01,Coal,13716.76
-Australia,2000-08-01,Distillate,2.3
-Australia,2000-08-01,Gas,777.19
-Australia,2000-08-01,Hydro,739.04
-Australia,2000-08-01,Solar,0
-Australia,2000-08-01,Wind,0
-Australia,2000-09-01,Bioenergy,0
-Australia,2000-09-01,Coal,12517.1
-Australia,2000-09-01,Distillate,0.05
-Australia,2000-09-01,Gas,566.79
-Australia,2000-09-01,Hydro,662.95
-Australia,2000-09-01,Solar,0
-Australia,2000-09-01,Wind,0
-Australia,2000-10-01,Bioenergy,0
-Australia,2000-10-01,Coal,12782.74
-Australia,2000-10-01,Distillate,4.5
-Australia,2000-10-01,Gas,601.46
-Australia,2000-10-01,Hydro,595.84
-Australia,2000-10-01,Solar,0
-Australia,2000-10-01,Wind,0
-Australia,2000-11-01,Bioenergy,0
-Australia,2000-11-01,Coal,12751.75
-Australia,2000-11-01,Distillate,8.4
-Australia,2000-11-01,Gas,645.31
-Australia,2000-11-01,Hydro,381.49
-Australia,2000-11-01,Solar,0
-Australia,2000-11-01,Wind,0
-Australia,2000-12-01,Bioenergy,0
-Australia,2000-12-01,Coal,13277.95
-Australia,2000-12-01,Distillate,5.36
-Australia,2000-12-01,Gas,611.92
-Australia,2000-12-01,Hydro,375.23
-Australia,2000-12-01,Solar,0
-Australia,2000-12-01,Wind,0
-Australia,2001-01-01,Bioenergy,0
-Australia,2001-01-01,Coal,13497.88
-Australia,2001-01-01,Distillate,5.06
-Australia,2001-01-01,Gas,970.87
-Australia,2001-01-01,Hydro,508.25
-Australia,2001-01-01,Solar,0
-Australia,2001-01-01,Wind,0
-Australia,2001-02-01,Bioenergy,0
-Australia,2001-02-01,Coal,12580.02
-Australia,2001-02-01,Distillate,2.38
-Australia,2001-02-01,Gas,908.54
-Australia,2001-02-01,Hydro,456.66
-Australia,2001-02-01,Solar,0
-Australia,2001-02-01,Wind,0
-Australia,2001-03-01,Bioenergy,0
-Australia,2001-03-01,Coal,13322.07
-Australia,2001-03-01,Distillate,1.89
-Australia,2001-03-01,Gas,860.52
-Australia,2001-03-01,Hydro,477.91
-Australia,2001-03-01,Solar,0
-Australia,2001-03-01,Wind,0
-Australia,2001-04-01,Bioenergy,0
-Australia,2001-04-01,Coal,12533.19
-Australia,2001-04-01,Distillate,0.06
-Australia,2001-04-01,Gas,674.59
-Australia,2001-04-01,Hydro,373.7
-Australia,2001-04-01,Solar,0
-Australia,2001-04-01,Wind,0
-Australia,2001-05-01,Bioenergy,0
-Australia,2001-05-01,Coal,13377.67
-Australia,2001-05-01,Distillate,0.18
-Australia,2001-05-01,Gas,893.99
-Australia,2001-05-01,Hydro,663.19
-Australia,2001-05-01,Solar,0
-Australia,2001-05-01,Wind,0
-Australia,2001-06-01,Bioenergy,0
-Australia,2001-06-01,Coal,13433.33
-Australia,2001-06-01,Distillate,0.35
-Australia,2001-06-01,Gas,860.2
-Australia,2001-06-01,Hydro,575.3
-Australia,2001-06-01,Solar,0
-Australia,2001-06-01,Wind,0
-Australia,2001-07-01,Bioenergy,0
-Australia,2001-07-01,Coal,14314.33
-Australia,2001-07-01,Distillate,0.01
-Australia,2001-07-01,Gas,833.48
-Australia,2001-07-01,Hydro,486.45
-Australia,2001-07-01,Solar,0
-Australia,2001-07-01,Wind,0
-Australia,2001-08-01,Bioenergy,0
-Australia,2001-08-01,Coal,14110.92
-Australia,2001-08-01,Distillate,0.75
-Australia,2001-08-01,Gas,915.07
-Australia,2001-08-01,Hydro,429.16
-Australia,2001-08-01,Solar,0
-Australia,2001-08-01,Wind,0
-Australia,2001-09-01,Bioenergy,0
-Australia,2001-09-01,Coal,12727.75
-Australia,2001-09-01,Distillate,0.23
-Australia,2001-09-01,Gas,765.51
-Australia,2001-09-01,Hydro,473.59
-Australia,2001-09-01,Solar,0
-Australia,2001-09-01,Wind,0
-Australia,2001-10-01,Bioenergy,0
-Australia,2001-10-01,Coal,12963.49
-Australia,2001-10-01,Distillate,2.03
-Australia,2001-10-01,Gas,835.08
-Australia,2001-10-01,Hydro,577.5
-Australia,2001-10-01,Solar,0
-Australia,2001-10-01,Wind,0
-Australia,2001-11-01,Bioenergy,0
-Australia,2001-11-01,Coal,12879
-Australia,2001-11-01,Distillate,19.47
-Australia,2001-11-01,Gas,648.1
-Australia,2001-11-01,Hydro,438.87
-Australia,2001-11-01,Solar,0
-Australia,2001-11-01,Wind,0
-Australia,2001-12-01,Bioenergy,0
-Australia,2001-12-01,Coal,12937.54
-Australia,2001-12-01,Distillate,44.01
-Australia,2001-12-01,Gas,804.24
-Australia,2001-12-01,Hydro,477
-Australia,2001-12-01,Solar,0
-Australia,2001-12-01,Wind,0
-Australia,2002-01-01,Bioenergy,0
-Australia,2002-01-01,Coal,13560.05
-Australia,2002-01-01,Distillate,19.73
-Australia,2002-01-01,Gas,741.12
-Australia,2002-01-01,Hydro,453.57
-Australia,2002-01-01,Solar,0
-Australia,2002-01-01,Wind,0
-Australia,2002-02-01,Bioenergy,0
-Australia,2002-02-01,Coal,12559.28
-Australia,2002-02-01,Distillate,25.62
-Australia,2002-02-01,Gas,656.71
-Australia,2002-02-01,Hydro,484.9
-Australia,2002-02-01,Solar,0
-Australia,2002-02-01,Wind,0
-Australia,2002-03-01,Bioenergy,0
-Australia,2002-03-01,Coal,13643.81
-Australia,2002-03-01,Distillate,12.06
-Australia,2002-03-01,Gas,712.86
-Australia,2002-03-01,Hydro,348.48
-Australia,2002-03-01,Solar,0
-Australia,2002-03-01,Wind,0
-Australia,2002-04-01,Bioenergy,0
-Australia,2002-04-01,Coal,13049.44
-Australia,2002-04-01,Distillate,2.58
-Australia,2002-04-01,Gas,708.32
-Australia,2002-04-01,Hydro,222.53
-Australia,2002-04-01,Solar,0
-Australia,2002-04-01,Wind,0
-Australia,2002-05-01,Bioenergy,0
-Australia,2002-05-01,Coal,13803.95
-Australia,2002-05-01,Distillate,6.33
-Australia,2002-05-01,Gas,963.34
-Australia,2002-05-01,Hydro,404.3
-Australia,2002-05-01,Solar,0
-Australia,2002-05-01,Wind,0
-Australia,2002-06-01,Bioenergy,0
-Australia,2002-06-01,Coal,13991.06
-Australia,2002-06-01,Distillate,0.58
-Australia,2002-06-01,Gas,918.58
-Australia,2002-06-01,Hydro,444.95
-Australia,2002-06-01,Solar,0
-Australia,2002-06-01,Wind,0
-Australia,2002-07-01,Bioenergy,0
-Australia,2002-07-01,Coal,14738.3
-Australia,2002-07-01,Distillate,0.63
-Australia,2002-07-01,Gas,1009.84
-Australia,2002-07-01,Hydro,561.39
-Australia,2002-07-01,Solar,0
-Australia,2002-07-01,Wind,0
-Australia,2002-08-01,Bioenergy,0
-Australia,2002-08-01,Coal,14392.3
-Australia,2002-08-01,Distillate,0.38
-Australia,2002-08-01,Gas,878.7
-Australia,2002-08-01,Hydro,426.76
-Australia,2002-08-01,Solar,0
-Australia,2002-08-01,Wind,0
-Australia,2002-09-01,Bioenergy,0
-Australia,2002-09-01,Coal,13106.34
-Australia,2002-09-01,Distillate,0.82
-Australia,2002-09-01,Gas,791.9
-Australia,2002-09-01,Hydro,503.95
-Australia,2002-09-01,Solar,0
-Australia,2002-09-01,Wind,0
-Australia,2002-10-01,Bioenergy,0
-Australia,2002-10-01,Coal,13374.1
-Australia,2002-10-01,Distillate,0.47
-Australia,2002-10-01,Gas,833.32
-Australia,2002-10-01,Hydro,536.4
-Australia,2002-10-01,Solar,0
-Australia,2002-10-01,Wind,0
-Australia,2002-11-01,Bioenergy,0
-Australia,2002-11-01,Coal,13427.08
-Australia,2002-11-01,Distillate,3.25
-Australia,2002-11-01,Gas,787.1
-Australia,2002-11-01,Hydro,375.65
-Australia,2002-11-01,Solar,0
-Australia,2002-11-01,Wind,0
-Australia,2002-12-01,Bioenergy,0
-Australia,2002-12-01,Coal,13676.06
-Australia,2002-12-01,Distillate,5.82
-Australia,2002-12-01,Gas,822.25
-Australia,2002-12-01,Hydro,426.6
-Australia,2002-12-01,Solar,0
-Australia,2002-12-01,Wind,0
-Australia,2003-01-01,Bioenergy,0
-Australia,2003-01-01,Coal,13921.38
-Australia,2003-01-01,Distillate,0.63
-Australia,2003-01-01,Gas,808.14
-Australia,2003-01-01,Hydro,670.5
-Australia,2003-01-01,Solar,0
-Australia,2003-01-01,Wind,0
-Australia,2003-02-01,Bioenergy,0
-Australia,2003-02-01,Coal,12922.92
-Australia,2003-02-01,Distillate,0.89
-Australia,2003-02-01,Gas,653.26
-Australia,2003-02-01,Hydro,602.59
-Australia,2003-02-01,Solar,0
-Australia,2003-02-01,Wind,0
-Australia,2003-03-01,Bioenergy,0
-Australia,2003-03-01,Coal,13792.45
-Australia,2003-03-01,Distillate,5.76
-Australia,2003-03-01,Gas,576.17
-Australia,2003-03-01,Hydro,582.37
-Australia,2003-03-01,Solar,0
-Australia,2003-03-01,Wind,0
-Australia,2003-04-01,Bioenergy,0
-Australia,2003-04-01,Coal,13324.07
-Australia,2003-04-01,Distillate,4.91
-Australia,2003-04-01,Gas,439.84
-Australia,2003-04-01,Hydro,423.09
-Australia,2003-04-01,Solar,0
-Australia,2003-04-01,Wind,0
-Australia,2003-05-01,Bioenergy,0
-Australia,2003-05-01,Coal,14119.28
-Australia,2003-05-01,Distillate,0.11
-Australia,2003-05-01,Gas,704.11
-Australia,2003-05-01,Hydro,519.39
-Australia,2003-05-01,Solar,0
-Australia,2003-05-01,Wind,0
-Australia,2003-06-01,Bioenergy,0
-Australia,2003-06-01,Coal,14091.87
-Australia,2003-06-01,Distillate,0.37
-Australia,2003-06-01,Gas,761.53
-Australia,2003-06-01,Hydro,538.79
-Australia,2003-06-01,Solar,0
-Australia,2003-06-01,Wind,0
-Australia,2003-07-01,Bioenergy,0
-Australia,2003-07-01,Coal,15049.51
-Australia,2003-07-01,Distillate,0.27
-Australia,2003-07-01,Gas,709.38
-Australia,2003-07-01,Hydro,680.99
-Australia,2003-07-01,Solar,0
-Australia,2003-07-01,Wind,0
-Australia,2003-08-01,Bioenergy,0
-Australia,2003-08-01,Coal,14595.45
-Australia,2003-08-01,Distillate,0.18
-Australia,2003-08-01,Gas,701.92
-Australia,2003-08-01,Hydro,754.4
-Australia,2003-08-01,Solar,0
-Australia,2003-08-01,Wind,0
-Australia,2003-09-01,Bioenergy,0
-Australia,2003-09-01,Coal,13629.85
-Australia,2003-09-01,Distillate,0.12
-Australia,2003-09-01,Gas,592.52
-Australia,2003-09-01,Hydro,661.36
-Australia,2003-09-01,Solar,0
-Australia,2003-09-01,Wind,0
-Australia,2003-10-01,Bioenergy,0
-Australia,2003-10-01,Coal,13872.5
-Australia,2003-10-01,Distillate,1.23
-Australia,2003-10-01,Gas,603.39
-Australia,2003-10-01,Hydro,636.06
-Australia,2003-10-01,Solar,0
-Australia,2003-10-01,Wind,0
-Australia,2003-11-01,Bioenergy,0
-Australia,2003-11-01,Coal,13416.09
-Australia,2003-11-01,Distillate,2.01
-Australia,2003-11-01,Gas,638.39
-Australia,2003-11-01,Hydro,530.5
-Australia,2003-11-01,Solar,0
-Australia,2003-11-01,Wind,0
-Australia,2003-12-01,Bioenergy,0
-Australia,2003-12-01,Coal,14125.05
-Australia,2003-12-01,Distillate,3.94
-Australia,2003-12-01,Gas,795.54
-Australia,2003-12-01,Hydro,468.92
-Australia,2003-12-01,Solar,0
-Australia,2003-12-01,Wind,0
-Australia,2004-01-01,Bioenergy,0
-Australia,2004-01-01,Coal,14755.15
-Australia,2004-01-01,Distillate,4.76
-Australia,2004-01-01,Gas,599.71
-Australia,2004-01-01,Hydro,282.16
-Australia,2004-01-01,Solar,0
-Australia,2004-01-01,Wind,0
-Australia,2004-02-01,Bioenergy,0
-Australia,2004-02-01,Coal,14323.88
-Australia,2004-02-01,Distillate,9.66
-Australia,2004-02-01,Gas,764.59
-Australia,2004-02-01,Hydro,431.18
-Australia,2004-02-01,Solar,0
-Australia,2004-02-01,Wind,0
-Australia,2004-03-01,Bioenergy,0
-Australia,2004-03-01,Coal,14777.41
-Australia,2004-03-01,Distillate,2.17
-Australia,2004-03-01,Gas,601.18
-Australia,2004-03-01,Hydro,330.53
-Australia,2004-03-01,Solar,0
-Australia,2004-03-01,Wind,0
-Australia,2004-04-01,Bioenergy,0
-Australia,2004-04-01,Coal,13565.19
-Australia,2004-04-01,Distillate,1.04
-Australia,2004-04-01,Gas,756.13
-Australia,2004-04-01,Hydro,322.39
-Australia,2004-04-01,Solar,0
-Australia,2004-04-01,Wind,0
-Australia,2004-05-01,Bioenergy,0
-Australia,2004-05-01,Coal,14512.17
-Australia,2004-05-01,Distillate,1.11
-Australia,2004-05-01,Gas,1013.79
-Australia,2004-05-01,Hydro,340.79
-Australia,2004-05-01,Solar,0
-Australia,2004-05-01,Wind,0
-Australia,2004-06-01,Bioenergy,0
-Australia,2004-06-01,Coal,14821.47
-Australia,2004-06-01,Distillate,0.48
-Australia,2004-06-01,Gas,933.52
-Australia,2004-06-01,Hydro,316.68
-Australia,2004-06-01,Solar,0
-Australia,2004-06-01,Wind,0
-Australia,2004-07-01,Bioenergy,0
-Australia,2004-07-01,Coal,15695.17
-Australia,2004-07-01,Distillate,1.76
-Australia,2004-07-01,Gas,809.63
-Australia,2004-07-01,Hydro,352.97
-Australia,2004-07-01,Solar,0
-Australia,2004-07-01,Wind,0
-Australia,2004-08-01,Bioenergy,0
-Australia,2004-08-01,Coal,15279.69
-Australia,2004-08-01,Distillate,1.82
-Australia,2004-08-01,Gas,690.19
-Australia,2004-08-01,Hydro,393.39
-Australia,2004-08-01,Solar,0
-Australia,2004-08-01,Wind,0
-Australia,2004-09-01,Bioenergy,0
-Australia,2004-09-01,Coal,13664.99
-Australia,2004-09-01,Distillate,1.79
-Australia,2004-09-01,Gas,841.35
-Australia,2004-09-01,Hydro,623.53
-Australia,2004-09-01,Solar,0
-Australia,2004-09-01,Wind,0
-Australia,2004-10-01,Bioenergy,0
-Australia,2004-10-01,Coal,13699.15
-Australia,2004-10-01,Distillate,5.8
-Australia,2004-10-01,Gas,917.47
-Australia,2004-10-01,Hydro,631.37
-Australia,2004-10-01,Solar,0
-Australia,2004-10-01,Wind,0
-Australia,2004-11-01,Bioenergy,0
-Australia,2004-11-01,Coal,13888.85
-Australia,2004-11-01,Distillate,6.58
-Australia,2004-11-01,Gas,889.11
-Australia,2004-11-01,Hydro,448.27
-Australia,2004-11-01,Solar,0
-Australia,2004-11-01,Wind,0
-Australia,2004-12-01,Bioenergy,0
-Australia,2004-12-01,Coal,14404.48
-Australia,2004-12-01,Distillate,7.16
-Australia,2004-12-01,Gas,855.94
-Australia,2004-12-01,Hydro,313.88
-Australia,2004-12-01,Solar,0
-Australia,2004-12-01,Wind,0
-Australia,2005-01-01,Bioenergy,0
-Australia,2005-01-01,Coal,14647.91
-Australia,2005-01-01,Distillate,4.09
-Australia,2005-01-01,Gas,765.3
-Australia,2005-01-01,Hydro,539
-Australia,2005-01-01,Solar,0
-Australia,2005-01-01,Wind,0
-Australia,2005-02-01,Bioenergy,0
-Australia,2005-02-01,Coal,13594.65
-Australia,2005-02-01,Distillate,7.38
-Australia,2005-02-01,Gas,720.16
-Australia,2005-02-01,Hydro,541.85
-Australia,2005-02-01,Solar,0
-Australia,2005-02-01,Wind,0
-Australia,2005-03-01,Bioenergy,0
-Australia,2005-03-01,Coal,14577.58
-Australia,2005-03-01,Distillate,0.95
-Australia,2005-03-01,Gas,764.06
-Australia,2005-03-01,Hydro,457.33
-Australia,2005-03-01,Solar,0
-Australia,2005-03-01,Wind,0
-Australia,2005-04-01,Bioenergy,0
-Australia,2005-04-01,Coal,13395.8
-Australia,2005-04-01,Distillate,0.72
-Australia,2005-04-01,Gas,1091.23
-Australia,2005-04-01,Hydro,572.03
-Australia,2005-04-01,Solar,0
-Australia,2005-04-01,Wind,0
-Australia,2005-05-01,Bioenergy,0
-Australia,2005-05-01,Coal,14516.63
-Australia,2005-05-01,Distillate,1.34
-Australia,2005-05-01,Gas,942.77
-Australia,2005-05-01,Hydro,986.34
-Australia,2005-05-01,Solar,0
-Australia,2005-05-01,Wind,0
-Australia,2005-06-01,Bioenergy,0
-Australia,2005-06-01,Coal,14882.03
-Australia,2005-06-01,Distillate,1.42
-Australia,2005-06-01,Gas,966.55
-Australia,2005-06-01,Hydro,1274.71
-Australia,2005-06-01,Solar,0
-Australia,2005-06-01,Wind,0
-Australia,2005-07-01,Bioenergy,0
-Australia,2005-07-01,Coal,15350.76
-Australia,2005-07-01,Distillate,0.33
-Australia,2005-07-01,Gas,1029.85
-Australia,2005-07-01,Hydro,1372.73
-Australia,2005-07-01,Solar,0
-Australia,2005-07-01,Wind,0
-Australia,2005-08-01,Bioenergy,0
-Australia,2005-08-01,Coal,15259.64
-Australia,2005-08-01,Distillate,1.27
-Australia,2005-08-01,Gas,988.04
-Australia,2005-08-01,Hydro,1375.96
-Australia,2005-08-01,Solar,0
-Australia,2005-08-01,Wind,0
-Australia,2005-09-01,Bioenergy,0
-Australia,2005-09-01,Coal,13743.41
-Australia,2005-09-01,Distillate,0.33
-Australia,2005-09-01,Gas,955.85
-Australia,2005-09-01,Hydro,1381.89
-Australia,2005-09-01,Solar,0
-Australia,2005-09-01,Wind,0
-Australia,2005-10-01,Bioenergy,0
-Australia,2005-10-01,Coal,13850.88
-Australia,2005-10-01,Distillate,0.36
-Australia,2005-10-01,Gas,938.9
-Australia,2005-10-01,Hydro,1320.85
-Australia,2005-10-01,Solar,0
-Australia,2005-10-01,Wind,0
-Australia,2005-11-01,Bioenergy,0
-Australia,2005-11-01,Coal,13839.26
-Australia,2005-11-01,Distillate,0.64
-Australia,2005-11-01,Gas,952.42
-Australia,2005-11-01,Hydro,1207.21
-Australia,2005-11-01,Solar,0
-Australia,2005-11-01,Wind,0
-Australia,2005-12-01,Bioenergy,0
-Australia,2005-12-01,Coal,14862.1
-Australia,2005-12-01,Distillate,9.61
-Australia,2005-12-01,Gas,855.11
-Australia,2005-12-01,Hydro,1315.72
-Australia,2005-12-01,Solar,0
-Australia,2005-12-01,Wind,0
-Australia,2006-01-01,Bioenergy,0
-Australia,2006-01-01,Coal,15198.99
-Australia,2006-01-01,Distillate,4.76
-Australia,2006-01-01,Gas,1052.35
-Australia,2006-01-01,Hydro,1324.76
-Australia,2006-01-01,Solar,0
-Australia,2006-01-01,Wind,0
-Australia,2006-02-01,Bioenergy,0
-Australia,2006-02-01,Coal,13878.21
-Australia,2006-02-01,Distillate,6.55
-Australia,2006-02-01,Gas,854.15
-Australia,2006-02-01,Hydro,1218.87
-Australia,2006-02-01,Solar,0
-Australia,2006-02-01,Wind,0
-Australia,2006-03-01,Bioenergy,0
-Australia,2006-03-01,Coal,15052.08
-Australia,2006-03-01,Distillate,0.35
-Australia,2006-03-01,Gas,918.81
-Australia,2006-03-01,Hydro,1169.69
-Australia,2006-03-01,Solar,0
-Australia,2006-03-01,Wind,0
-Australia,2006-04-01,Bioenergy,0
-Australia,2006-04-01,Coal,13922.85
-Australia,2006-04-01,Distillate,0.4
-Australia,2006-04-01,Gas,692.44
-Australia,2006-04-01,Hydro,1196.65
-Australia,2006-04-01,Solar,0
-Australia,2006-04-01,Wind,0
-Australia,2006-05-01,Bioenergy,0
-Australia,2006-05-01,Coal,15026.81
-Australia,2006-05-01,Distillate,0.39
-Australia,2006-05-01,Gas,1053.56
-Australia,2006-05-01,Hydro,1425.28
-Australia,2006-05-01,Solar,0
-Australia,2006-05-01,Wind,0
-Australia,2006-06-01,Bioenergy,0
-Australia,2006-06-01,Coal,15423.24
-Australia,2006-06-01,Distillate,0.03
-Australia,2006-06-01,Gas,1162.61
-Australia,2006-06-01,Hydro,1510.77
-Australia,2006-06-01,Solar,0
-Australia,2006-06-01,Wind,0
-Australia,2006-07-01,Bioenergy,0
-Australia,2006-07-01,Coal,15765.34
-Australia,2006-07-01,Distillate,0.52
-Australia,2006-07-01,Gas,1053.2
-Australia,2006-07-01,Hydro,1550.47
-Australia,2006-07-01,Solar,0
-Australia,2006-07-01,Wind,0
-Australia,2006-08-01,Bioenergy,0
-Australia,2006-08-01,Coal,15468.47
-Australia,2006-08-01,Distillate,0.37
-Australia,2006-08-01,Gas,1195.82
-Australia,2006-08-01,Hydro,1272.77
-Australia,2006-08-01,Solar,0
-Australia,2006-08-01,Wind,0
-Australia,2006-09-01,Bioenergy,0
-Australia,2006-09-01,Coal,14200.17
-Australia,2006-09-01,Distillate,1.55
-Australia,2006-09-01,Gas,1161.07
-Australia,2006-09-01,Hydro,1078.3
-Australia,2006-09-01,Solar,0
-Australia,2006-09-01,Wind,0
-Australia,2006-10-01,Bioenergy,0
-Australia,2006-10-01,Coal,14493.74
-Australia,2006-10-01,Distillate,0.07
-Australia,2006-10-01,Gas,1253.47
-Australia,2006-10-01,Hydro,956.1
-Australia,2006-10-01,Solar,0
-Australia,2006-10-01,Wind,0
-Australia,2006-11-01,Bioenergy,0
-Australia,2006-11-01,Coal,14479.88
-Australia,2006-11-01,Distillate,1.42
-Australia,2006-11-01,Gas,1210.72
-Australia,2006-11-01,Hydro,941.74
-Australia,2006-11-01,Solar,0
-Australia,2006-11-01,Wind,0
-Australia,2006-12-01,Bioenergy,0
-Australia,2006-12-01,Coal,14928.4
-Australia,2006-12-01,Distillate,1
-Australia,2006-12-01,Gas,1111.9
-Australia,2006-12-01,Hydro,778.13
-Australia,2006-12-01,Solar,0
-Australia,2006-12-01,Wind,0
-Australia,2007-01-01,Bioenergy,0
-Australia,2007-01-01,Coal,15207.33
-Australia,2007-01-01,Distillate,17.1
-Australia,2007-01-01,Gas,1545.85
-Australia,2007-01-01,Hydro,1010.87
-Australia,2007-01-01,Solar,0
-Australia,2007-01-01,Wind,0
-Australia,2007-02-01,Bioenergy,0
-Australia,2007-02-01,Coal,14033.41
-Australia,2007-02-01,Distillate,3.71
-Australia,2007-02-01,Gas,1541.34
-Australia,2007-02-01,Hydro,992.51
-Australia,2007-02-01,Solar,0
-Australia,2007-02-01,Wind,0
-Australia,2007-03-01,Bioenergy,0
-Australia,2007-03-01,Coal,15123.46
-Australia,2007-03-01,Distillate,7.27
-Australia,2007-03-01,Gas,1623.05
-Australia,2007-03-01,Hydro,1026.14
-Australia,2007-03-01,Solar,0
-Australia,2007-03-01,Wind,0
-Australia,2007-04-01,Bioenergy,0
-Australia,2007-04-01,Coal,13262.09
-Australia,2007-04-01,Distillate,0.32
-Australia,2007-04-01,Gas,1640.1
-Australia,2007-04-01,Hydro,1083.46
-Australia,2007-04-01,Solar,0
-Australia,2007-04-01,Wind,0
-Australia,2007-05-01,Bioenergy,0
-Australia,2007-05-01,Coal,14127.51
-Australia,2007-05-01,Distillate,0.77
-Australia,2007-05-01,Gas,1864.13
-Australia,2007-05-01,Hydro,1125.52
-Australia,2007-05-01,Solar,0
-Australia,2007-05-01,Wind,0
-Australia,2007-06-01,Bioenergy,0
-Australia,2007-06-01,Coal,14594.28
-Australia,2007-06-01,Distillate,17.66
-Australia,2007-06-01,Gas,2007.36
-Australia,2007-06-01,Hydro,1573.14
-Australia,2007-06-01,Solar,0
-Australia,2007-06-01,Wind,0
-Australia,2007-07-01,Bioenergy,0
-Australia,2007-07-01,Coal,16271.59
-Australia,2007-07-01,Distillate,6.07
-Australia,2007-07-01,Gas,1689.81
-Australia,2007-07-01,Hydro,1119.33
-Australia,2007-07-01,Solar,0
-Australia,2007-07-01,Wind,0
-Australia,2007-08-01,Bioenergy,0
-Australia,2007-08-01,Coal,15499.36
-Australia,2007-08-01,Distillate,3.34
-Australia,2007-08-01,Gas,1467.08
-Australia,2007-08-01,Hydro,982.82
-Australia,2007-08-01,Solar,0
-Australia,2007-08-01,Wind,0
-Australia,2007-09-01,Bioenergy,0
-Australia,2007-09-01,Coal,14152.29
-Australia,2007-09-01,Distillate,9.07
-Australia,2007-09-01,Gas,1265.62
-Australia,2007-09-01,Hydro,1046.39
-Australia,2007-09-01,Solar,0
-Australia,2007-09-01,Wind,0
-Australia,2007-10-01,Bioenergy,0
-Australia,2007-10-01,Coal,14475.98
-Australia,2007-10-01,Distillate,5.36
-Australia,2007-10-01,Gas,1404.2
-Australia,2007-10-01,Hydro,1104
-Australia,2007-10-01,Solar,0
-Australia,2007-10-01,Wind,0
-Australia,2007-11-01,Bioenergy,0
-Australia,2007-11-01,Coal,14362.97
-Australia,2007-11-01,Distillate,3.26
-Australia,2007-11-01,Gas,1631.78
-Australia,2007-11-01,Hydro,814.1
-Australia,2007-11-01,Solar,0
-Australia,2007-11-01,Wind,0
-Australia,2007-12-01,Bioenergy,0
-Australia,2007-12-01,Coal,14567.34
-Australia,2007-12-01,Distillate,6.35
-Australia,2007-12-01,Gas,1699.4
-Australia,2007-12-01,Hydro,818.09
-Australia,2007-12-01,Solar,0
-Australia,2007-12-01,Wind,0
-Australia,2008-01-01,Bioenergy,0
-Australia,2008-01-01,Coal,15366.83
-Australia,2008-01-01,Distillate,19.57
-Australia,2008-01-01,Gas,1550.3
-Australia,2008-01-01,Hydro,868.13
-Australia,2008-01-01,Solar,0
-Australia,2008-01-01,Wind,0
-Australia,2008-02-01,Bioenergy,0
-Australia,2008-02-01,Coal,14325.58
-Australia,2008-02-01,Distillate,16.11
-Australia,2008-02-01,Gas,1338.49
-Australia,2008-02-01,Hydro,729.18
-Australia,2008-02-01,Solar,0
-Australia,2008-02-01,Wind,0
-Australia,2008-03-01,Bioenergy,0
-Australia,2008-03-01,Coal,14916.67
-Australia,2008-03-01,Distillate,5.38
-Australia,2008-03-01,Gas,1596.31
-Australia,2008-03-01,Hydro,898.56
-Australia,2008-03-01,Solar,0
-Australia,2008-03-01,Wind,0
-Australia,2008-04-01,Bioenergy,0
-Australia,2008-04-01,Coal,14082.49
-Australia,2008-04-01,Distillate,0.84
-Australia,2008-04-01,Gas,1477.43
-Australia,2008-04-01,Hydro,908.36
-Australia,2008-04-01,Solar,0
-Australia,2008-04-01,Wind,0
-Australia,2008-05-01,Bioenergy,0
-Australia,2008-05-01,Coal,14785.36
-Australia,2008-05-01,Distillate,1.24
-Australia,2008-05-01,Gas,1826.94
-Australia,2008-05-01,Hydro,1101.23
-Australia,2008-05-01,Solar,0
-Australia,2008-05-01,Wind,0
-Australia,2008-06-01,Bioenergy,0
-Australia,2008-06-01,Coal,14749.23
-Australia,2008-06-01,Distillate,4.96
-Australia,2008-06-01,Gas,1654.06
-Australia,2008-06-01,Hydro,1070.76
-Australia,2008-06-01,Solar,0
-Australia,2008-06-01,Wind,0
-Australia,2008-07-01,Bioenergy,0
-Australia,2008-07-01,Coal,16200
-Australia,2008-07-01,Distillate,0.45
-Australia,2008-07-01,Gas,1568.33
-Australia,2008-07-01,Hydro,1213.98
-Australia,2008-07-01,Solar,0
-Australia,2008-07-01,Wind,0
-Australia,2008-08-01,Bioenergy,0
-Australia,2008-08-01,Coal,16130.2
-Australia,2008-08-01,Distillate,0.49
-Australia,2008-08-01,Gas,1653.28
-Australia,2008-08-01,Hydro,1044.79
-Australia,2008-08-01,Solar,0
-Australia,2008-08-01,Wind,0
-Australia,2008-09-01,Bioenergy,0
-Australia,2008-09-01,Coal,14380.56
-Australia,2008-09-01,Distillate,0.17
-Australia,2008-09-01,Gas,1377
-Australia,2008-09-01,Hydro,1029.03
-Australia,2008-09-01,Solar,0
-Australia,2008-09-01,Wind,0
-Australia,2008-10-01,Bioenergy,0
-Australia,2008-10-01,Coal,14621.65
-Australia,2008-10-01,Distillate,2.31
-Australia,2008-10-01,Gas,1329.89
-Australia,2008-10-01,Hydro,1005.27
-Australia,2008-10-01,Solar,0
-Australia,2008-10-01,Wind,0
-Australia,2008-11-01,Bioenergy,0
-Australia,2008-11-01,Coal,14533.76
-Australia,2008-11-01,Distillate,2.31
-Australia,2008-11-01,Gas,1295.8
-Australia,2008-11-01,Hydro,720.45
-Australia,2008-11-01,Solar,0
-Australia,2008-11-01,Wind,0
-Australia,2008-12-01,Bioenergy,0
-Australia,2008-12-01,Coal,15023.04
-Australia,2008-12-01,Distillate,6.51
-Australia,2008-12-01,Gas,1245.4
-Australia,2008-12-01,Hydro,679.21
-Australia,2008-12-01,Solar,0
-Australia,2008-12-01,Wind,0
-Australia,2009-01-01,Bioenergy,0.1
-Australia,2009-01-01,Coal,15161.48
-Australia,2009-01-01,Distillate,12.86
-Australia,2009-01-01,Gas,1728
-Australia,2009-01-01,Hydro,1019.9
-Australia,2009-01-01,Solar,0
-Australia,2009-01-01,Wind,0
-Australia,2009-02-01,Bioenergy,1.21
-Australia,2009-02-01,Coal,14214.57
-Australia,2009-02-01,Distillate,3
-Australia,2009-02-01,Gas,1766.05
-Australia,2009-02-01,Hydro,868.45
-Australia,2009-02-01,Solar,0
-Australia,2009-02-01,Wind,0
-Australia,2009-03-01,Bioenergy,1.39
-Australia,2009-03-01,Coal,15260.14
-Australia,2009-03-01,Distillate,1.74
-Australia,2009-03-01,Gas,1546.28
-Australia,2009-03-01,Hydro,696.75
-Australia,2009-03-01,Solar,0
-Australia,2009-03-01,Wind,0
-Australia,2009-04-01,Bioenergy,0
-Australia,2009-04-01,Coal,13689.25
-Australia,2009-04-01,Distillate,2.57
-Australia,2009-04-01,Gas,1472.48
-Australia,2009-04-01,Hydro,797.8
-Australia,2009-04-01,Solar,0
-Australia,2009-04-01,Wind,0
-Australia,2009-05-01,Bioenergy,0
-Australia,2009-05-01,Coal,14578.26
-Australia,2009-05-01,Distillate,4.19
-Australia,2009-05-01,Gas,1602.27
-Australia,2009-05-01,Hydro,950.68
-Australia,2009-05-01,Solar,0
-Australia,2009-05-01,Wind,0
-Australia,2009-06-01,Bioenergy,0
-Australia,2009-06-01,Coal,14971.35
-Australia,2009-06-01,Distillate,0.31
-Australia,2009-06-01,Gas,1552.23
-Australia,2009-06-01,Hydro,1007.39
-Australia,2009-06-01,Solar,0
-Australia,2009-06-01,Wind,0
-Australia,2009-07-01,Bioenergy,48.21
-Australia,2009-07-01,Coal,15312.63
-Australia,2009-07-01,Distillate,1.9
-Australia,2009-07-01,Gas,1502.88
-Australia,2009-07-01,Hydro,1331.53
-Australia,2009-07-01,Solar,0
-Australia,2009-07-01,Wind,411.65
-Australia,2009-08-01,Bioenergy,47.69
-Australia,2009-08-01,Coal,14583.18
-Australia,2009-08-01,Distillate,0.18
-Australia,2009-08-01,Gas,1353.41
-Australia,2009-08-01,Hydro,1329.45
-Australia,2009-08-01,Solar,0
-Australia,2009-08-01,Wind,511.15
-Australia,2009-09-01,Bioenergy,51.29
-Australia,2009-09-01,Coal,13245.51
-Australia,2009-09-01,Distillate,3.18
-Australia,2009-09-01,Gas,1581.43
-Australia,2009-09-01,Hydro,1277.36
-Australia,2009-09-01,Solar,0
-Australia,2009-09-01,Wind,452.11
-Australia,2009-10-01,Bioenergy,46.3
-Australia,2009-10-01,Coal,13853.15
-Australia,2009-10-01,Distillate,5.63
-Australia,2009-10-01,Gas,1802.39
-Australia,2009-10-01,Hydro,972.78
-Australia,2009-10-01,Solar,0
-Australia,2009-10-01,Wind,383.78
-Australia,2009-11-01,Bioenergy,13.88
-Australia,2009-11-01,Coal,14149.89
-Australia,2009-11-01,Distillate,18.56
-Australia,2009-11-01,Gas,2111.16
-Australia,2009-11-01,Hydro,970.88
-Australia,2009-11-01,Solar,0
-Australia,2009-11-01,Wind,326.21
-Australia,2009-12-01,Bioenergy,11.94
-Australia,2009-12-01,Coal,14718.21
-Australia,2009-12-01,Distillate,7.01
-Australia,2009-12-01,Gas,1796.21
-Australia,2009-12-01,Hydro,870.19
-Australia,2009-12-01,Solar,0
-Australia,2009-12-01,Wind,354.55
-Australia,2010-01-01,Bioenergy,14.3
-Australia,2010-01-01,Coal,14993.67
-Australia,2010-01-01,Distillate,5.92
-Australia,2010-01-01,Gas,1814.96
-Australia,2010-01-01,Hydro,947.5
-Australia,2010-01-01,Solar,0
-Australia,2010-01-01,Wind,366.84
-Australia,2010-02-01,Bioenergy,13.75
-Australia,2010-02-01,Coal,13661.78
-Australia,2010-02-01,Distillate,3.31
-Australia,2010-02-01,Gas,1858.77
-Australia,2010-02-01,Hydro,936.17
-Australia,2010-02-01,Solar,0
-Australia,2010-02-01,Wind,353.75
-Australia,2010-03-01,Bioenergy,14.93
-Australia,2010-03-01,Coal,14721.17
-Australia,2010-03-01,Distillate,0.79
-Australia,2010-03-01,Gas,1707.86
-Australia,2010-03-01,Hydro,816.42
-Australia,2010-03-01,Solar,0
-Australia,2010-03-01,Wind,319.2
-Australia,2010-04-01,Bioenergy,-0.38
-Australia,2010-04-01,Coal,13178.09
-Australia,2010-04-01,Distillate,0.59
-Australia,2010-04-01,Gas,1741.23
-Australia,2010-04-01,Hydro,988.7
-Australia,2010-04-01,Solar,0
-Australia,2010-04-01,Wind,315.44
-Australia,2010-05-01,Bioenergy,-0.58
-Australia,2010-05-01,Coal,14006.71
-Australia,2010-05-01,Distillate,1.91
-Australia,2010-05-01,Gas,1995.46
-Australia,2010-05-01,Hydro,1259
-Australia,2010-05-01,Solar,0
-Australia,2010-05-01,Wind,276.13
-Australia,2010-06-01,Bioenergy,31.51
-Australia,2010-06-01,Coal,14232.6
-Australia,2010-06-01,Distillate,0.41
-Australia,2010-06-01,Gas,2117.95
-Australia,2010-06-01,Hydro,1348.6
-Australia,2010-06-01,Solar,0
-Australia,2010-06-01,Wind,306.31
-Australia,2010-07-01,Bioenergy,44.11
-Australia,2010-07-01,Coal,14896.06
-Australia,2010-07-01,Distillate,0.17
-Australia,2010-07-01,Gas,2145.77
-Australia,2010-07-01,Hydro,1440.6
-Australia,2010-07-01,Solar,0
-Australia,2010-07-01,Wind,294.21
-Australia,2010-08-01,Bioenergy,24.65
-Australia,2010-08-01,Coal,14131.91
-Australia,2010-08-01,Distillate,1.86
-Australia,2010-08-01,Gas,2167.12
-Australia,2010-08-01,Hydro,1599.36
-Australia,2010-08-01,Solar,0
-Australia,2010-08-01,Wind,549.77
-Australia,2010-09-01,Bioenergy,14.21
-Australia,2010-09-01,Coal,12731.19
-Australia,2010-09-01,Distillate,3.78
-Australia,2010-09-01,Gas,2110.32
-Australia,2010-09-01,Hydro,1672.26
-Australia,2010-09-01,Solar,0
-Australia,2010-09-01,Wind,413.16
-Australia,2010-10-01,Bioenergy,40.9
-Australia,2010-10-01,Coal,12807.38
-Australia,2010-10-01,Distillate,0.16
-Australia,2010-10-01,Gas,1969.59
-Australia,2010-10-01,Hydro,1523.55
-Australia,2010-10-01,Solar,0
-Australia,2010-10-01,Wind,432.61
-Australia,2010-11-01,Bioenergy,9.82
-Australia,2010-11-01,Coal,12518.2
-Australia,2010-11-01,Distillate,0.4
-Australia,2010-11-01,Gas,1937.83
-Australia,2010-11-01,Hydro,1652.26
-Australia,2010-11-01,Solar,0
-Australia,2010-11-01,Wind,371.47
-Australia,2010-12-01,Bioenergy,1.43
-Australia,2010-12-01,Coal,12696.6
-Australia,2010-12-01,Distillate,0.54
-Australia,2010-12-01,Gas,2058.86
-Australia,2010-12-01,Hydro,1569.64
-Australia,2010-12-01,Solar,0
-Australia,2010-12-01,Wind,469.56
-Australia,2011-01-01,Bioenergy,0.45
-Australia,2011-01-01,Coal,13859.61
-Australia,2011-01-01,Distillate,23.14
-Australia,2011-01-01,Gas,2277.97
-Australia,2011-01-01,Hydro,1106.61
-Australia,2011-01-01,Solar,0
-Australia,2011-01-01,Wind,380.12
-Australia,2011-02-01,Bioenergy,4.47
-Australia,2011-02-01,Coal,12933.94
-Australia,2011-02-01,Distillate,8.13
-Australia,2011-02-01,Gas,2130.48
-Australia,2011-02-01,Hydro,1150.61
-Australia,2011-02-01,Solar,0
-Australia,2011-02-01,Wind,400.12
-Australia,2011-03-01,Bioenergy,-0.38
-Australia,2011-03-01,Coal,13914.1
-Australia,2011-03-01,Distillate,1.21
-Australia,2011-03-01,Gas,1995.3
-Australia,2011-03-01,Hydro,951.9
-Australia,2011-03-01,Solar,0
-Australia,2011-03-01,Wind,473.33
-Australia,2011-04-01,Bioenergy,-0.23
-Australia,2011-04-01,Coal,13073.76
-Australia,2011-04-01,Distillate,0.11
-Australia,2011-04-01,Gas,1591.55
-Australia,2011-04-01,Hydro,880.5
-Australia,2011-04-01,Solar,0
-Australia,2011-04-01,Wind,373.29
-Australia,2011-05-01,Bioenergy,7.42
-Australia,2011-05-01,Coal,14156.69
-Australia,2011-05-01,Distillate,0.14
-Australia,2011-05-01,Gas,1913.72
-Australia,2011-05-01,Hydro,1233.39
-Australia,2011-05-01,Solar,0
-Australia,2011-05-01,Wind,380.26
-Australia,2011-06-01,Bioenergy,45.86
-Australia,2011-06-01,Coal,14208.53
-Australia,2011-06-01,Distillate,0.15
-Australia,2011-06-01,Gas,1780.27
-Australia,2011-06-01,Hydro,1301.47
-Australia,2011-06-01,Solar,0
-Australia,2011-06-01,Wind,588.7
-Australia,2011-07-01,Bioenergy,59.66
-Australia,2011-07-01,Coal,14533.29
-Australia,2011-07-01,Distillate,0.14
-Australia,2011-07-01,Gas,1966.16
-Australia,2011-07-01,Hydro,1452.36
-Australia,2011-07-01,Solar,0
-Australia,2011-07-01,Wind,601.73
-Australia,2011-08-01,Bioenergy,60.92
-Australia,2011-08-01,Coal,13878.53
-Australia,2011-08-01,Distillate,0.03
-Australia,2011-08-01,Gas,2015.79
-Australia,2011-08-01,Hydro,1281.44
-Australia,2011-08-01,Solar,0
-Australia,2011-08-01,Wind,440.5
-Australia,2011-09-01,Bioenergy,59.5
-Australia,2011-09-01,Coal,13002.48
-Australia,2011-09-01,Distillate,0.16
-Australia,2011-09-01,Gas,1559.04
-Australia,2011-09-01,Hydro,1177.42
-Australia,2011-09-01,Solar,0
-Australia,2011-09-01,Wind,621.06
-Australia,2011-10-01,Bioenergy,61.88
-Australia,2011-10-01,Coal,13448.49
-Australia,2011-10-01,Distillate,0.57
-Australia,2011-10-01,Gas,1646
-Australia,2011-10-01,Hydro,962.22
-Australia,2011-10-01,Solar,0
-Australia,2011-10-01,Wind,474.34
-Australia,2011-11-01,Bioenergy,57.55
-Australia,2011-11-01,Coal,12952.95
-Australia,2011-11-01,Distillate,1.07
-Australia,2011-11-01,Gas,2139.72
-Australia,2011-11-01,Hydro,1023.89
-Australia,2011-11-01,Solar,0
-Australia,2011-11-01,Wind,458.04
-Australia,2011-12-01,Bioenergy,32.45
-Australia,2011-12-01,Coal,13034.39
-Australia,2011-12-01,Distillate,0.05
-Australia,2011-12-01,Gas,2002.98
-Australia,2011-12-01,Hydro,867.54
-Australia,2011-12-01,Solar,0
-Australia,2011-12-01,Wind,473.94
-Australia,2012-01-01,Bioenergy,15.29
-Australia,2012-01-01,Coal,13816.94
-Australia,2012-01-01,Distillate,3.9
-Australia,2012-01-01,Gas,2154.09
-Australia,2012-01-01,Hydro,792.56
-Australia,2012-01-01,Solar,0
-Australia,2012-01-01,Wind,645.07
-Australia,2012-02-01,Bioenergy,16.68
-Australia,2012-02-01,Coal,13202.89
-Australia,2012-02-01,Distillate,2
-Australia,2012-02-01,Gas,1997.98
-Australia,2012-02-01,Hydro,838.84
-Australia,2012-02-01,Solar,0
-Australia,2012-02-01,Wind,423.9
-Australia,2012-03-01,Bioenergy,14.67
-Australia,2012-03-01,Coal,13107.27
-Australia,2012-03-01,Distillate,0.84
-Australia,2012-03-01,Gas,1945.86
-Australia,2012-03-01,Hydro,1104
-Australia,2012-03-01,Solar,0
-Australia,2012-03-01,Wind,504.09
-Australia,2012-04-01,Bioenergy,-0.53
-Australia,2012-04-01,Coal,12181.25
-Australia,2012-04-01,Distillate,0.18
-Australia,2012-04-01,Gas,2027.98
-Australia,2012-04-01,Hydro,1129.1
-Australia,2012-04-01,Solar,0
-Australia,2012-04-01,Wind,360.92
-Australia,2012-05-01,Bioenergy,-0.77
-Australia,2012-05-01,Coal,13845.56
-Australia,2012-05-01,Distillate,0.19
-Australia,2012-05-01,Gas,1797.4
-Australia,2012-05-01,Hydro,1166.01
-Australia,2012-05-01,Solar,0
-Australia,2012-05-01,Wind,471.77
-Australia,2012-06-01,Bioenergy,7.28
-Australia,2012-06-01,Coal,13280.56
-Australia,2012-06-01,Distillate,0.29
-Australia,2012-06-01,Gas,2000.69
-Australia,2012-06-01,Hydro,1562.8
-Australia,2012-06-01,Solar,0
-Australia,2012-06-01,Wind,573.32
-Australia,2012-07-01,Bioenergy,5.25
-Australia,2012-07-01,Coal,13051.32
-Australia,2012-07-01,Distillate,0.8
-Australia,2012-07-01,Gas,2326.73
-Australia,2012-07-01,Hydro,2026.81
-Australia,2012-07-01,Solar,0
-Australia,2012-07-01,Wind,464.4
-Australia,2012-08-01,Bioenergy,48.59
-Australia,2012-08-01,Coal,12884.45
-Australia,2012-08-01,Distillate,3.57
-Australia,2012-08-01,Gas,2042.3
-Australia,2012-08-01,Hydro,1910.09
-Australia,2012-08-01,Solar,0
-Australia,2012-08-01,Wind,700.35
-Australia,2012-09-01,Bioenergy,60.55
-Australia,2012-09-01,Coal,11581.3
-Australia,2012-09-01,Distillate,2.6
-Australia,2012-09-01,Gas,1832.57
-Australia,2012-09-01,Hydro,1714.25
-Australia,2012-09-01,Solar,0
-Australia,2012-09-01,Wind,587.77
-Australia,2012-10-01,Bioenergy,67.39
-Australia,2012-10-01,Coal,11782.1
-Australia,2012-10-01,Distillate,0.31
-Australia,2012-10-01,Gas,2267.05
-Australia,2012-10-01,Hydro,1475.06
-Australia,2012-10-01,Solar,0
-Australia,2012-10-01,Wind,503.11
-Australia,2012-11-01,Bioenergy,64.39
-Australia,2012-11-01,Coal,12145.18
-Australia,2012-11-01,Distillate,2.49
-Australia,2012-11-01,Gas,2075.05
-Australia,2012-11-01,Hydro,1133.53
-Australia,2012-11-01,Solar,0
-Australia,2012-11-01,Wind,494.23
-Australia,2012-12-01,Bioenergy,35.45
-Australia,2012-12-01,Coal,12605.87
-Australia,2012-12-01,Distillate,10.03
-Australia,2012-12-01,Gas,2003.41
-Australia,2012-12-01,Hydro,1115.82
-Australia,2012-12-01,Solar,0
-Australia,2012-12-01,Wind,622.9
-Australia,2013-01-01,Bioenergy,15.83
-Australia,2013-01-01,Coal,13122.49
-Australia,2013-01-01,Distillate,37.45
-Australia,2013-01-01,Gas,2318.95
-Australia,2013-01-01,Hydro,1260.82
-Australia,2013-01-01,Solar,0
-Australia,2013-01-01,Wind,555.92
-Australia,2013-02-01,Bioenergy,20.18
-Australia,2013-02-01,Coal,11620.7
-Australia,2013-02-01,Distillate,2.32
-Australia,2013-02-01,Gas,2111.89
-Australia,2013-02-01,Hydro,1303.63
-Australia,2013-02-01,Solar,0
-Australia,2013-02-01,Wind,509.23
-Australia,2013-03-01,Bioenergy,22.13
-Australia,2013-03-01,Coal,12791.56
-Australia,2013-03-01,Distillate,1.39
-Australia,2013-03-01,Gas,2040.03
-Australia,2013-03-01,Hydro,1243.59
-Australia,2013-03-01,Solar,0
-Australia,2013-03-01,Wind,616.87
-Australia,2013-04-01,Bioenergy,8.6
-Australia,2013-04-01,Coal,11886.09
-Australia,2013-04-01,Distillate,0.52
-Australia,2013-04-01,Gas,1684.08
-Australia,2013-04-01,Hydro,1353
-Australia,2013-04-01,Solar,0
-Australia,2013-04-01,Wind,464.2
-Australia,2013-05-01,Bioenergy,11.64
-Australia,2013-05-01,Coal,12832.26
-Australia,2013-05-01,Distillate,3.74
-Australia,2013-05-01,Gas,1672.83
-Australia,2013-05-01,Hydro,1564.19
-Australia,2013-05-01,Solar,0
-Australia,2013-05-01,Wind,635.72
-Australia,2013-06-01,Bioenergy,24.69
-Australia,2013-06-01,Coal,12914.09
-Australia,2013-06-01,Distillate,1.09
-Australia,2013-06-01,Gas,1846.98
-Australia,2013-06-01,Hydro,1532.81
-Australia,2013-06-01,Solar,0
-Australia,2013-06-01,Wind,489.47
-Australia,2013-07-01,Bioenergy,30.49
-Australia,2013-07-01,Coal,12805.04
-Australia,2013-07-01,Distillate,0.22
-Australia,2013-07-01,Gas,1831.77
-Australia,2013-07-01,Hydro,1903.49
-Australia,2013-07-01,Solar,0
-Australia,2013-07-01,Wind,747.14
-Australia,2013-08-01,Bioenergy,49.85
-Australia,2013-08-01,Coal,12097.09
-Australia,2013-08-01,Distillate,17.46
-Australia,2013-08-01,Gas,1913.54
-Australia,2013-08-01,Hydro,1762.35
-Australia,2013-08-01,Solar,0
-Australia,2013-08-01,Wind,1021.89
-Australia,2013-09-01,Bioenergy,61.06
-Australia,2013-09-01,Coal,10956.19
-Australia,2013-09-01,Distillate,21.63
-Australia,2013-09-01,Gas,1832.27
-Australia,2013-09-01,Hydro,1671.24
-Australia,2013-09-01,Solar,0
-Australia,2013-09-01,Wind,799.02
-Australia,2013-10-01,Bioenergy,35.97
-Australia,2013-10-01,Coal,11533.37
-Australia,2013-10-01,Distillate,3.45
-Australia,2013-10-01,Gas,1711.51
-Australia,2013-10-01,Hydro,1779.74
-Australia,2013-10-01,Solar,0
-Australia,2013-10-01,Wind,869.13
-Australia,2013-11-01,Bioenergy,10.48
-Australia,2013-11-01,Coal,11436.39
-Australia,2013-11-01,Distillate,0.19
-Australia,2013-11-01,Gas,1800.66
-Australia,2013-11-01,Hydro,1575.62
-Australia,2013-11-01,Solar,0
-Australia,2013-11-01,Wind,638.57
-Australia,2013-12-01,Bioenergy,18.94
-Australia,2013-12-01,Coal,12208.76
-Australia,2013-12-01,Distillate,0.81
-Australia,2013-12-01,Gas,2142.7
-Australia,2013-12-01,Hydro,1619.32
-Australia,2013-12-01,Solar,0
-Australia,2013-12-01,Wind,712.34
-Australia,2014-01-01,Bioenergy,31.52
-Australia,2014-01-01,Coal,13722.34
-Australia,2014-01-01,Distillate,6.53
-Australia,2014-01-01,Gas,2911.02
-Australia,2014-01-01,Hydro,1161.03
-Australia,2014-01-01,Solar,0
-Australia,2014-01-01,Wind,907.68
-Australia,2014-02-01,Bioenergy,33.54
-Australia,2014-02-01,Coal,12476.21
-Australia,2014-02-01,Distillate,3.93
-Australia,2014-02-01,Gas,2597.38
-Australia,2014-02-01,Hydro,1033.45
-Australia,2014-02-01,Solar,0
-Australia,2014-02-01,Wind,759.78
-Australia,2014-03-01,Bioenergy,34.58
-Australia,2014-03-01,Coal,13335.48
-Australia,2014-03-01,Distillate,2.04
-Australia,2014-03-01,Gas,2670.99
-Australia,2014-03-01,Hydro,1007.2
-Australia,2014-03-01,Solar,0
-Australia,2014-03-01,Wind,659.94
-Australia,2014-04-01,Bioenergy,9.55
-Australia,2014-04-01,Coal,12167.49
-Australia,2014-04-01,Distillate,2.78
-Australia,2014-04-01,Gas,2551.07
-Australia,2014-04-01,Hydro,1116.35
-Australia,2014-04-01,Solar,0
-Australia,2014-04-01,Wind,657.83
-Australia,2014-05-01,Bioenergy,19.28
-Australia,2014-05-01,Coal,12610.99
-Australia,2014-05-01,Distillate,2.31
-Australia,2014-05-01,Gas,2794.07
-Australia,2014-05-01,Hydro,1512.15
-Australia,2014-05-01,Solar,0
-Australia,2014-05-01,Wind,715.08
-Australia,2014-06-01,Bioenergy,35.48
-Australia,2014-06-01,Coal,12191.2
-Australia,2014-06-01,Distillate,1.19
-Australia,2014-06-01,Gas,2947.47
-Australia,2014-06-01,Hydro,1675.6
-Australia,2014-06-01,Solar,0
-Australia,2014-06-01,Wind,969.8
-Australia,2014-07-01,Bioenergy,71.84
-Australia,2014-07-01,Coal,13398.05
-Australia,2014-07-01,Distillate,0.53
-Australia,2014-07-01,Gas,2936.42
-Australia,2014-07-01,Hydro,1461.72
-Australia,2014-07-01,Solar,0
-Australia,2014-07-01,Wind,1153.54
-Australia,2014-08-01,Bioenergy,58.08
-Australia,2014-08-01,Coal,13502.83
-Australia,2014-08-01,Distillate,0.17
-Australia,2014-08-01,Gas,2713.93
-Australia,2014-08-01,Hydro,1354.92
-Australia,2014-08-01,Solar,0
-Australia,2014-08-01,Wind,680.27
-Australia,2014-09-01,Bioenergy,68.86
-Australia,2014-09-01,Coal,12329.96
-Australia,2014-09-01,Distillate,0.95
-Australia,2014-09-01,Gas,2142.11
-Australia,2014-09-01,Hydro,1100.22
-Australia,2014-09-01,Solar,0
-Australia,2014-09-01,Wind,885.36
-Australia,2014-10-01,Bioenergy,71.96
-Australia,2014-10-01,Coal,12581.86
-Australia,2014-10-01,Distillate,0.14
-Australia,2014-10-01,Gas,2348.95
-Australia,2014-10-01,Hydro,969.89
-Australia,2014-10-01,Solar,0
-Australia,2014-10-01,Wind,906.26
-Australia,2014-11-01,Bioenergy,51.35
-Australia,2014-11-01,Coal,12320.23
-Australia,2014-11-01,Distillate,2.62
-Australia,2014-11-01,Gas,2902.03
-Australia,2014-11-01,Hydro,752.52
-Australia,2014-11-01,Solar,0
-Australia,2014-11-01,Wind,873.59
-Australia,2014-12-01,Bioenergy,14.04
-Australia,2014-12-01,Coal,13119.36
-Australia,2014-12-01,Distillate,6.9
-Australia,2014-12-01,Gas,2586.16
-Australia,2014-12-01,Hydro,750.11
-Australia,2014-12-01,Solar,0
-Australia,2014-12-01,Wind,898.31
-Australia,2015-01-01,Bioenergy,23.93
-Australia,2015-01-01,Coal,13680.58
-Australia,2015-01-01,Distillate,15.85
-Australia,2015-01-01,Gas,2623.69
-Australia,2015-01-01,Hydro,885.2
-Australia,2015-01-01,Solar,0
-Australia,2015-01-01,Wind,1054.49
-Australia,2015-02-01,Bioenergy,26.12
-Australia,2015-02-01,Coal,12662.91
-Australia,2015-02-01,Distillate,2.81
-Australia,2015-02-01,Gas,2440.09
-Australia,2015-02-01,Hydro,826.76
-Australia,2015-02-01,Solar,0
-Australia,2015-02-01,Wind,798.99
-Australia,2015-03-01,Bioenergy,35.31
-Australia,2015-03-01,Coal,13513.51
-Australia,2015-03-01,Distillate,6.03
-Australia,2015-03-01,Gas,2576.59
-Australia,2015-03-01,Hydro,887.43
-Australia,2015-03-01,Solar,0
-Australia,2015-03-01,Wind,864.9
-Australia,2015-04-01,Bioenergy,15.4
-Australia,2015-04-01,Coal,12573.65
-Australia,2015-04-01,Distillate,1.11
-Australia,2015-04-01,Gas,2199.09
-Australia,2015-04-01,Hydro,992.2
-Australia,2015-04-01,Solar,0
-Australia,2015-04-01,Wind,850.06
-Australia,2015-05-01,Bioenergy,12.42
-Australia,2015-05-01,Coal,13418.66
-Australia,2015-05-01,Distillate,0.38
-Australia,2015-05-01,Gas,2126.45
-Australia,2015-05-01,Hydro,1209.95
-Australia,2015-05-01,Solar,0
-Australia,2015-05-01,Wind,1180.9
-Australia,2015-06-01,Bioenergy,33.73
-Australia,2015-06-01,Coal,13641.36
-Australia,2015-06-01,Distillate,0.95
-Australia,2015-06-01,Gas,2315.33
-Australia,2015-06-01,Hydro,1469.15
-Australia,2015-06-01,Solar,0
-Australia,2015-06-01,Wind,826.87
-Australia,2015-07-01,Bioenergy,70.11
-Australia,2015-07-01,Coal,14721.8
-Australia,2015-07-01,Distillate,1.98
-Australia,2015-07-01,Gas,2088.36
-Australia,2015-07-01,Hydro,1455.5
-Australia,2015-07-01,Solar,0
-Australia,2015-07-01,Wind,1180.36
-Australia,2015-08-01,Bioenergy,70.33
-Australia,2015-08-01,Coal,13678.77
-Australia,2015-08-01,Distillate,0.89
-Australia,2015-08-01,Gas,2138.61
-Australia,2015-08-01,Hydro,1611.69
-Australia,2015-08-01,Solar,0
-Australia,2015-08-01,Wind,1088.98
-Australia,2015-09-01,Bioenergy,68
-Australia,2015-09-01,Coal,12668.26
-Australia,2015-09-01,Distillate,0.59
-Australia,2015-09-01,Gas,2014.24
-Australia,2015-09-01,Hydro,1311.91
-Australia,2015-09-01,Solar,0
-Australia,2015-09-01,Wind,875.42
-Australia,2015-10-01,Bioenergy,70.05
-Australia,2015-10-01,Coal,12995
-Australia,2015-10-01,Distillate,1.18
-Australia,2015-10-01,Gas,2012.98
-Australia,2015-10-01,Hydro,938.08
-Australia,2015-10-01,Solar,0
-Australia,2015-10-01,Wind,943.36
-Australia,2015-11-01,Bioenergy,24.46
-Australia,2015-11-01,Coal,12969.63
-Australia,2015-11-01,Distillate,1.57
-Australia,2015-11-01,Gas,2305.82
-Australia,2015-11-01,Hydro,804.67
-Australia,2015-11-01,Solar,0
-Australia,2015-11-01,Wind,912.47
-Australia,2015-12-01,Bioenergy,16.97
-Australia,2015-12-01,Coal,13548.01
-Australia,2015-12-01,Distillate,2
-Australia,2015-12-01,Gas,2546.19
-Australia,2015-12-01,Hydro,983.63
-Australia,2015-12-01,Solar,0
-Australia,2015-12-01,Wind,1020.5
-Australia,2016-01-01,Bioenergy,39.19
-Australia,2016-01-01,Coal,13773.92
-Australia,2016-01-01,Distillate,5.09
-Australia,2016-01-01,Gas,2251.75
-Australia,2016-01-01,Hydro,1322.12
-Australia,2016-01-01,Solar,0
-Australia,2016-01-01,Wind,944.5
-Australia,2016-02-01,Bioenergy,36.57
-Australia,2016-02-01,Coal,13600.15
-Australia,2016-02-01,Distillate,23.23
-Australia,2016-02-01,Gas,2166.69
-Australia,2016-02-01,Hydro,1092.03
-Australia,2016-02-01,Solar,0
-Australia,2016-02-01,Wind,822.28
-Australia,2016-03-01,Bioenergy,26.42
-Australia,2016-03-01,Coal,13988.25
-Australia,2016-03-01,Distillate,11.24
-Australia,2016-03-01,Gas,2460.02
-Australia,2016-03-01,Hydro,1141.15
-Australia,2016-03-01,Solar,0
-Australia,2016-03-01,Wind,755.73
-Australia,2016-04-01,Bioenergy,9.56
-Australia,2016-04-01,Coal,12933.61
-Australia,2016-04-01,Distillate,64.04
-Australia,2016-04-01,Gas,2084.34
-Australia,2016-04-01,Hydro,890.69
-Australia,2016-04-01,Solar,0
-Australia,2016-04-01,Wind,773.79
-Australia,2016-05-01,Bioenergy,10.08
-Australia,2016-05-01,Coal,12900.35
-Australia,2016-05-01,Distillate,3.85
-Australia,2016-05-01,Gas,2195.57
-Australia,2016-05-01,Hydro,1247.18
-Australia,2016-05-01,Solar,0
-Australia,2016-05-01,Wind,1382.08
-Australia,2016-06-01,Bioenergy,21.27
-Australia,2016-06-01,Coal,13457.9
-Australia,2016-06-01,Distillate,8.81
-Australia,2016-06-01,Gas,2377.32
-Australia,2016-06-01,Hydro,1681.63
-Australia,2016-06-01,Solar,0
-Australia,2016-06-01,Wind,1116.36
-Australia,2016-07-01,Bioenergy,21.2
-Australia,2016-07-01,Coal,14133.94
-Australia,2016-07-01,Distillate,13.93
-Australia,2016-07-01,Gas,2053.04
-Australia,2016-07-01,Hydro,1738.58
-Australia,2016-07-01,Solar,0
-Australia,2016-07-01,Wind,1381.79
-Australia,2016-08-01,Bioenergy,55.33
-Australia,2016-08-01,Coal,14385.17
-Australia,2016-08-01,Distillate,1.22
-Australia,2016-08-01,Gas,1725.47
-Australia,2016-08-01,Hydro,1620.11
-Australia,2016-08-01,Solar,550.68
-Australia,2016-08-01,Wind,1117.87
-Australia,2016-09-01,Bioenergy,60.6
-Australia,2016-09-01,Coal,12876.73
-Australia,2016-09-01,Distillate,1.5
-Australia,2016-09-01,Gas,1843.05
-Australia,2016-09-01,Hydro,1397.36
-Australia,2016-09-01,Solar,605.19
-Australia,2016-09-01,Wind,955.79
-Australia,2016-10-01,Bioenergy,61.48
-Australia,2016-10-01,Coal,12002.07
-Australia,2016-10-01,Distillate,0.99
-Australia,2016-10-01,Gas,1570.86
-Australia,2016-10-01,Hydro,1921.61
-Australia,2016-10-01,Solar,817.09
-Australia,2016-10-01,Wind,1353.23
-Australia,2016-11-01,Bioenergy,68.07
-Australia,2016-11-01,Coal,12378.68
-Australia,2016-11-01,Distillate,1.7
-Australia,2016-11-01,Gas,1888.43
-Australia,2016-11-01,Hydro,1628.65
-Australia,2016-11-01,Solar,847.39
-Australia,2016-11-01,Wind,1049.19
-Australia,2016-12-01,Bioenergy,52.22
-Australia,2016-12-01,Coal,13742.22
-Australia,2016-12-01,Distillate,3.27
-Australia,2016-12-01,Gas,1617.39
-Australia,2016-12-01,Hydro,1387.86
-Australia,2016-12-01,Solar,842.22
-Australia,2016-12-01,Wind,1052.79
-Australia,2017-01-01,Bioenergy,26.34
-Australia,2017-01-01,Coal,14563.84
-Australia,2017-01-01,Distillate,33.61
-Australia,2017-01-01,Gas,2465.89
-Australia,2017-01-01,Hydro,818.17
-Australia,2017-01-01,Solar,848.38
-Australia,2017-01-01,Wind,1009.77
-Australia,2017-02-01,Bioenergy,25.69
-Australia,2017-02-01,Coal,12936.22
-Australia,2017-02-01,Distillate,41.58
-Australia,2017-02-01,Gas,2426.86
-Australia,2017-02-01,Hydro,908.76
-Australia,2017-02-01,Solar,773.28
-Australia,2017-02-01,Wind,953.55
-Australia,2017-03-01,Bioenergy,24.79
-Australia,2017-03-01,Coal,13893.34
-Australia,2017-03-01,Distillate,5.74
-Australia,2017-03-01,Gas,2633.38
-Australia,2017-03-01,Hydro,691.67
-Australia,2017-03-01,Solar,716.29
-Australia,2017-03-01,Wind,1010.33
-Australia,2017-04-01,Bioenergy,11.76
-Australia,2017-04-01,Coal,11975.74
-Australia,2017-04-01,Distillate,0.09
-Australia,2017-04-01,Gas,2534.44
-Australia,2017-04-01,Hydro,659.1
-Australia,2017-04-01,Solar,645.51
-Australia,2017-04-01,Wind,778.57
-Australia,2017-05-01,Bioenergy,16.31
-Australia,2017-05-01,Coal,13086.43
-Australia,2017-05-01,Distillate,1.26
-Australia,2017-05-01,Gas,2444.38
-Australia,2017-05-01,Hydro,1343.07
-Australia,2017-05-01,Solar,543.15
-Australia,2017-05-01,Wind,910.33
-Australia,2017-06-01,Bioenergy,27.75
-Australia,2017-06-01,Coal,13718.1
-Australia,2017-06-01,Distillate,0.44
-Australia,2017-06-01,Gas,2645.32
-Australia,2017-06-01,Hydro,1403.43
-Australia,2017-06-01,Solar,486.96
-Australia,2017-06-01,Wind,586.26
-Australia,2017-07-01,Bioenergy,69.25
-Australia,2017-07-01,Coal,13716.58
-Australia,2017-07-01,Distillate,0.76
-Australia,2017-07-01,Gas,2494.61
-Australia,2017-07-01,Hydro,1423.8
-Australia,2017-07-01,Solar,551.64
-Australia,2017-07-01,Wind,1449.85
-Australia,2017-08-01,Bioenergy,65.7
-Australia,2017-08-01,Coal,13414.84
-Australia,2017-08-01,Distillate,5.26
-Australia,2017-08-01,Gas,2395.34
-Australia,2017-08-01,Hydro,1487.52
-Australia,2017-08-01,Solar,692.53
-Australia,2017-08-01,Wind,1330.58
-Australia,2017-09-01,Bioenergy,62.61
-Australia,2017-09-01,Coal,11889.57
-Australia,2017-09-01,Distillate,1.55
-Australia,2017-09-01,Gas,2200.5
-Australia,2017-09-01,Hydro,1271.39
-Australia,2017-09-01,Solar,807.24
-Australia,2017-09-01,Wind,1563.88
-Australia,2017-10-01,Bioenergy,50.46
-Australia,2017-10-01,Coal,11998.96
-Australia,2017-10-01,Distillate,3.54
-Australia,2017-10-01,Gas,2255.18
-Australia,2017-10-01,Hydro,1328.92
-Australia,2017-10-01,Solar,868.72
-Australia,2017-10-01,Wind,1148.2
-Australia,2017-11-01,Bioenergy,66.71
-Australia,2017-11-01,Coal,12332.66
-Australia,2017-11-01,Distillate,2.86
-Australia,2017-11-01,Gas,2676.15
-Australia,2017-11-01,Hydro,832.76
-Australia,2017-11-01,Solar,907.26
-Australia,2017-11-01,Wind,990.82
-Australia,2017-12-01,Bioenergy,30.68
-Australia,2017-12-01,Coal,13581.31
-Australia,2017-12-01,Distillate,0.84
-Australia,2017-12-01,Gas,2431.07
-Australia,2017-12-01,Hydro,754.63
-Australia,2017-12-01,Solar,1009.14
-Australia,2017-12-01,Wind,1132.61
-Australia,2018-01-01,Bioenergy,32.98
-Australia,2018-01-01,Coal,14156.68
-Australia,2018-01-01,Distillate,4.96
-Australia,2018-01-01,Gas,2526.21
-Australia,2018-01-01,Hydro,1089.14
-Australia,2018-01-01,Solar,1020.84
-Australia,2018-01-01,Wind,1154.49
-Australia,2018-02-01,Bioenergy,26.24
-Australia,2018-02-01,Coal,12709.65
-Australia,2018-02-01,Distillate,5.86
-Australia,2018-02-01,Gas,2095.17
-Australia,2018-02-01,Hydro,936.93
-Australia,2018-02-01,Solar,872.27
-Australia,2018-02-01,Wind,1097.63
-Australia,2018-03-01,Bioenergy,13.89
-Australia,2018-03-01,Coal,13189.17
-Australia,2018-03-01,Distillate,1.08
-Australia,2018-03-01,Gas,2171.94
-Australia,2018-03-01,Hydro,1114.71
-Australia,2018-03-01,Solar,888.98
-Australia,2018-03-01,Wind,1292.31
-Australia,2018-04-01,Bioenergy,15.51
-Australia,2018-04-01,Coal,12313.24
-Australia,2018-04-01,Distillate,1.07
-Australia,2018-04-01,Gas,1949.22
-Australia,2018-04-01,Hydro,1403.62
-Australia,2018-04-01,Solar,787.03
-Australia,2018-04-01,Wind,971.4
-Australia,2018-05-01,Bioenergy,13.81
-Australia,2018-05-01,Coal,13064.36
-Australia,2018-05-01,Distillate,0.43
-Australia,2018-05-01,Gas,1938.44
-Australia,2018-05-01,Hydro,1510.08
-Australia,2018-05-01,Solar,695.92
-Australia,2018-05-01,Wind,1365.42
-Australia,2018-06-01,Bioenergy,19.58
-Australia,2018-06-01,Coal,13346.04
-Australia,2018-06-01,Distillate,2.57
-Australia,2018-06-01,Gas,2239.91
-Australia,2018-06-01,Hydro,1939.54
-Australia,2018-06-01,Solar,627.21
-Australia,2018-06-01,Wind,1137.81
-Australia,2018-07-01,Bioenergy,36.2
-Australia,2018-07-01,Coal,13556.04
-Australia,2018-07-01,Distillate,2.94
-Australia,2018-07-01,Gas,1890.63
-Australia,2018-07-01,Hydro,1823.16
-Australia,2018-07-01,Solar,746.04
-Australia,2018-07-01,Wind,1752.49
-Australia,2018-08-01,Bioenergy,50.06
-Australia,2018-08-01,Coal,12793.76
-Australia,2018-08-01,Distillate,1.5
-Australia,2018-08-01,Gas,2051.35
-Australia,2018-08-01,Hydro,1952.93
-Australia,2018-08-01,Solar,955.82
-Australia,2018-08-01,Wind,1772.64
-Australia,2018-09-01,Bioenergy,46.41
-Australia,2018-09-01,Coal,11968.47
-Australia,2018-09-01,Distillate,0.42
-Australia,2018-09-01,Gas,1867.9
-Australia,2018-09-01,Hydro,1492.45
-Australia,2018-09-01,Solar,1130.92
-Australia,2018-09-01,Wind,1328.96
-Australia,2018-10-01,Bioenergy,44.9
-Australia,2018-10-01,Coal,12463.87
-Australia,2018-10-01,Distillate,2
-Australia,2018-10-01,Gas,1625.42
-Australia,2018-10-01,Hydro,1068.9
-Australia,2018-10-01,Solar,1249.72
-Australia,2018-10-01,Wind,1341.48
-Australia,2018-11-01,Bioenergy,35.64
-Australia,2018-11-01,Coal,11997.27
-Australia,2018-11-01,Distillate,1.23
-Australia,2018-11-01,Gas,1697.67
-Australia,2018-11-01,Hydro,1158.6
-Australia,2018-11-01,Solar,1422.89
-Australia,2018-11-01,Wind,1312.12
-Australia,2018-12-01,Bioenergy,30.13
-Australia,2018-12-01,Coal,13055.94
-Australia,2018-12-01,Distillate,1.98
-Australia,2018-12-01,Gas,1669.3
-Australia,2018-12-01,Hydro,1214.85
-Australia,2018-12-01,Solar,1543.81
-Australia,2018-12-01,Wind,1376.09
-Australia,2019-01-01,Bioenergy,27.92
-Australia,2019-01-01,Coal,13965.33
-Australia,2019-01-01,Distillate,3.68
-Australia,2019-01-01,Gas,2579.37
-Australia,2019-01-01,Hydro,1151.53
-Australia,2019-01-01,Solar,1612.42
-Australia,2019-01-01,Wind,1318.59
-Australia,2019-02-01,Bioenergy,27.67
-Australia,2019-02-01,Coal,12170.57
-Australia,2019-02-01,Distillate,2.47
-Australia,2019-02-01,Gas,2157.31
-Australia,2019-02-01,Hydro,745.12
-Australia,2019-02-01,Solar,1390.13
-Australia,2019-02-01,Wind,1374.13
-Australia,2019-03-01,Bioenergy,28.45
-Australia,2019-03-01,Coal,13217.09
-Australia,2019-03-01,Distillate,2.34
-Australia,2019-03-01,Gas,2403.74
-Australia,2019-03-01,Hydro,808.88
-Australia,2019-03-01,Solar,1350.72
-Australia,2019-03-01,Wind,1344.59
-Australia,2019-04-01,Bioenergy,15.08
-Australia,2019-04-01,Coal,11935.45
-Australia,2019-04-01,Distillate,1.95
-Australia,2019-04-01,Gas,1680.87
-Australia,2019-04-01,Hydro,921.31
-Australia,2019-04-01,Solar,1202.56
-Australia,2019-04-01,Wind,1404.95
-Australia,2019-05-01,Bioenergy,8.78
-Australia,2019-05-01,Coal,12548.59
-Australia,2019-05-01,Distillate,3.81
-Australia,2019-05-01,Gas,2055.2
-Australia,2019-05-01,Hydro,1284.12
-Australia,2019-05-01,Solar,1011.31
-Australia,2019-05-01,Wind,1654.35
-Australia,2019-06-01,Bioenergy,27.2
-Australia,2019-06-01,Coal,12758.22
-Australia,2019-06-01,Distillate,5.17
-Australia,2019-06-01,Gas,2221.96
-Australia,2019-06-01,Hydro,1636.3
-Australia,2019-06-01,Solar,882.73
-Australia,2019-06-01,Wind,1494.38
-Australia,2019-07-01,Bioenergy,37.52
-Australia,2019-07-01,Coal,12862.74
-Australia,2019-07-01,Distillate,1.79
-Australia,2019-07-01,Gas,2263.32
-Australia,2019-07-01,Hydro,1547.14
-Australia,2019-07-01,Solar,1081.54
-Australia,2019-07-01,Wind,1870.15
-Australia,2019-08-01,Bioenergy,46.24
-Australia,2019-08-01,Coal,12282.79
-Australia,2019-08-01,Distillate,1.95
-Australia,2019-08-01,Gas,2514.89
-Australia,2019-08-01,Hydro,1462.22
-Australia,2019-08-01,Solar,1385.53
-Australia,2019-08-01,Wind,1885.57
-Australia,2019-09-01,Bioenergy,40.81
-Australia,2019-09-01,Coal,10877.16
-Australia,2019-09-01,Distillate,1.39
-Australia,2019-09-01,Gas,2310.1
-Australia,2019-09-01,Hydro,1208.31
-Australia,2019-09-01,Solar,1615.87
-Australia,2019-09-01,Wind,1606.65
-Australia,2019-10-01,Bioenergy,30.48
-Australia,2019-10-01,Coal,11177.91
-Australia,2019-10-01,Distillate,2.05
-Australia,2019-10-01,Gas,2320.85
-Australia,2019-10-01,Hydro,971.66
-Australia,2019-10-01,Solar,1861.67
-Australia,2019-10-01,Wind,1589.54
-Australia,2019-11-01,Bioenergy,31.36
-Australia,2019-11-01,Coal,11383.41
-Australia,2019-11-01,Distillate,2.01
-Australia,2019-11-01,Gas,1693.23
-Australia,2019-11-01,Hydro,999.16
-Australia,2019-11-01,Solar,2072.96
-Australia,2019-11-01,Wind,1814.45
-Australia,2019-12-01,Bioenergy,27.56
-Australia,2019-12-01,Coal,12797.23
-Australia,2019-12-01,Distillate,1.32
-Australia,2019-12-01,Gas,1769.19
-Australia,2019-12-01,Hydro,992.75
-Australia,2019-12-01,Solar,2292.76
-Australia,2019-12-01,Wind,1706.04
-Australia,2020-01-01,Bioenergy,19.79
-Australia,2020-01-01,Coal,13295.94
-Australia,2020-01-01,Distillate,1.92
-Australia,2020-01-01,Gas,1983.08
-Australia,2020-01-01,Hydro,1074.37
-Australia,2020-01-01,Solar,2036.11
-Australia,2020-01-01,Wind,1642.18
-Australia,2020-02-01,Bioenergy,27.26
-Australia,2020-02-01,Coal,12133.36
-Australia,2020-02-01,Distillate,3.71
-Australia,2020-02-01,Gas,2137.77
-Australia,2020-02-01,Hydro,1049.17
-Australia,2020-02-01,Solar,1752.49
-Australia,2020-02-01,Wind,1391.2
-Australia,2020-03-01,Bioenergy,11.88
-Australia,2020-03-01,Coal,11758.64
-Australia,2020-03-01,Distillate,0.3
-Australia,2020-03-01,Gas,2015.74
-Australia,2020-03-01,Hydro,1068.04
-Australia,2020-03-01,Solar,1835.93
-Australia,2020-03-01,Wind,1708.68
-Australia,2020-04-01,Bioenergy,8.99
-Australia,2020-04-01,Coal,10994.03
-Australia,2020-04-01,Distillate,0.11
-Australia,2020-04-01,Gas,1634.88
-Australia,2020-04-01,Hydro,1228.21
-Australia,2020-04-01,Solar,1542.13
-Australia,2020-04-01,Wind,1578.01
-Australia,2020-05-01,Bioenergy,7.98
-Australia,2020-05-01,Coal,11666.99
-Australia,2020-05-01,Distillate,2.57
-Australia,2020-05-01,Gas,2000.22
-Australia,2020-05-01,Hydro,1479.63
-Australia,2020-05-01,Solar,1348.96
-Australia,2020-05-01,Wind,1904.38
-Australia,2020-06-01,Bioenergy,21.98
-Australia,2020-06-01,Coal,12332.75
-Australia,2020-06-01,Distillate,0.49
-Australia,2020-06-01,Gas,2218.02
-Australia,2020-06-01,Hydro,1527.31
-Australia,2020-06-01,Solar,1160.34
-Australia,2020-06-01,Wind,1651.69
-Australia,2020-07-01,Bioenergy,22.8
-Australia,2020-07-01,Coal,12840.05
-Australia,2020-07-01,Distillate,0.22
-Australia,2020-07-01,Gas,2578.68
-Australia,2020-07-01,Hydro,1541.17
-Australia,2020-07-01,Solar,1313.46
-Australia,2020-07-01,Wind,1559.73
-Australia,2020-08-01,Bioenergy,30.31
-Australia,2020-08-01,Coal,12205.36
-Australia,2020-08-01,Distillate,0.61
-Australia,2020-08-01,Gas,2027.21
-Australia,2020-08-01,Hydro,1221.79
-Australia,2020-08-01,Solar,1645.31
-Australia,2020-08-01,Wind,2206.71
-Australia,2020-09-01,Bioenergy,39.65
-Australia,2020-09-01,Coal,10652.02
-Australia,2020-09-01,Distillate,4.14
-Australia,2020-09-01,Gas,1377.13
-Australia,2020-09-01,Hydro,1047.48
-Australia,2020-09-01,Solar,1936.53
-Australia,2020-09-01,Wind,2299.59
-Australia,2020-10-01,Bioenergy,39.46
-Australia,2020-10-01,Coal,10543.63
-Australia,2020-10-01,Distillate,0.62
-Australia,2020-10-01,Gas,1622.34
-Australia,2020-10-01,Hydro,1204.95
-Australia,2020-10-01,Solar,2258.31
-Australia,2020-10-01,Wind,2029.57
-Australia,2020-11-01,Bioenergy,34.15
-Australia,2020-11-01,Coal,11035.5
-Australia,2020-11-01,Distillate,0.98
-Australia,2020-11-01,Gas,1395.04
-Australia,2020-11-01,Hydro,951.61
-Australia,2020-11-01,Solar,2662.69
-Australia,2020-11-01,Wind,1971.82
-Australia,2020-12-01,Bioenergy,20.04
-Australia,2020-12-01,Coal,11613.59
-Australia,2020-12-01,Distillate,4.19
-Australia,2020-12-01,Gas,1484.68
-Australia,2020-12-01,Hydro,919.82
-Australia,2020-12-01,Solar,2709.85
-Australia,2020-12-01,Wind,2257.79
-Australia,2021-01-01,Bioenergy,19.26
-Australia,2021-01-01,Coal,11983.85
-Australia,2021-01-01,Distillate,1.84
-Australia,2021-01-01,Gas,1428.33
-Australia,2021-01-01,Hydro,1026.72
-Australia,2021-01-01,Solar,2752.77
-Australia,2021-01-01,Wind,2234.41
-Australia,2021-02-01,Bioenergy,22.22
-Australia,2021-02-01,Coal,11009.05
-Australia,2021-02-01,Distillate,1.56
-Australia,2021-02-01,Gas,1181.54
-Australia,2021-02-01,Hydro,979.31
-Australia,2021-02-01,Solar,2380.94
-Australia,2021-02-01,Wind,1914.07
-Australia,2021-03-01,Bioenergy,10.25
-Australia,2021-03-01,Coal,11803.43
-Australia,2021-03-01,Distillate,2.77
-Australia,2021-03-01,Gas,1370.81
-Australia,2021-03-01,Hydro,1223.23
-Australia,2021-03-01,Solar,2282.45
-Australia,2021-03-01,Wind,1998.54
-Australia,2021-04-01,Bioenergy,8.76
-Australia,2021-04-01,Coal,11213.31
-Australia,2021-04-01,Distillate,2.34
-Australia,2021-04-01,Gas,1385.43
-Australia,2021-04-01,Hydro,1312.5
-Australia,2021-04-01,Solar,2012.88
-Australia,2021-04-01,Wind,1641.78
-Australia,2021-05-01,Bioenergy,8.42
-Australia,2021-05-01,Coal,11813.73
-Australia,2021-05-01,Distillate,21.43
-Australia,2021-05-01,Gas,1668.37
-Australia,2021-05-01,Hydro,1493.63
-Australia,2021-05-01,Solar,1761.35
-Australia,2021-05-01,Wind,2068.69
-Australia,2021-06-01,Bioenergy,21.75
-Australia,2021-06-01,Coal,11817.27
-Australia,2021-06-01,Distillate,14.87
-Australia,2021-06-01,Gas,2411.79
-Australia,2021-06-01,Hydro,1710.51
-Australia,2021-06-01,Solar,1376.7
-Australia,2021-06-01,Wind,2158.91
-Australia,2021-07-01,Bioenergy,33.48
-Australia,2021-07-01,Coal,12725.82
-Australia,2021-07-01,Distillate,33.19
-Australia,2021-07-01,Gas,1869.86
-Australia,2021-07-01,Hydro,1540.14
-Australia,2021-07-01,Solar,1566.82
-Australia,2021-07-01,Wind,2785.23
-Australia,2021-08-01,Bioenergy,40.95
-Australia,2021-08-01,Coal,11604.64
-Australia,2021-08-01,Distillate,3.28
-Australia,2021-08-01,Gas,1596.3
-Australia,2021-08-01,Hydro,1426.52
-Australia,2021-08-01,Solar,2095.16
-Australia,2021-08-01,Wind,2499.29
-Australia,2021-09-01,Bioenergy,29.03
-Australia,2021-09-01,Coal,10188.88
-Australia,2021-09-01,Distillate,6.07
-Australia,2021-09-01,Gas,1251.25
-Australia,2021-09-01,Hydro,1338.59
-Australia,2021-09-01,Solar,2517.5
-Australia,2021-09-01,Wind,2406.58
-Australia,2021-10-01,Bioenergy,35.71
-Australia,2021-10-01,Coal,10341.2
-Australia,2021-10-01,Distillate,8.05
-Australia,2021-10-01,Gas,1172.31
-Australia,2021-10-01,Hydro,1343.14
-Australia,2021-10-01,Solar,2994.8
-Australia,2021-10-01,Wind,2184.05
-Australia,2021-11-01,Bioenergy,26.35
-Australia,2021-11-01,Coal,10266.31
-Australia,2021-11-01,Distillate,2.54
-Australia,2021-11-01,Gas,1120.71
-Australia,2021-11-01,Hydro,1340.45
-Australia,2021-11-01,Solar,2779
-Australia,2021-11-01,Wind,2224.86
-Australia,2021-12-01,Bioenergy,20.21
-Australia,2021-12-01,Coal,10884.65
-Australia,2021-12-01,Distillate,5.92
-Australia,2021-12-01,Gas,1252.45
-Australia,2021-12-01,Hydro,1069.05
-Australia,2021-12-01,Solar,3737.55
-Australia,2021-12-01,Wind,2245.55
-Australia,2022-01-01,Bioenergy,20.09
-Australia,2022-01-01,Coal,11852.15
-Australia,2022-01-01,Distillate,3.68
-Australia,2022-01-01,Gas,1477.22
-Australia,2022-01-01,Hydro,1190.81
-Australia,2022-01-01,Solar,3495.91
-Australia,2022-01-01,Wind,2425.7
-Australia,2022-02-01,Bioenergy,13.31
-Australia,2022-02-01,Coal,10301.83
-Australia,2022-02-01,Distillate,3.02
-Australia,2022-02-01,Gas,1394.39
-Australia,2022-02-01,Hydro,1000.91
-Australia,2022-02-01,Solar,3157.27
-Australia,2022-02-01,Wind,2230.3
-Australia,2022-03-01,Bioenergy,7.02
-Australia,2022-03-01,Coal,11559.5
-Australia,2022-03-01,Distillate,1.78
-Australia,2022-03-01,Gas,1511.86
-Australia,2022-03-01,Hydro,1131.88
-Australia,2022-03-01,Solar,2932.01
-Australia,2022-03-01,Wind,2212.07
-Australia,2022-04-01,Bioenergy,7.53
-Australia,2022-04-01,Coal,10382.14
-Australia,2022-04-01,Distillate,4.31
-Australia,2022-04-01,Gas,1648.7
-Australia,2022-04-01,Hydro,1109.7
-Australia,2022-04-01,Solar,2309.92
-Australia,2022-04-01,Wind,2093.47
-Australia,2022-05-01,Bioenergy,7.11
-Australia,2022-05-01,Coal,11012.42
-Australia,2022-05-01,Distillate,22.19
-Australia,2022-05-01,Gas,2077.6
-Australia,2022-05-01,Hydro,1894.18
-Australia,2022-05-01,Solar,1856
-Australia,2022-05-01,Wind,2233.36
-Australia,2022-06-01,Bioenergy,14.41
-Australia,2022-06-01,Coal,10790.86
-Australia,2022-06-01,Distillate,32.23
-Australia,2022-06-01,Gas,2740.45
-Australia,2022-06-01,Hydro,1885.14
-Australia,2022-06-01,Solar,1718.69
-Australia,2022-06-01,Wind,2838.01
-Australia,2022-07-01,Bioenergy,12.31
-Australia,2022-07-01,Coal,11785.72
-Australia,2022-07-01,Distillate,12.29
-Australia,2022-07-01,Gas,2649
-Australia,2022-07-01,Hydro,1760.03
-Australia,2022-07-01,Solar,1964.67
-Australia,2022-07-01,Wind,2672.37
-Australia,2022-08-01,Bioenergy,32.29
-Australia,2022-08-01,Coal,11180.16
-Australia,2022-08-01,Distillate,1.53
-Australia,2022-08-01,Gas,1968.37
-Australia,2022-08-01,Hydro,1491.44
-Australia,2022-08-01,Solar,2349.33
-Australia,2022-08-01,Wind,3052.03
-Australia,2022-09-01,Bioenergy,33.07
-Australia,2022-09-01,Coal,10189.27
-Australia,2022-09-01,Distillate,2.61
-Australia,2022-09-01,Gas,1545.23
-Australia,2022-09-01,Hydro,1445.22
-Australia,2022-09-01,Solar,2747.39
-Australia,2022-09-01,Wind,2460.56
-Australia,2022-10-01,Bioenergy,30.15
-Australia,2022-10-01,Coal,10043.58
-Australia,2022-10-01,Distillate,0.51
-Australia,2022-10-01,Gas,1408.04
-Australia,2022-10-01,Hydro,1306.56
-Australia,2022-10-01,Solar,3097.93
-Australia,2022-10-01,Wind,2410.42
-Australia,2022-11-01,Bioenergy,37.19
-Australia,2022-11-01,Coal,9002.31
-Australia,2022-11-01,Distillate,2.13
-Australia,2022-11-01,Gas,1235.79
-Australia,2022-11-01,Hydro,1355.13
-Australia,2022-11-01,Solar,3838.73
-Australia,2022-11-01,Wind,2342.85
-Australia,2022-12-01,Bioenergy,26.82
-Australia,2022-12-01,Coal,9697.95
-Australia,2022-12-01,Distillate,0.51
-Australia,2022-12-01,Gas,1159.33
-Australia,2022-12-01,Hydro,1068.45
-Australia,2022-12-01,Solar,4381.52
-Australia,2022-12-01,Wind,2489.25
-Australia,2023-01-01,Bioenergy,14.79
-Australia,2023-01-01,Coal,10814.18
-Australia,2023-01-01,Distillate,2.82
-Australia,2023-01-01,Gas,1295.75
-Australia,2023-01-01,Hydro,1144.05
-Australia,2023-01-01,Solar,4228.03
-Australia,2023-01-01,Wind,2421.6
-Australia,2023-02-01,Bioenergy,9.88
-Australia,2023-02-01,Coal,10301.1
-Australia,2023-02-01,Distillate,4.52
-Australia,2023-02-01,Gas,1103.11
-Australia,2023-02-01,Hydro,903.54
-Australia,2023-02-01,Solar,3853.7
-Australia,2023-02-01,Wind,2363.91
-Australia,2023-03-01,Bioenergy,8.01
-Australia,2023-03-01,Coal,11158.98
-Australia,2023-03-01,Distillate,2.82
-Australia,2023-03-01,Gas,1599.49
-Australia,2023-03-01,Hydro,1164.04
-Australia,2023-03-01,Solar,3520.22
-Australia,2023-03-01,Wind,2282.2
-Australia,2023-04-01,Bioenergy,6.98
-Australia,2023-04-01,Coal,9878.27
-Australia,2023-04-01,Distillate,4.35
-Australia,2023-04-01,Gas,1481.14
-Australia,2023-04-01,Hydro,1192.92
-Australia,2023-04-01,Solar,2948.14
-Australia,2023-04-01,Wind,2113.64
-Australia,2023-05-01,Bioenergy,8.23
-Australia,2023-05-01,Coal,11035.28
-Australia,2023-05-01,Distillate,9.69
-Australia,2023-05-01,Gas,1992.33
-Australia,2023-05-01,Hydro,1534.4
-Australia,2023-05-01,Solar,2609.74
-Australia,2023-05-01,Wind,2530.58
-Australia,2023-06-01,Bioenergy,26.94
-Australia,2023-06-01,Coal,11001.59
-Australia,2023-06-01,Distillate,6.12
-Australia,2023-06-01,Gas,1824.52
-Australia,2023-06-01,Hydro,1567.93
-Australia,2023-06-01,Solar,2095.03
-Australia,2023-06-01,Wind,3259.56
-Australia,2023-07-01,Bioenergy,14.66
-Australia,2023-07-01,Coal,11294.86
-Australia,2023-07-01,Distillate,0.65
-Australia,2023-07-01,Gas,1688.58
-Australia,2023-07-01,Hydro,1708.14
-Australia,2023-07-01,Solar,2395.41
-Australia,2023-07-01,Wind,3120.44
-Australia,2023-08-01,Bioenergy,51.46
-Australia,2023-08-01,Coal,10661.99
-Australia,2023-08-01,Distillate,4.22
-Australia,2023-08-01,Gas,1785.59
-Australia,2023-08-01,Hydro,1617.24
-Australia,2023-08-01,Solar,3064.17
-Australia,2023-08-01,Wind,2466.21
-Australia,2023-09-01,Bioenergy,48.41
-Australia,2023-09-01,Coal,9198.43
-Australia,2023-09-01,Distillate,0.21
-Australia,2023-09-01,Gas,1244.74
-Australia,2023-09-01,Hydro,1206.76
-Australia,2023-09-01,Solar,3800.79
-Australia,2023-09-01,Wind,2486.41
-Australia,2023-10-01,Bioenergy,59.63
-Australia,2023-10-01,Coal,9321.2
-Australia,2023-10-01,Distillate,0.49
-Australia,2023-10-01,Gas,866.68
-Australia,2023-10-01,Hydro,1130.85
-Australia,2023-10-01,Solar,4308.39
-Australia,2023-10-01,Wind,2896.08
-Australia,2023-11-01,Bioenergy,49.47
-Australia,2023-11-01,Coal,9497.12
-Australia,2023-11-01,Distillate,3.37
-Australia,2023-11-01,Gas,1199.78
-Australia,2023-11-01,Hydro,1098.14
-Australia,2023-11-01,Solar,4285.02
-Australia,2023-11-01,Wind,2326.64
-Australia,2023-12-01,Bioenergy,31.18
-Australia,2023-12-01,Coal,10326.71
-Australia,2023-12-01,Distillate,2.56
-Australia,2023-12-01,Gas,1187.79
-Australia,2023-12-01,Hydro,1019.22
-Australia,2023-12-01,Solar,4797.79
-Australia,2023-12-01,Wind,2667.08
-Australia,2024-01-01,Bioenergy,21.23
-Australia,2024-01-01,Coal,11259.12
-Australia,2024-01-01,Distillate,20.56
-Australia,2024-01-01,Gas,1274.26
-Australia,2024-01-01,Hydro,911.75
-Australia,2024-01-01,Solar,4675.25
-Australia,2024-01-01,Wind,2591.04
-Australia,2024-02-01,Bioenergy,24.42
-Australia,2024-02-01,Coal,10796.12
-Australia,2024-02-01,Distillate,11.6
-Australia,2024-02-01,Gas,1490.37
-Australia,2024-02-01,Hydro,1016.76
-Australia,2024-02-01,Solar,4406.49
-Australia,2024-02-01,Wind,2337.33
-Australia,2024-03-01,Bioenergy,24.26
-Australia,2024-03-01,Coal,10944.2
-Australia,2024-03-01,Distillate,1.27
-Australia,2024-03-01,Gas,1215.64
-Australia,2024-03-01,Hydro,1006.31
-Australia,2024-03-01,Solar,4156.13
-Australia,2024-03-01,Wind,2598.46
-Australia,2024-04-01,Bioenergy,29.38
-Australia,2024-04-01,Coal,10282.7
-Australia,2024-04-01,Distillate,2.12
-Australia,2024-04-01,Gas,1263.09
-Australia,2024-04-01,Hydro,1110.11
-Australia,2024-04-01,Solar,3317.58
-Australia,2024-04-01,Wind,2179.9
-Australia,2024-05-01,Bioenergy,26.29
-Australia,2024-05-01,Coal,11504.57
-Australia,2024-05-01,Distillate,4.79
-Australia,2024-05-01,Gas,1846.75
-Australia,2024-05-01,Hydro,1162.28
-Australia,2024-05-01,Solar,2736.14
-Australia,2024-05-01,Wind,2271.98
-Australia,2024-06-01,Bioenergy,34.74
-Australia,2024-06-01,Coal,12153
-Australia,2024-06-01,Distillate,12.18
-Australia,2024-06-01,Gas,2342.6
-Australia,2024-06-01,Hydro,1236.1
-Australia,2024-06-01,Solar,2348.29
-Australia,2024-06-01,Wind,2182.48
-Australia,2024-07-01,Bioenergy,41.52
-Australia,2024-07-01,Coal,11946.83
-Australia,2024-07-01,Distillate,3.27
-Australia,2024-07-01,Gas,2236.48
-Australia,2024-07-01,Hydro,1263.64
-Australia,2024-07-01,Solar,2672.27
-Australia,2024-07-01,Wind,3232.8
-Australia,2024-08-01,Bioenergy,42.34
-Australia,2024-08-01,Coal,10530.56
-Australia,2024-08-01,Distillate,2.82
-Australia,2024-08-01,Gas,1810.07
-Australia,2024-08-01,Hydro,1115.04
-Australia,2024-08-01,Solar,3240.81
-Australia,2024-08-01,Wind,3216.17
-Australia,2024-09-01,Bioenergy,59.94
-Australia,2024-09-01,Coal,9062.19
-Australia,2024-09-01,Distillate,2.31
-Australia,2024-09-01,Gas,1047.07
-Australia,2024-09-01,Hydro,1160.28
-Australia,2024-09-01,Solar,3848.87
-Australia,2024-09-01,Wind,3367.07
-Australia,2024-10-01,Bioenergy,59.09
-Australia,2024-10-01,Coal,8884.56
-Australia,2024-10-01,Distillate,5.93
-Australia,2024-10-01,Gas,997.46
-Australia,2024-10-01,Hydro,1260.42
-Australia,2024-10-01,Solar,4767.51
-Australia,2024-10-01,Wind,2776.64
-Australia,2024-11-01,Bioenergy,56.3
-Australia,2024-11-01,Coal,9051.15
-Australia,2024-11-01,Distillate,9.95
-Australia,2024-11-01,Gas,1401.51
-Australia,2024-11-01,Hydro,1284.84
-Australia,2024-11-01,Solar,4801.21
-Australia,2024-11-01,Wind,2513.52
-Australia,2024-12-01,Bioenergy,40.65
-Australia,2024-12-01,Coal,10029.25
-Australia,2024-12-01,Distillate,14.5
-Australia,2024-12-01,Gas,1425.25
-Australia,2024-12-01,Hydro,1012.09
-Australia,2024-12-01,Solar,5777.15
-Australia,2024-12-01,Wind,2633.04
-Australia,2025-01-01,Bioenergy,32.1
-Australia,2025-01-01,Coal,10562.24
-Australia,2025-01-01,Distillate,5.83
-Australia,2025-01-01,Gas,1290.25
-Australia,2025-01-01,Hydro,865.96
-Australia,2025-01-01,Solar,5592.85
-Australia,2025-01-01,Wind,2833.79
-Australia,2025-02-01,Bioenergy,20.9
-Australia,2025-02-01,Coal,9666.85
-Australia,2025-02-01,Distillate,3.19
-Australia,2025-02-01,Gas,1235.97
-Australia,2025-02-01,Hydro,871.8
-Australia,2025-02-01,Solar,4896.97
-Australia,2025-02-01,Wind,2757.59
-Australia,2025-03-01,Bioenergy,20.38
-Australia,2025-03-01,Coal,11053.86
-Australia,2025-03-01,Distillate,0.47
-Australia,2025-03-01,Gas,1222.1
-Australia,2025-03-01,Hydro,957.58
-Australia,2025-03-01,Solar,4331.51
-Australia,2025-03-01,Wind,3019.92
-Australia,2025-04-01,Bioenergy,6.65
-Australia,2025-04-01,Coal,9874.66
-Australia,2025-04-01,Distillate,2.34
-Australia,2025-04-01,Gas,1182.68
-Australia,2025-04-01,Hydro,1025.67
-Australia,2025-04-01,Solar,3803.81
-Australia,2025-04-01,Wind,2384.37
-Australia,2025-05-01,Bioenergy,7.29
-Australia,2025-05-01,Coal,10691.44
-Australia,2025-05-01,Distillate,4.29
-Australia,2025-05-01,Gas,1504.26
-Australia,2025-05-01,Hydro,1251.02
-Australia,2025-05-01,Solar,3178.74
-Australia,2025-05-01,Wind,2929.38
-Australia,2025-06-01,Bioenergy,28.81
-Australia,2025-06-01,Coal,11377.79
-Australia,2025-06-01,Distillate,2.03
-Australia,2025-06-01,Gas,2189.9
-Australia,2025-06-01,Hydro,1375.23
-Australia,2025-06-01,Solar,2711.87
-Australia,2025-06-01,Wind,3198.97
-Australia,2025-07-01,Bioenergy,61.94
-Australia,2025-07-01,Coal,11792.56
-Australia,2025-07-01,Distillate,4.2
-Australia,2025-07-01,Gas,1824.57
-Australia,2025-07-01,Hydro,1157.37
-Australia,2025-07-01,Solar,3011.55
-Australia,2025-07-01,Wind,4015.18
-Australia,2025-08-01,Bioenergy,66.01
-Australia,2025-08-01,Coal,10928.92
-Australia,2025-08-01,Distillate,1.21
-Australia,2025-08-01,Gas,1853.29
-Australia,2025-08-01,Hydro,1139.96
-Australia,2025-08-01,Solar,3679.59
-Australia,2025-08-01,Wind,3530.33
-Australia,2025-09-01,Bioenergy,63.88
-Australia,2025-09-01,Coal,8800.42
-Australia,2025-09-01,Distillate,1.93
-Australia,2025-09-01,Gas,1072.79
-Australia,2025-09-01,Hydro,1117.05
-Australia,2025-09-01,Solar,4455.85
-Australia,2025-09-01,Wind,3694.27
-Australia,2025-10-01,Bioenergy,83.32
-Australia,2025-10-01,Coal,8751.66
-Australia,2025-10-01,Distillate,2.52
-Australia,2025-10-01,Gas,1072.67
-Australia,2025-10-01,Hydro,1153.89
-Australia,2025-10-01,Solar,5225.37
-Australia,2025-10-01,Wind,3434.09
-Australia,2025-11-01,Bioenergy,64.57
-Australia,2025-11-01,Coal,8704.88
-Australia,2025-11-01,Distillate,2.14
-Australia,2025-11-01,Gas,837.08
-Australia,2025-11-01,Hydro,1008.25
-Australia,2025-11-01,Solar,5506.25
-Australia,2025-11-01,Wind,3412.34
-Australia,2025-12-01,Bioenergy,48.78
-Australia,2025-12-01,Coal,9221.14
-Australia,2025-12-01,Distillate,1.74
-Australia,2025-12-01,Gas,1039.14
-Australia,2025-12-01,Hydro,974.11
-Australia,2025-12-01,Solar,6350.97
-Australia,2025-12-01,Wind,3240.11
+United Kingdom,2019-01-01T00:00:00Z,Biomass,1413.8586666666665
+United Kingdom,2019-01-01T00:00:00Z,Gas,13268.05
+United Kingdom,2019-01-01T00:00:00Z,Hydro,544.0826666666667
+United Kingdom,2019-01-01T00:00:00Z,Nuclear,4568.441833333333
+United Kingdom,2019-01-01T00:00:00Z,Solar,282.0812438506667
+United Kingdom,2019-01-01T00:00:00Z,Wind,4066.9046666666663
+United Kingdom,2019-02-01T00:00:00Z,Biomass,1190.44325
+United Kingdom,2019-02-01T00:00:00Z,Gas,9682.831
+United Kingdom,2019-02-01T00:00:00Z,Hydro,499.6455833333333
+United Kingdom,2019-02-01T00:00:00Z,Nuclear,4272.338333333333
+United Kingdom,2019-02-01T00:00:00Z,Solar,589.1271491917499
+United Kingdom,2019-02-01T00:00:00Z,Wind,4134.034083333333
+United Kingdom,2019-03-01T00:00:00Z,Biomass,1378.2825
+United Kingdom,2019-03-01T00:00:00Z,Gas,9245.619583333333
+United Kingdom,2019-03-01T00:00:00Z,Hydro,612.9930833333333
+United Kingdom,2019-03-01T00:00:00Z,Nuclear,4229.463583333333
+United Kingdom,2019-03-01T00:00:00Z,Solar,882.5520784953333
+United Kingdom,2019-03-01T00:00:00Z,Wind,4862.225833333333
+United Kingdom,2019-04-01T00:00:00Z,Biomass,1207.3631666666665
+United Kingdom,2019-04-01T00:00:00Z,Gas,9616.091166666667
+United Kingdom,2019-04-01T00:00:00Z,Hydro,314.6250833333333
+United Kingdom,2019-04-01T00:00:00Z,Nuclear,4544.817333333333
+United Kingdom,2019-04-01T00:00:00Z,Solar,1278.9470099779167
+United Kingdom,2019-04-01T00:00:00Z,Wind,3440.4044166666663
+United Kingdom,2019-05-01T00:00:00Z,Biomass,1545.9841666666666
+United Kingdom,2019-05-01T00:00:00Z,Gas,9612.581333333334
+United Kingdom,2019-05-01T00:00:00Z,Hydro,219.41708333333332
+United Kingdom,2019-05-01T00:00:00Z,Nuclear,4540.672833333333
+United Kingdom,2019-05-01T00:00:00Z,Solar,1482.2829875344166
+United Kingdom,2019-05-01T00:00:00Z,Wind,2264.565
+United Kingdom,2019-06-01T00:00:00Z,Biomass,1418.1364999999998
+United Kingdom,2019-06-01T00:00:00Z,Gas,9106.298583333333
+United Kingdom,2019-06-01T00:00:00Z,Hydro,318.1943333333333
+United Kingdom,2019-06-01T00:00:00Z,Nuclear,3199.1266666666666
+United Kingdom,2019-06-01T00:00:00Z,Solar,1283.2972889825833
+United Kingdom,2019-06-01T00:00:00Z,Wind,3024.2347499999996
+United Kingdom,2019-07-01T00:00:00Z,Biomass,1374.2854166666666
+United Kingdom,2019-07-01T00:00:00Z,Gas,9927.833333333334
+United Kingdom,2019-07-01T00:00:00Z,Hydro,309.40799999999996
+United Kingdom,2019-07-01T00:00:00Z,Nuclear,3849.704333333333
+United Kingdom,2019-07-01T00:00:00Z,Solar,1482.7466247801665
+United Kingdom,2019-07-01T00:00:00Z,Wind,2580.145833333333
+United Kingdom,2019-08-01T00:00:00Z,Biomass,1391.5151666666666
+United Kingdom,2019-08-01T00:00:00Z,Gas,7233.662916666666
+United Kingdom,2019-08-01T00:00:00Z,Hydro,435.2813333333333
+United Kingdom,2019-08-01T00:00:00Z,Nuclear,4297.8367499999995
+United Kingdom,2019-08-01T00:00:00Z,Solar,1348.8640647339998
+United Kingdom,2019-08-01T00:00:00Z,Wind,3787.5089166666667
+United Kingdom,2019-09-01T00:00:00Z,Biomass,1254.533
+United Kingdom,2019-09-01T00:00:00Z,Gas,7513.0126666666665
+United Kingdom,2019-09-01T00:00:00Z,Hydro,485.143
+United Kingdom,2019-09-01T00:00:00Z,Nuclear,4630.916499999999
+United Kingdom,2019-09-01T00:00:00Z,Solar,1025.16462695325
+United Kingdom,2019-09-01T00:00:00Z,Wind,3935.7161666666666
+United Kingdom,2019-10-01T00:00:00Z,Biomass,1188.1242499999998
+United Kingdom,2019-10-01T00:00:00Z,Gas,9753.396416666666
+United Kingdom,2019-10-01T00:00:00Z,Hydro,559.4236666666667
+United Kingdom,2019-10-01T00:00:00Z,Nuclear,4927.166916666666
+United Kingdom,2019-10-01T00:00:00Z,Solar,564.0548003686666
+United Kingdom,2019-10-01T00:00:00Z,Wind,4707.2240833333335
+United Kingdom,2019-11-01T00:00:00Z,Biomass,1840.0851666666665
+United Kingdom,2019-11-01T00:00:00Z,Gas,10788.43175
+United Kingdom,2019-11-01T00:00:00Z,Hydro,361.5498333333333
+United Kingdom,2019-11-01T00:00:00Z,Nuclear,4803.354666666666
+United Kingdom,2019-11-01T00:00:00Z,Solar,288.19335668225
+United Kingdom,2019-11-01T00:00:00Z,Wind,4025.6540833333333
+United Kingdom,2019-12-01T00:00:00Z,Biomass,1959.9310833333332
+United Kingdom,2019-12-01T00:00:00Z,Gas,8674.567916666667
+United Kingdom,2019-12-01T00:00:00Z,Hydro,600.6310833333333
+United Kingdom,2019-12-01T00:00:00Z,Nuclear,4773.8205
+United Kingdom,2019-12-01T00:00:00Z,Solar,229.86958545099998
+United Kingdom,2019-12-01T00:00:00Z,Wind,5434.3012499999995
+United Kingdom,2020-01-01T00:00:00Z,Biomass,1752.6723333333332
+United Kingdom,2020-01-01T00:00:00Z,Gas,8296.221583333334
+United Kingdom,2020-01-01T00:00:00Z,Hydro,656.582
+United Kingdom,2020-01-01T00:00:00Z,Nuclear,4972.385833333333
+United Kingdom,2020-01-01T00:00:00Z,Solar,249.7611457885
+United Kingdom,2020-01-01T00:00:00Z,Wind,6328.524166666666
+United Kingdom,2020-02-01T00:00:00Z,Biomass,1415.68425
+United Kingdom,2020-02-01T00:00:00Z,Gas,6640.62125
+United Kingdom,2020-02-01T00:00:00Z,Hydro,656.4194166666666
+United Kingdom,2020-02-01T00:00:00Z,Nuclear,3942.264083333333
+United Kingdom,2020-02-01T00:00:00Z,Solar,460.11141042891666
+United Kingdom,2020-02-01T00:00:00Z,Wind,6893.957166666666
+United Kingdom,2020-03-01T00:00:00Z,Biomass,1593.6838333333333
+United Kingdom,2020-03-01T00:00:00Z,Gas,8436.4565
+United Kingdom,2020-03-01T00:00:00Z,Hydro,629.2219166666666
+United Kingdom,2020-03-01T00:00:00Z,Nuclear,3392.1780833333332
+United Kingdom,2020-03-01T00:00:00Z,Solar,1019.8103889544999
+United Kingdom,2020-03-01T00:00:00Z,Wind,5606.108666666666
+United Kingdom,2020-04-01T00:00:00Z,Biomass,1454.65075
+United Kingdom,2020-04-01T00:00:00Z,Gas,6113.947916666666
+United Kingdom,2020-04-01T00:00:00Z,Hydro,363.8140833333333
+United Kingdom,2020-04-01T00:00:00Z,Nuclear,3782.8759999999997
+United Kingdom,2020-04-01T00:00:00Z,Solar,1484.9925946183332
+United Kingdom,2020-04-01T00:00:00Z,Wind,3407.50675
+United Kingdom,2020-05-01T00:00:00Z,Biomass,1623.31475
+United Kingdom,2020-05-01T00:00:00Z,Gas,5501.2515
+United Kingdom,2020-05-01T00:00:00Z,Hydro,307.32616666666667
+United Kingdom,2020-05-01T00:00:00Z,Nuclear,4119.729833333333
+United Kingdom,2020-05-01T00:00:00Z,Solar,1843.0157387315833
+United Kingdom,2020-05-01T00:00:00Z,Wind,3106.703583333333
+United Kingdom,2020-06-01T00:00:00Z,Biomass,1573.7119166666666
+United Kingdom,2020-06-01T00:00:00Z,Gas,7249.5723333333335
+United Kingdom,2020-06-01T00:00:00Z,Hydro,296.52208333333334
+United Kingdom,2020-06-01T00:00:00Z,Nuclear,3326.0488333333333
+United Kingdom,2020-06-01T00:00:00Z,Solar,1399.6799168073333
+United Kingdom,2020-06-01T00:00:00Z,Wind,3298.5764166666663
+United Kingdom,2020-07-01T00:00:00Z,Biomass,1673.3461666666665
+United Kingdom,2020-07-01T00:00:00Z,Gas,8277.064666666667
+United Kingdom,2020-07-01T00:00:00Z,Hydro,370.91541666666666
+United Kingdom,2020-07-01T00:00:00Z,Nuclear,3866.289583333333
+United Kingdom,2020-07-01T00:00:00Z,Solar,1370.2461054040832
+United Kingdom,2020-07-01T00:00:00Z,Wind,3292.442
+United Kingdom,2020-08-01T00:00:00Z,Biomass,1206.9168333333332
+United Kingdom,2020-08-01T00:00:00Z,Gas,8990.48275
+United Kingdom,2020-08-01T00:00:00Z,Hydro,306.0045
+United Kingdom,2020-08-01T00:00:00Z,Nuclear,3147.3576666666663
+United Kingdom,2020-08-01T00:00:00Z,Solar,1189.5478247948333
+United Kingdom,2020-08-01T00:00:00Z,Wind,3365.0999166666666
+United Kingdom,2020-09-01T00:00:00Z,Biomass,1007.5139166666667
+United Kingdom,2020-09-01T00:00:00Z,Gas,8946.06975
+United Kingdom,2020-09-01T00:00:00Z,Hydro,360.61358333333334
+United Kingdom,2020-09-01T00:00:00Z,Nuclear,3415.666833333333
+United Kingdom,2020-09-01T00:00:00Z,Solar,1055.6972902588334
+United Kingdom,2020-09-01T00:00:00Z,Wind,4110.545416666667
+United Kingdom,2020-10-01T00:00:00Z,Biomass,1332.0866666666666
+United Kingdom,2020-10-01T00:00:00Z,Gas,8291.42075
+United Kingdom,2020-10-01T00:00:00Z,Hydro,520.6626666666666
+United Kingdom,2020-10-01T00:00:00Z,Nuclear,4528.613916666666
+United Kingdom,2020-10-01T00:00:00Z,Solar,506.7485444298333
+United Kingdom,2020-10-01T00:00:00Z,Wind,5262.026
+United Kingdom,2020-11-01T00:00:00Z,Biomass,1554.6600833333332
+United Kingdom,2020-11-01T00:00:00Z,Gas,8622.514833333333
+United Kingdom,2020-11-01T00:00:00Z,Hydro,670.689
+United Kingdom,2020-11-01T00:00:00Z,Nuclear,4244.0365
+United Kingdom,2020-11-01T00:00:00Z,Solar,312.0133539043333
+United Kingdom,2020-11-01T00:00:00Z,Wind,4822.2635
+United Kingdom,2020-12-01T00:00:00Z,Biomass,1805.3075833333332
+United Kingdom,2020-12-01T00:00:00Z,Gas,9821.608583333333
+United Kingdom,2020-12-01T00:00:00Z,Hydro,673.0773333333333
+United Kingdom,2020-12-01T00:00:00Z,Nuclear,4662.982416666667
+United Kingdom,2020-12-01T00:00:00Z,Solar,207.6102838413333
+United Kingdom,2020-12-01T00:00:00Z,Wind,5280.322583333333
+United Kingdom,2021-01-01T00:00:00Z,Biomass,1645.6967499999998
+United Kingdom,2021-01-01T00:00:00Z,Gas,11104.98825
+United Kingdom,2021-01-01T00:00:00Z,Hydro,533.2391666666666
+United Kingdom,2021-01-01T00:00:00Z,Nuclear,4259.5794166666665
+United Kingdom,2021-01-01T00:00:00Z,Solar,233.54212392091665
+United Kingdom,2021-01-01T00:00:00Z,Wind,4858.825083333333
+United Kingdom,2021-02-01T00:00:00Z,Biomass,1543.0100833333333
+United Kingdom,2021-02-01T00:00:00Z,Gas,7894.8358333333335
+United Kingdom,2021-02-01T00:00:00Z,Hydro,421.61358333333334
+United Kingdom,2021-02-01T00:00:00Z,Nuclear,3261.3934166666663
+United Kingdom,2021-02-01T00:00:00Z,Solar,448.14612348016664
+United Kingdom,2021-02-01T00:00:00Z,Wind,5769.499416666667
+United Kingdom,2021-03-01T00:00:00Z,Biomass,1976.7445833333331
+United Kingdom,2021-03-01T00:00:00Z,Gas,9455.126833333334
+United Kingdom,2021-03-01T00:00:00Z,Hydro,513.7489166666667
+United Kingdom,2021-03-01T00:00:00Z,Nuclear,3329.8244999999997
+United Kingdom,2021-03-01T00:00:00Z,Solar,845.7562950378333
+United Kingdom,2021-03-01T00:00:00Z,Wind,4793.592833333333
+United Kingdom,2021-04-01T00:00:00Z,Biomass,1377.5608333333332
+United Kingdom,2021-04-01T00:00:00Z,Gas,10341.01175
+United Kingdom,2021-04-01T00:00:00Z,Hydro,485.42966666666666
+United Kingdom,2021-04-01T00:00:00Z,Nuclear,3575.823083333333
+United Kingdom,2021-04-01T00:00:00Z,Solar,1482.6853490322499
+United Kingdom,2021-04-01T00:00:00Z,Wind,2802.054083333333
+United Kingdom,2021-05-01T00:00:00Z,Biomass,1664.5699166666666
+United Kingdom,2021-05-01T00:00:00Z,Gas,9181.870666666666
+United Kingdom,2021-05-01T00:00:00Z,Hydro,340.1669166666666
+United Kingdom,2021-05-01T00:00:00Z,Nuclear,3392.105583333333
+United Kingdom,2021-05-01T00:00:00Z,Solar,1356.6500476519166
+United Kingdom,2021-05-01T00:00:00Z,Wind,3269.8761666666664
+United Kingdom,2021-06-01T00:00:00Z,Biomass,1586.0855
+United Kingdom,2021-06-01T00:00:00Z,Gas,7575.553583333333
+United Kingdom,2021-06-01T00:00:00Z,Hydro,242.32999999999998
+United Kingdom,2021-06-01T00:00:00Z,Nuclear,3824.827583333333
+United Kingdom,2021-06-01T00:00:00Z,Solar,1444.9741600490831
+United Kingdom,2021-06-01T00:00:00Z,Wind,2516.9883333333332
+United Kingdom,2021-07-01T00:00:00Z,Biomass,1600.7412499999998
+United Kingdom,2021-07-01T00:00:00Z,Gas,8852.690083333333
+United Kingdom,2021-07-01T00:00:00Z,Hydro,234.20158333333333
+United Kingdom,2021-07-01T00:00:00Z,Nuclear,3290.7211666666667
+United Kingdom,2021-07-01T00:00:00Z,Solar,1461.0223256160832
+United Kingdom,2021-07-01T00:00:00Z,Wind,1952.0913333333333
+United Kingdom,2021-08-01T00:00:00Z,Biomass,1303.2710833333333
+United Kingdom,2021-08-01T00:00:00Z,Gas,7628.093416666667
+United Kingdom,2021-08-01T00:00:00Z,Hydro,247.5905833333333
+United Kingdom,2021-08-01T00:00:00Z,Nuclear,3296.8350833333334
+United Kingdom,2021-08-01T00:00:00Z,Solar,1113.8409377495832
+United Kingdom,2021-08-01T00:00:00Z,Wind,3123.094583333333
+United Kingdom,2021-09-01T00:00:00Z,Biomass,1109.7418333333333
+United Kingdom,2021-09-01T00:00:00Z,Gas,8934.001833333334
+United Kingdom,2021-09-01T00:00:00Z,Hydro,294.85741666666667
+United Kingdom,2021-09-01T00:00:00Z,Nuclear,3509.2673333333332
+United Kingdom,2021-09-01T00:00:00Z,Solar,929.0340284661667
+United Kingdom,2021-09-01T00:00:00Z,Wind,2969.7204166666666
+United Kingdom,2021-10-01T00:00:00Z,Biomass,1584.15475
+United Kingdom,2021-10-01T00:00:00Z,Gas,7378.0005
+United Kingdom,2021-10-01T00:00:00Z,Hydro,546.4736666666666
+United Kingdom,2021-10-01T00:00:00Z,Nuclear,3362.376583333333
+United Kingdom,2021-10-01T00:00:00Z,Solar,552.3066656844167
+United Kingdom,2021-10-01T00:00:00Z,Wind,5897.140833333333
+United Kingdom,2021-11-01T00:00:00Z,Biomass,1695.5226666666665
+United Kingdom,2021-11-01T00:00:00Z,Gas,9319.446333333333
+United Kingdom,2021-11-01T00:00:00Z,Hydro,630.4718333333333
+United Kingdom,2021-11-01T00:00:00Z,Nuclear,4049.18275
+United Kingdom,2021-11-01T00:00:00Z,Solar,354.7734544180833
+United Kingdom,2021-11-01T00:00:00Z,Wind,5496.286666666666
+United Kingdom,2021-12-01T00:00:00Z,Biomass,1930.4189166666665
+United Kingdom,2021-12-01T00:00:00Z,Gas,9949.491083333332
+United Kingdom,2021-12-01T00:00:00Z,Hydro,581.2955833333333
+United Kingdom,2021-12-01T00:00:00Z,Nuclear,4255.24975
+United Kingdom,2021-12-01T00:00:00Z,Solar,161.68360810008332
+United Kingdom,2021-12-01T00:00:00Z,Wind,5493.4572499999995
+United Kingdom,2022-01-01T00:00:00Z,Biomass,1720.7085
+United Kingdom,2022-01-01T00:00:00Z,Gas,10377.5505
+United Kingdom,2022-01-01T00:00:00Z,Hydro,575.9830833333333
+United Kingdom,2022-01-01T00:00:00Z,Nuclear,4092.7551666666664
+United Kingdom,2022-01-01T00:00:00Z,Solar,319.49463705725
+United Kingdom,2022-01-01T00:00:00Z,Wind,6075.6849999999995
+United Kingdom,2022-02-01T00:00:00Z,Biomass,1423.3349166666667
+United Kingdom,2022-02-01T00:00:00Z,Gas,5195.751166666667
+United Kingdom,2022-02-01T00:00:00Z,Hydro,620.1188333333333
+United Kingdom,2022-02-01T00:00:00Z,Nuclear,3431.4514166666663
+United Kingdom,2022-02-01T00:00:00Z,Solar,475.8540052485833
+United Kingdom,2022-02-01T00:00:00Z,Wind,7583.820333333333
+United Kingdom,2022-03-01T00:00:00Z,Biomass,1385.18375
+United Kingdom,2022-03-01T00:00:00Z,Gas,9168.404583333333
+United Kingdom,2022-03-01T00:00:00Z,Hydro,516.391
+United Kingdom,2022-03-01T00:00:00Z,Nuclear,4225.78875
+United Kingdom,2022-03-01T00:00:00Z,Solar,1023.0479585838333
+United Kingdom,2022-03-01T00:00:00Z,Wind,4627.232416666667
+United Kingdom,2022-04-01T00:00:00Z,Biomass,1177.7158333333332
+United Kingdom,2022-04-01T00:00:00Z,Gas,9285.088333333333
+United Kingdom,2022-04-01T00:00:00Z,Hydro,332.16841666666664
+United Kingdom,2022-04-01T00:00:00Z,Nuclear,3938.6361666666667
+United Kingdom,2022-04-01T00:00:00Z,Solar,1283.7416519160834
+United Kingdom,2022-04-01T00:00:00Z,Wind,4268.8625
+United Kingdom,2022-05-01T00:00:00Z,Biomass,805.0353333333333
+United Kingdom,2022-05-01T00:00:00Z,Gas,10275.841
+United Kingdom,2022-05-01T00:00:00Z,Hydro,397.15324999999996
+United Kingdom,2022-05-01T00:00:00Z,Nuclear,4070.019333333333
+United Kingdom,2022-05-01T00:00:00Z,Solar,1387.1709411964166
+United Kingdom,2022-05-01T00:00:00Z,Wind,4516.861083333333
+United Kingdom,2022-06-01T00:00:00Z,Biomass,1068.0436666666667
+United Kingdom,2022-06-01T00:00:00Z,Gas,9374.296583333333
+United Kingdom,2022-06-01T00:00:00Z,Hydro,312.9713333333333
+United Kingdom,2022-06-01T00:00:00Z,Nuclear,4134.267416666667
+United Kingdom,2022-06-01T00:00:00Z,Solar,1535.0649473419166
+United Kingdom,2022-06-01T00:00:00Z,Wind,3645.016833333333
+United Kingdom,2022-07-01T00:00:00Z,Biomass,1362.5291666666667
+United Kingdom,2022-07-01T00:00:00Z,Gas,10122.006749999999
+United Kingdom,2022-07-01T00:00:00Z,Hydro,321.258
+United Kingdom,2022-07-01T00:00:00Z,Nuclear,3548.7752499999997
+United Kingdom,2022-07-01T00:00:00Z,Solar,1440.51713383
+United Kingdom,2022-07-01T00:00:00Z,Wind,3451.9746666666665
+United Kingdom,2022-08-01T00:00:00Z,Biomass,1387.8794166666667
+United Kingdom,2022-08-01T00:00:00Z,Gas,10670.7135
+United Kingdom,2022-08-01T00:00:00Z,Hydro,268.09591666666665
+United Kingdom,2022-08-01T00:00:00Z,Nuclear,3344.7451666666666
+United Kingdom,2022-08-01T00:00:00Z,Solar,1479.8781839102498
+United Kingdom,2022-08-01T00:00:00Z,Wind,2730.49075
+United Kingdom,2022-09-01T00:00:00Z,Biomass,1434.7228333333333
+United Kingdom,2022-09-01T00:00:00Z,Gas,9886.184833333333
+United Kingdom,2022-09-01T00:00:00Z,Hydro,236.339
+United Kingdom,2022-09-01T00:00:00Z,Nuclear,3279.2817499999996
+United Kingdom,2022-09-01T00:00:00Z,Solar,935.3039446857499
+United Kingdom,2022-09-01T00:00:00Z,Wind,4454.994416666666
+United Kingdom,2022-10-01T00:00:00Z,Biomass,739.4209999999999
+United Kingdom,2022-10-01T00:00:00Z,Gas,8585.84175
+United Kingdom,2022-10-01T00:00:00Z,Hydro,538.7445
+United Kingdom,2022-10-01T00:00:00Z,Nuclear,3337.474583333333
+United Kingdom,2022-10-01T00:00:00Z,Solar,712.2044175287499
+United Kingdom,2022-10-01T00:00:00Z,Wind,6981.3485833333325
+United Kingdom,2022-11-01T00:00:00Z,Biomass,1202.6328333333333
+United Kingdom,2022-11-01T00:00:00Z,Gas,9450.523666666666
+United Kingdom,2022-11-01T00:00:00Z,Hydro,623.2903333333333
+United Kingdom,2022-11-01T00:00:00Z,Nuclear,3197.3161666666665
+United Kingdom,2022-11-01T00:00:00Z,Solar,319.40042603399996
+United Kingdom,2022-11-01T00:00:00Z,Wind,6925.906749999999
+United Kingdom,2022-12-01T00:00:00Z,Biomass,1284.4301666666665
+United Kingdom,2022-12-01T00:00:00Z,Gas,9411.722833333333
+United Kingdom,2022-12-01T00:00:00Z,Hydro,532.6789166666666
+United Kingdom,2022-12-01T00:00:00Z,Nuclear,4097.500916666667
+United Kingdom,2022-12-01T00:00:00Z,Solar,236.93036957016665
+United Kingdom,2022-12-01T00:00:00Z,Wind,6394.990083333333
+United Kingdom,2023-01-01T00:00:00Z,Biomass,1171.4393333333333
+United Kingdom,2023-01-01T00:00:00Z,Gas,7377.229249999999
+United Kingdom,2023-01-01T00:00:00Z,Hydro,718.6244166666667
+United Kingdom,2023-01-01T00:00:00Z,Nuclear,3749.2098333333333
+United Kingdom,2023-01-01T00:00:00Z,Solar,344.682618801
+United Kingdom,2023-01-01T00:00:00Z,Wind,7877.367416666666
+United Kingdom,2023-02-01T00:00:00Z,Biomass,1234.17425
+United Kingdom,2023-02-01T00:00:00Z,Gas,7566.740666666667
+United Kingdom,2023-02-01T00:00:00Z,Hydro,525.7343333333333
+United Kingdom,2023-02-01T00:00:00Z,Nuclear,2394.0063333333333
+United Kingdom,2023-02-01T00:00:00Z,Solar,506.43261725183334
+United Kingdom,2023-02-01T00:00:00Z,Wind,5764.667083333333
+United Kingdom,2023-03-01T00:00:00Z,Biomass,1171.3015833333332
+United Kingdom,2023-03-01T00:00:00Z,Gas,8434.152583333333
+United Kingdom,2023-03-01T00:00:00Z,Hydro,429.85175
+United Kingdom,2023-03-01T00:00:00Z,Nuclear,3071.4559999999997
+United Kingdom,2023-03-01T00:00:00Z,Solar,713.751995561
+United Kingdom,2023-03-01T00:00:00Z,Wind,5912.438999999999
+United Kingdom,2023-04-01T00:00:00Z,Biomass,1203.2798333333333
+United Kingdom,2023-04-01T00:00:00Z,Gas,7557.305916666666
+United Kingdom,2023-04-01T00:00:00Z,Hydro,331.6655833333333
+United Kingdom,2023-04-01T00:00:00Z,Nuclear,3059.2474166666666
+United Kingdom,2023-04-01T00:00:00Z,Solar,1230.52973246375
+United Kingdom,2023-04-01T00:00:00Z,Wind,4316.778833333333
+United Kingdom,2023-05-01T00:00:00Z,Biomass,607.5436666666666
+United Kingdom,2023-05-01T00:00:00Z,Gas,7052.902916666666
+United Kingdom,2023-05-01T00:00:00Z,Hydro,188.35816666666665
+United Kingdom,2023-05-01T00:00:00Z,Nuclear,3142.8058333333333
+United Kingdom,2023-05-01T00:00:00Z,Solar,1696.0653674062498
+United Kingdom,2023-05-01T00:00:00Z,Wind,3278.462
+United Kingdom,2023-06-01T00:00:00Z,Biomass,568.453
+United Kingdom,2023-06-01T00:00:00Z,Gas,7398.035583333333
+United Kingdom,2023-06-01T00:00:00Z,Hydro,121.42116666666666
+United Kingdom,2023-06-01T00:00:00Z,Nuclear,3340.056333333333
+United Kingdom,2023-06-01T00:00:00Z,Solar,1784.3713582436665
+United Kingdom,2023-06-01T00:00:00Z,Wind,3040.6506666666664
+United Kingdom,2023-07-01T00:00:00Z,Biomass,1046.5116666666665
+United Kingdom,2023-07-01T00:00:00Z,Gas,6250.37525
+United Kingdom,2023-07-01T00:00:00Z,Hydro,238.5065
+United Kingdom,2023-07-01T00:00:00Z,Nuclear,3116.4811666666665
+United Kingdom,2023-07-01T00:00:00Z,Solar,1390.2428197211666
+United Kingdom,2023-07-01T00:00:00Z,Wind,4655.526333333333
+United Kingdom,2023-08-01T00:00:00Z,Biomass,859.36725
+United Kingdom,2023-08-01T00:00:00Z,Gas,7331.845166666666
+United Kingdom,2023-08-01T00:00:00Z,Hydro,275.09933333333333
+United Kingdom,2023-08-01T00:00:00Z,Nuclear,3058.5648333333334
+United Kingdom,2023-08-01T00:00:00Z,Solar,1311.92398063525
+United Kingdom,2023-08-01T00:00:00Z,Wind,3816.042
+United Kingdom,2023-09-01T00:00:00Z,Biomass,908.49275
+United Kingdom,2023-09-01T00:00:00Z,Gas,7031.5289999999995
+United Kingdom,2023-09-01T00:00:00Z,Hydro,329.4004166666667
+United Kingdom,2023-09-01T00:00:00Z,Nuclear,3705.0671666666667
+United Kingdom,2023-09-01T00:00:00Z,Solar,1111.11571764625
+United Kingdom,2023-09-01T00:00:00Z,Wind,4115.853166666667
+United Kingdom,2023-10-01T00:00:00Z,Biomass,1388.1154166666665
+United Kingdom,2023-10-01T00:00:00Z,Gas,6263.5602499999995
+United Kingdom,2023-10-01T00:00:00Z,Hydro,613.7742499999999
+United Kingdom,2023-10-01T00:00:00Z,Nuclear,3176.3444999999997
+United Kingdom,2023-10-01T00:00:00Z,Solar,721.3346923065833
+United Kingdom,2023-10-01T00:00:00Z,Wind,6191.29875
+United Kingdom,2023-11-01T00:00:00Z,Biomass,1711.3425833333333
+United Kingdom,2023-11-01T00:00:00Z,Gas,7790.13375
+United Kingdom,2023-11-01T00:00:00Z,Hydro,517.1890833333333
+United Kingdom,2023-11-01T00:00:00Z,Nuclear,2826.6359166666666
+United Kingdom,2023-11-01T00:00:00Z,Solar,402.31893070116666
+United Kingdom,2023-11-01T00:00:00Z,Wind,6038.268499999999
+United Kingdom,2023-12-01T00:00:00Z,Biomass,1496.59825
+United Kingdom,2023-12-01T00:00:00Z,Gas,6879.479249999999
+United Kingdom,2023-12-01T00:00:00Z,Hydro,621.0639166666666
+United Kingdom,2023-12-01T00:00:00Z,Nuclear,3611.1290833333333
+United Kingdom,2023-12-01T00:00:00Z,Solar,190.5179709013333
+United Kingdom,2023-12-01T00:00:00Z,Wind,8298.784083333332
+United Kingdom,2024-01-01T00:00:00Z,Biomass,1677.1619999999998
+United Kingdom,2024-01-01T00:00:00Z,Gas,9707.56025
+United Kingdom,2024-01-01T00:00:00Z,Hydro,643.1805833333333
+United Kingdom,2024-01-01T00:00:00Z,Nuclear,2447.6784166666666
+United Kingdom,2024-01-01T00:00:00Z,Solar,375.73358146491665
+United Kingdom,2024-01-01T00:00:00Z,Wind,7344.528333333333
+United Kingdom,2024-02-01T00:00:00Z,Biomass,1564.1629166666667
+United Kingdom,2024-02-01T00:00:00Z,Gas,6250.025833333333
+United Kingdom,2024-02-01T00:00:00Z,Hydro,675.8120833333332
+United Kingdom,2024-02-01T00:00:00Z,Nuclear,2617.6434999999997
+United Kingdom,2024-02-01T00:00:00Z,Solar,458.45837183891666
+United Kingdom,2024-02-01T00:00:00Z,Wind,6610.349249999999
+United Kingdom,2024-03-01T00:00:00Z,Biomass,1278.5714166666667
+United Kingdom,2024-03-01T00:00:00Z,Gas,5920.608166666667
+United Kingdom,2024-03-01T00:00:00Z,Hydro,545.6302499999999
+United Kingdom,2024-03-01T00:00:00Z,Nuclear,2816.530083333333
+United Kingdom,2024-03-01T00:00:00Z,Solar,929.1075397159999
+United Kingdom,2024-03-01T00:00:00Z,Wind,6379.438833333333
+United Kingdom,2024-04-01T00:00:00Z,Biomass,1592.0578333333333
+United Kingdom,2024-04-01T00:00:00Z,Gas,3937.352083333333
+United Kingdom,2024-04-01T00:00:00Z,Hydro,452.33966666666663
+United Kingdom,2024-04-01T00:00:00Z,Nuclear,3703.81825
+United Kingdom,2024-04-01T00:00:00Z,Solar,1356.3903771788332
+United Kingdom,2024-04-01T00:00:00Z,Wind,6341.073083333333
+United Kingdom,2024-05-01T00:00:00Z,Biomass,1529.3123333333333
+United Kingdom,2024-05-01T00:00:00Z,Gas,5419.80425
+United Kingdom,2024-05-01T00:00:00Z,Hydro,311.07849999999996
+United Kingdom,2024-05-01T00:00:00Z,Nuclear,3618.664083333333
+United Kingdom,2024-05-01T00:00:00Z,Solar,1629.2984039391665
+United Kingdom,2024-05-01T00:00:00Z,Wind,3203.3941666666665
+United Kingdom,2024-06-01T00:00:00Z,Biomass,735.4141666666667
+United Kingdom,2024-06-01T00:00:00Z,Gas,2020.59
+United Kingdom,2024-06-01T00:00:00Z,Hydro,192.12874999999997
+United Kingdom,2024-06-01T00:00:00Z,Nuclear,3370.5283333333336
+United Kingdom,2024-06-01T00:00:00Z,Solar,1901.8795990095
+United Kingdom,2024-06-01T00:00:00Z,Wind,6163.9508333333315
+United Kingdom,2024-07-01T00:00:00Z,Biomass,1380.00075
+United Kingdom,2024-07-01T00:00:00Z,Gas,4557.409333333333
+United Kingdom,2024-07-01T00:00:00Z,Hydro,229.93041666666664
+United Kingdom,2024-07-01T00:00:00Z,Nuclear,3287.10925
+United Kingdom,2024-07-01T00:00:00Z,Solar,1737.6539757283333
+United Kingdom,2024-07-01T00:00:00Z,Wind,3690.929833333333
+United Kingdom,2024-08-01T00:00:00Z,Biomass,1511.9516666666666
+United Kingdom,2024-08-01T00:00:00Z,Gas,3512.2769166666667
+United Kingdom,2024-08-01T00:00:00Z,Hydro,418.34324999999995
+United Kingdom,2024-08-01T00:00:00Z,Nuclear,3868.4914166666663
+United Kingdom,2024-08-01T00:00:00Z,Solar,1626.9590230945
+United Kingdom,2024-08-01T00:00:00Z,Wind,5238.954333333333
+United Kingdom,2024-09-01T00:00:00Z,Biomass,1732.2692499999998
+United Kingdom,2024-09-01T00:00:00Z,Gas,5304.105583333333
+United Kingdom,2024-09-01T00:00:00Z,Hydro,380.3555833333333
+United Kingdom,2024-09-01T00:00:00Z,Nuclear,3392.7761666666665
+United Kingdom,2024-09-01T00:00:00Z,Solar,1077.40325169025
+United Kingdom,2024-09-01T00:00:00Z,Wind,4317.35525
+United Kingdom,2024-10-01T00:00:00Z,Biomass,1793.6074166666665
+United Kingdom,2024-10-01T00:00:00Z,Gas,6713.782583333333
+United Kingdom,2024-10-01T00:00:00Z,Hydro,365.24491666666665
+United Kingdom,2024-10-01T00:00:00Z,Nuclear,2960.3231666666666
+United Kingdom,2024-10-01T00:00:00Z,Solar,779.4826081556666
+United Kingdom,2024-10-01T00:00:00Z,Wind,5617.191666666667
+United Kingdom,2024-11-01T00:00:00Z,Biomass,1811.0545
+United Kingdom,2024-11-01T00:00:00Z,Gas,9508.426916666667
+United Kingdom,2024-11-01T00:00:00Z,Hydro,362.8943333333333
+United Kingdom,2024-11-01T00:00:00Z,Nuclear,3021.4406666666664
+United Kingdom,2024-11-01T00:00:00Z,Solar,347.00088625725
+United Kingdom,2024-11-01T00:00:00Z,Wind,5282.662166666666
+United Kingdom,2024-12-01T00:00:00Z,Biomass,1459.1759166666666
+United Kingdom,2024-12-01T00:00:00Z,Gas,7482.183416666667
+United Kingdom,2024-12-01T00:00:00Z,Hydro,742.6249166666666
+United Kingdom,2024-12-01T00:00:00Z,Nuclear,3042.77825
+United Kingdom,2024-12-01T00:00:00Z,Solar,213.400341764
+United Kingdom,2024-12-01T00:00:00Z,Wind,7841.19525
+United Kingdom,2025-01-01T00:00:00Z,Biomass,1813.9206666666666
+United Kingdom,2025-01-01T00:00:00Z,Gas,10883.728583333334
+United Kingdom,2025-01-01T00:00:00Z,Hydro,642.3900833333333
+United Kingdom,2025-01-01T00:00:00Z,Nuclear,3265.570083333333
+United Kingdom,2025-01-01T00:00:00Z,Solar,414.88732158716664
+United Kingdom,2025-01-01T00:00:00Z,Wind,6093.269166666666
+United Kingdom,2025-02-01T00:00:00Z,Biomass,1778.5175833333333
+United Kingdom,2025-02-01T00:00:00Z,Gas,8234.112416666667
+United Kingdom,2025-02-01T00:00:00Z,Hydro,487.19775
+United Kingdom,2025-02-01T00:00:00Z,Nuclear,2969.9291666666663
+United Kingdom,2025-02-01T00:00:00Z,Solar,568.4930722664167
+United Kingdom,2025-02-01T00:00:00Z,Wind,6386.060333333333
+United Kingdom,2025-03-01T00:00:00Z,Biomass,1055.3573333333334
+United Kingdom,2025-03-01T00:00:00Z,Gas,6786.319416666666
+United Kingdom,2025-03-01T00:00:00Z,Hydro,387.9745833333333
+United Kingdom,2025-03-01T00:00:00Z,Nuclear,2529.5533333333333
+United Kingdom,2025-03-01T00:00:00Z,Solar,1331.9853022329166
+United Kingdom,2025-03-01T00:00:00Z,Wind,4990.229333333333
+United Kingdom,2025-04-01T00:00:00Z,Biomass,1598.4880833333332
+United Kingdom,2025-04-01T00:00:00Z,Gas,5717.12725
+United Kingdom,2025-04-01T00:00:00Z,Hydro,190.76725
+United Kingdom,2025-04-01T00:00:00Z,Nuclear,2873.6565
+United Kingdom,2025-04-01T00:00:00Z,Solar,2114.226243195
+United Kingdom,2025-04-01T00:00:00Z,Wind,3881.4719166666664
+United Kingdom,2025-05-01T00:00:00Z,Biomass,1541.6433333333332
+United Kingdom,2025-05-01T00:00:00Z,Gas,4441.712333333333
+United Kingdom,2025-05-01T00:00:00Z,Hydro,168.11358333333334
+United Kingdom,2025-05-01T00:00:00Z,Nuclear,3327.8067499999997
+United Kingdom,2025-05-01T00:00:00Z,Solar,2436.5551321779167
+United Kingdom,2025-05-01T00:00:00Z,Wind,4669.059666666666
+United Kingdom,2025-06-01T00:00:00Z,Biomass,1480.7954166666666
+United Kingdom,2025-06-01T00:00:00Z,Gas,3863.955
+United Kingdom,2025-06-01T00:00:00Z,Hydro,227.74733333333333
+United Kingdom,2025-06-01T00:00:00Z,Nuclear,3192.9874166666664
+United Kingdom,2025-06-01T00:00:00Z,Solar,2284.23164971
+United Kingdom,2025-06-01T00:00:00Z,Wind,5407.7085
+United Kingdom,2025-07-01T00:00:00Z,Biomass,1751.9901666666665
+United Kingdom,2025-07-01T00:00:00Z,Gas,5279.948083333333
+United Kingdom,2025-07-01T00:00:00Z,Hydro,241.56824999999998
+United Kingdom,2025-07-01T00:00:00Z,Nuclear,3140.916833333333
+United Kingdom,2025-07-01T00:00:00Z,Solar,2250.2717682806665
+United Kingdom,2025-07-01T00:00:00Z,Wind,3259.7590833333334
+United Kingdom,2025-08-01T00:00:00Z,Biomass,1631.1890833333332
+United Kingdom,2025-08-01T00:00:00Z,Gas,4981.144166666667
+United Kingdom,2025-08-01T00:00:00Z,Hydro,252.87141666666665
+United Kingdom,2025-08-01T00:00:00Z,Nuclear,2348.0711666666666
+United Kingdom,2025-08-01T00:00:00Z,Solar,2079.3713805112498
+United Kingdom,2025-08-01T00:00:00Z,Wind,4372.885249999999
+United Kingdom,2025-09-01T00:00:00Z,Biomass,1599.0086666666666
+United Kingdom,2025-09-01T00:00:00Z,Gas,4855.7175
+United Kingdom,2025-09-01T00:00:00Z,Hydro,334.02675
+United Kingdom,2025-09-01T00:00:00Z,Nuclear,2103.5800833333333
+United Kingdom,2025-09-01T00:00:00Z,Solar,1563.5615337324998
+United Kingdom,2025-09-01T00:00:00Z,Wind,6305.836916666666
+United Kingdom,2025-10-01T00:00:00Z,Biomass,1434.9720833333333
+United Kingdom,2025-10-01T00:00:00Z,Gas,7082.714333333332
+United Kingdom,2025-10-01T00:00:00Z,Hydro,451.25666666666666
+United Kingdom,2025-10-01T00:00:00Z,Nuclear,2531.6299166666663
+United Kingdom,2025-10-01T00:00:00Z,Solar,781.0665005678333
+United Kingdom,2025-10-01T00:00:00Z,Wind,6619.649083333333
+United Kingdom,2025-11-01T00:00:00Z,Biomass,2139.7379166666665
+United Kingdom,2025-11-01T00:00:00Z,Gas,7198.391166666666
+United Kingdom,2025-11-01T00:00:00Z,Hydro,579.0574166666667
+United Kingdom,2025-11-01T00:00:00Z,Nuclear,2666.6209999999996
+United Kingdom,2025-11-01T00:00:00Z,Solar,538.2117601043333
+United Kingdom,2025-11-01T00:00:00Z,Wind,7911.795499999999
+United Kingdom,2025-12-01T00:00:00Z,Biomass,1829.3275833333332
+United Kingdom,2025-12-01T00:00:00Z,Gas,6828.859083333333
+United Kingdom,2025-12-01T00:00:00Z,Hydro,669.4594999999999
+United Kingdom,2025-12-01T00:00:00Z,Nuclear,2752.5211666666664
+United Kingdom,2025-12-01T00:00:00Z,Solar,362.86806958899996
+United Kingdom,2025-12-01T00:00:00Z,Wind,8260.3475
