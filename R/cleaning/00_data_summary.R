@@ -16,7 +16,7 @@ cat("\n╔═══════════════════════�
 cat("║  🇬🇧 GRIDWATCH (UK) - DATA SUMMARY\n")
 cat("╚════════════════════════════════════════════════════════════════╝\n\n")
 
-raw_uk <- read_csv("data/raw/gridwatch.csv") |> clean_names()
+raw_uk <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/raw/gridwatch.csv")|> clean_names()
 
 cat("Dimensions: ", nrow(raw_uk), " rows × ", ncol(raw_uk), " columns\n\n")
 cat("Column Names and Types:\n")
@@ -84,7 +84,7 @@ cat("\n╔═══════════════════════�
 cat("║  🇦🇺 AEMO (AUSTRALIA) - DATA SUMMARY\n")
 cat("╚════════════════════════════════════════════════════════════════╝\n\n")
 
-raw_au <- read_csv("data/raw/19990101_All_Regions_Australia.csv") |> clean_names()
+raw_au <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/raw/19990101 All Regions Australia.csv") |>clean_names()
 
 cat("Dimensions: ", nrow(raw_au), " rows × ", ncol(raw_au), " columns\n\n")
 cat("Column Names and Types:\n")
