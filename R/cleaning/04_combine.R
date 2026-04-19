@@ -27,7 +27,6 @@ combined <- bind_rows(uk, us, au) |>
   arrange(country, date, source)
 
 write_csv(combined, "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/combined_energy.csv")
-
 message(
   "Combined dataset written: ", nrow(combined), " rows | ",
   n_distinct(combined$country), " countries | ",
