@@ -1,0 +1,3 @@
+https://www.gridwatch.templar.co.uk/download.php
+https://explore.openelectricity.org.au/energy/au/?range=all&interval=1M&view=discrete-time&group=Simplified
+https://www.eia.gov/opendata/browser/electricity/rto/daily-region-data
