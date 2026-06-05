@@ -345,18 +345,18 @@ ui <- fluidPage(
           plotlyOutput("p_lollipop", height = "420px")
       ),
       
-      # ── ROW 6: Calendar Heatmap (Advanced) ────────────────────────────────
+      # ── ROW 6 (Advanced): Parallel Coordinates ────────────────────────────
       div(class = "cc",
           div(class = "cc-lbl",
-              HTML("Calendar heatmap \u2014 renewable share by month &times; year (&nbsp;&#9889;&nbsp;= peak months)")),
-          plotlyOutput("p_cal_heatmap", height = "440px")
+              "Parallel coordinates \u2014 multi-dimensional profile: each line = one country-year"),
+          plotlyOutput("p_parallel", height = "460px")
       ),
       
-      # ── ROW 7: Slope Chart (Advanced) ─────────────────────────────────────
+      # ── ROW 7 (Advanced): Nightingale / Polar Area ────────────────────────
       div(class = "cc",
           div(class = "cc-lbl",
-              "Slope chart \u2014 each backup source: first year vs. last year during peak"),
-          plotlyOutput("p_slope_chart", height = "440px")
+              "Nightingale polar chart \u2014 backup source mix by season and country"),
+          plotlyOutput("p_nightingale", height = "480px")
       ),
       
       div(class = "pg-footer",
@@ -757,244 +757,216 @@ server <- function(input, output, session) {
     do.call(layout, c(list(p), cfg))
   })
   
-  # ── ADVANCED CHART 1: Calendar Heatmap ────────────────────────────────────
-  # رنگ = renewable share, ماه‌های peak با ⚡ مشخص
-  output$p_cal_heatmap <- renderPlotly({
-    d <- monthly_f()
-    countries <- unique(d$country)
-    n <- length(countries)
-    if (n == 0) return(plot_ly())
+  # ══════════════════════════════════════════════════════════════════════════
+  # ADVANCED CHART 1: Parallel Coordinates
+  # هر خط = یک country-year, محورها = ابعاد مختلف عملکرد شبکه
+  # ══════════════════════════════════════════════════════════════════════════
+  output$p_parallel <- renderPlotly({
+    d <- annual_pnp |>
+      filter(country %in% input$countries,
+             year    >= input$years[1],
+             year    <= input$years[2])
+    
+    if (nrow(d) == 0) return(plot_ly())
+    
+    # Aggregate peak & non-peak into one row per country-year
+    peak_d <- d |> filter(is_peak) |>
+      select(year, country, renew_peak = renew_share, fossil_peak = fossil_share,
+             ws_peak = ws_share, nuclear_peak = nuclear_share)
+    nonpeak_d <- d |> filter(!is_peak) |>
+      select(year, country, renew_np = renew_share, fossil_np = fossil_share)
+    
+    par_data <- inner_join(peak_d, nonpeak_d, by = c("year","country")) |>
+      mutate(
+        reliability_gap = renew_np - renew_peak,
+        country_num = as.numeric(factor(country,
+                                        levels = c("United Kingdom","United States","Australia")))
+      )
+    
+    if (nrow(par_data) == 0) return(plot_ly())
+    
+    # Color scale: map country to number (1=UK, 2=US, 3=AU)
+    col_scale <- list(
+      c(0,   unname(COUNTRY_COL["United Kingdom"])),
+      c(0.5, unname(COUNTRY_COL["United States"])),
+      c(1,   unname(COUNTRY_COL["Australia"]))
+    )
+    
+    plot_ly(
+      type = "parcoords",
+      line = list(
+        color     = ~country_num,
+        colorscale = col_scale,
+        showscale  = FALSE
+      ),
+      data = par_data,
+      dimensions = list(
+        list(label = "Year",             values = ~year,             range = c(input$years[1], input$years[2])),
+        list(label = "Renew (peak %)",   values = ~renew_peak,       range = c(0, 80)),
+        list(label = "Fossil (peak %)",  values = ~fossil_peak,      range = c(0, 100)),
+        list(label = "W+S (peak %)",     values = ~ws_peak,          range = c(0, 60)),
+        list(label = "Nuclear (peak %)", values = ~nuclear_peak,     range = c(0, 50)),
+        list(label = "Renew (non-peak)", values = ~renew_np,         range = c(0, 80)),
+        list(label = "Fossil (non-peak)",values = ~fossil_np,        range = c(0, 100)),
+        list(label = "Reliability gap",  values = ~reliability_gap,  range = c(-30, 30))
+      )
+    ) |>
+      layout(
+        paper_bgcolor = "rgba(0,0,0,0)",
+        plot_bgcolor  = "rgba(0,0,0,0)",
+        font   = list(family = FONT, color = FG, size = 11),
+        title  = list(
+          text = "PARALLEL COORDINATES \u2014 drag axes to filter, each line = country\u00D7year",
+          font = list(size = 12, color = FG2)
+        ),
+        margin = list(t = 60, b = 30, l = 80, r = 80),
+        hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
+      )
+  })
+  
+  # ══════════════════════════════════════════════════════════════════════════
+  # ADVANCED CHART 2: Nightingale Rose / Polar Area
+  # هر گوشه = یک ماه، شعاع = سهم backup، تفکیک peak vs non-peak
+  # ══════════════════════════════════════════════════════════════════════════
+  output$p_nightingale <- renderPlotly({
+    d_raw <- combined |>
+      filter(country %in% input$countries,
+             year    >= input$years[1],
+             year    <= input$years[2])
+    
+    if (nrow(d_raw) == 0) return(plot_ly())
+    
+    # Monthly source shares per country
+    monthly_src <- d_raw |>
+      group_by(month, country, source) |>
+      summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop") |>
+      group_by(month, country) |>
+      mutate(share = gwh / sum(gwh) * 100) |>
+      ungroup()
+    
+    # Peak months per country
+    peak_months <- list(
+      "United Kingdom" = c(12, 1, 2),
+      "Australia"      = c(12, 1, 2),
+      "United States"  = c(6, 7, 8)
+    )
     
     month_lbls <- c("Jan","Feb","Mar","Apr","May","Jun",
                     "Jul","Aug","Sep","Oct","Nov","Dec")
     
-    domain_w <- 1 / n
-    p <- plot_ly()
-    ann <- list()
-    
-    for (i in seq_along(countries)) {
-      ctry <- countries[i]
-      sub  <- filter(d, country == ctry)
-      
-      years_here <- sort(unique(sub$year))
-      
-      # Build matrix: rows = months, cols = years
-      z_vals <- matrix(NA_real_, nrow = 12, ncol = length(years_here))
-      peak_m <- integer(0)  # which month numbers are peak for this country
-      
-      if (ctry == "United Kingdom") peak_m <- c(12, 1, 2)
-      if (ctry == "Australia")      peak_m <- c(12, 1, 2)
-      if (ctry == "United States")  peak_m <- c(6, 7, 8)
-      
-      for (yr_i in seq_along(years_here)) {
-        for (mo_i in 1:12) {
-          v <- sub$renew_share[sub$year == years_here[yr_i] & sub$month == mo_i]
-          if (length(v) > 0) z_vals[mo_i, yr_i] <- mean(v)
-        }
-      }
-      
-      # Labels with ⚡ for peak months
-      y_labels <- ifelse(seq_len(12) %in% peak_m,
-                         paste0(month_lbls, " \u26A1"),
-                         month_lbls)
-      
-      xa <- if (i == 1) "x"  else paste0("x", i)
-      ya <- if (i == 1) "y"  else paste0("y", i)
-      
-      p <- add_trace(p,
-                     z         = z_vals,
-                     x         = years_here,
-                     y         = y_labels,
-                     type      = "heatmap",
-                     colorscale = list(
-                       c(0,    "#B71C1C"),
-                       c(0.25, "#EF5350"),
-                       c(0.5,  "#FF9800"),
-                       c(0.75, "#66BB6A"),
-                       c(1,    "#1B5E20")),
-                     zmin = 0, zmax = 80,
-                     showscale = (i == 1),
-                     colorbar  = list(
-                       title = "Renew %", ticksuffix = "%",
-                       tickfont  = list(color = "#8B949E"),
-                       titlefont = list(color = "#8B949E")),
-                     xaxis = xa, yaxis = ya,
-                     hovertemplate = paste0("<b>", ctry, "</b><br>",
-                                            "%{y} %{x}<br>Renewable: %{z:.1f}%<extra></extra>"),
-                     name = ctry
-      )
-      
-      ann[[i]] <- list(
-        text = countries[i],
-        xref = paste0("x", if (i == 1) "" else i, " domain"),
-        yref = paste0("y", if (i == 1) "" else i, " domain"),
-        x = 0.5, y = 1.06, showarrow = FALSE,
-        font = list(color = FG2, size = 11, family = "Space Grotesk")
-      )
-    }
-    
-    cfg <- list(
-      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
-      font   = list(family = FONT, color = "#8B949E", size = 11),
-      annotations = ann,
-      margin = list(t = 40, b = 10, l = 10, r = 60),
-      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
-    )
-    for (i in seq_along(countries)) {
-      xk  <- if (i == 1) "xaxis"  else paste0("xaxis",  i)
-      yk  <- if (i == 1) "yaxis"  else paste0("yaxis",  i)
-      dom <- c((i - 1) * domain_w, i * domain_w - 0.04)
-      cfg[[xk]] <- list(domain = dom, gridcolor = GR,
-                        tickfont = list(color = "#8B949E"), dtick = 1,
-                        anchor = if (i == 1) "y" else paste0("y", i))
-      cfg[[yk]] <- list(gridcolor = GR, tickfont = list(color = "#8B949E"),
-                        autorange = "reversed",
-                        anchor = if (i == 1) "x" else paste0("x", i))
-    }
-    do.call(layout, c(list(p), cfg))
-  })
-  
-  # ── ADVANCED CHART 2: Slope Chart ─────────────────────────────────────────
-  # سهم هر منبع در peak: سال اول vs سال آخر
-  output$p_slope_chart <- renderPlotly({
-    countries_sel <- input$countries
-    if (length(countries_sel) == 0) return(plot_ly())
-    
-    yr_min <- input$years[1]
-    yr_max <- input$years[2]
-    
-    d <- combined |>
-      filter(country %in% countries_sel,
-             year    >= yr_min,
-             year    <= yr_max,
-             is_peak) |>
-      group_by(country, year, source) |>
-      summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop") |>
-      group_by(country, year) |>
-      mutate(share = gwh / sum(gwh) * 100) |>
-      ungroup()
-    
-    first_yr <- d |>
-      filter(year == min(year)) |>
-      select(country, source, share_start = share)
-    
-    last_yr <- d |>
-      filter(year == max(year)) |>
-      select(country, source, share_end = share)
-    
-    slope_dat <- inner_join(first_yr, last_yr, by = c("country", "source")) |>
-      filter(share_start > 1 | share_end > 1) |>
-      mutate(
-        col   = case_when(
-          share_end > share_start  ~ "#66BB6A",
-          share_end < share_start  ~ "#EF5350",
-          TRUE                     ~ "#888888"
-        )
-      )
-    
-    countries <- unique(slope_dat$country)
+    countries <- unique(d_raw$country)
     n <- length(countries)
     if (n == 0) return(plot_ly())
     
-    domain_w <- 1 / n
+    # Subplots arranged in a row using polar domains
     p <- plot_ly()
-    ann <- list()
+    shown_src <- character(0)
+    
+    # Key backup sources to display on nightingale
+    key_sources <- c("Gas", "Coal", "Nuclear", "Hydro", "Wind", "Solar",
+                     "Biomass", "Bioenergy")
     
     for (i in seq_along(countries)) {
       ctry <- countries[i]
-      sub  <- filter(slope_dat, country == ctry)
+      pm   <- peak_months[[ctry]]
+      if (is.null(pm)) pm <- integer(0)
       
-      xa <- if (i == 1) "x"  else paste0("x", i)
-      ya <- if (i == 1) "y"  else paste0("y", i)
+      sub <- filter(monthly_src, country == ctry,
+                    source %in% key_sources)
       
-      # Draw lines connecting start to end
-      for (j in seq_len(nrow(sub))) {
-        src_col <- if (sub$source[j] %in% names(SOURCE_COL))
-          SOURCE_COL[sub$source[j]] else "#888888"
+      # Identify which months are peak for this country
+      sub <- sub |>
+        mutate(
+          month_lbl  = month_lbls[month],
+          is_peak_mo = month %in% pm
+        )
+      
+      # polar axis index
+      pol <- if (i == 1) "" else as.character(i)
+      
+      for (src in key_sources) {
+        s <- filter(sub, source == src)
+        if (nrow(s) == 0) next
+        col <- if (src %in% names(SOURCE_COL)) unname(SOURCE_COL[src]) else "#888888"
         
         p <- add_trace(p,
-                       x = c(yr_min, yr_max),
-                       y = c(sub$share_start[j], sub$share_end[j]),
-                       type = "scatter", mode = "lines",
-                       line = list(color = src_col, width = 2.5),
-                       showlegend = FALSE, hoverinfo = "skip",
-                       xaxis = xa, yaxis = ya
+                       type  = "barpolar",
+                       r     = ~share,
+                       theta = ~month_lbl,
+                       data  = s,
+                       name  = src,
+                       marker = list(
+                         color = col,
+                         opacity = 0.85,
+                         line = list(color = BG, width = 0.8)
+                       ),
+                       legendgroup = src,
+                       showlegend  = !(src %in% shown_src),
+                       subplot     = paste0("polar", pol),
+                       hovertemplate = paste0(
+                         "<b>", src, "</b> \u2014 ", ctry, "<br>",
+                         "%{theta}: %{r:.1f}%<extra></extra>")
         )
+        if (!(src %in% shown_src)) shown_src <- c(shown_src, src)
       }
-      
-      # Start dots
-      p <- add_trace(p, data = sub,
-                     x = rep(yr_min, nrow(sub)),
-                     y = ~share_start,
-                     type = "scatter", mode = "markers+text",
-                     marker = list(
-                       color = sapply(sub$source, function(s) {
-                         if (s %in% names(SOURCE_COL)) unname(SOURCE_COL[s]) else "#888888"
-                       }),
-                       size = 12, line = list(color = BG, width = 1.5)),
-                     text = ~paste0(source, " ", round(share_start, 1), "%"),
-                     textposition = "middle left",
-                     textfont = list(color = FG, size = 9),
-                     showlegend = FALSE,
-                     xaxis = xa, yaxis = ya,
-                     hovertemplate = paste0("<b>%{text}</b><br>", yr_min,
-                                            ": %{y:.1f}%<extra></extra>")
-      )
-      
-      # End dots
-      p <- add_trace(p, data = sub,
-                     x = rep(yr_max, nrow(sub)),
-                     y = ~share_end,
-                     type = "scatter", mode = "markers+text",
-                     marker = list(
-                       color = sapply(sub$source, function(s) {
-                         if (s %in% names(SOURCE_COL)) unname(SOURCE_COL[s]) else "#888888"
-                       }),
-                       size = 12, line = list(color = BG, width = 1.5)),
-                     text = ~paste0(source, " ", round(share_end, 1), "%"),
-                     textposition = "middle right",
-                     textfont = list(color = FG, size = 9),
-                     showlegend = FALSE,
-                     xaxis = xa, yaxis = ya,
-                     hovertemplate = paste0("<b>%{text}</b><br>", yr_max,
-                                            ": %{y:.1f}%<extra></extra>")
-      )
-      
-      ann[[i]] <- list(
-        text = countries[i],
-        xref = paste0("x", if (i == 1) "" else i, " domain"),
-        yref = paste0("y", if (i == 1) "" else i, " domain"),
-        x = 0.5, y = 1.06, showarrow = FALSE,
-        font = list(color = FG2, size = 11, family = "Space Grotesk")
+    }
+    
+    # Build polar axis configs
+    cfg <- list(
+      paper_bgcolor = "rgba(0,0,0,0)",
+      font   = list(family = FONT, color = "#8B949E", size = 11),
+      legend = list(orientation = "h", y = -0.12,
+                    bgcolor = "rgba(0,0,0,0)",
+                    font = list(color = FG, size = 10)),
+      title  = list(
+        text = "NIGHTINGALE ROSE \u2014 backup source share by month | outer ring = peak season",
+        font = list(size = 12, color = FG2)
+      ),
+      margin = list(t = 60, b = 60, l = 20, r = 20),
+      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
+    )
+    
+    # Annotations for country labels
+    x_positions <- switch(as.character(n),
+                          "1" = c(0.5),
+                          "2" = c(0.2, 0.8),
+                          "3" = c(0.15, 0.5, 0.85)
+    )
+    
+    ann <- lapply(seq_along(countries), function(i) {
+      list(text = countries[i],
+           x = x_positions[i], y = 1.06,
+           xref = "paper", yref = "paper",
+           showarrow = FALSE,
+           font = list(color = FG2, size = 11, family = "Space Grotesk"))
+    })
+    cfg[["annotations"]] <- ann
+    
+    # Domain fractions for each polar subplot
+    polar_w <- 0.9 / n
+    for (i in seq_along(countries)) {
+      pol_key <- paste0("polar", if (i == 1) "" else i)
+      x_start <- (i - 1) / n
+      x_end   <- i / n - 0.03
+      cfg[[pol_key]] <- list(
+        domain = list(x = c(x_start, x_end), y = c(0, 1)),
+        bgcolor = "rgba(0,0,0,0)",
+        angularaxis = list(
+          tickfont = list(color = FG, size = 10),
+          linecolor = GR, gridcolor = GR,
+          direction = "clockwise",
+          rotation  = 90
+        ),
+        radialaxis = list(
+          tickfont  = list(color = "#8B949E", size = 8),
+          gridcolor = GR, linecolor = GR,
+          ticksuffix = "%",
+          angle = 45,
+          visible = TRUE
+        )
       )
     }
     
-    cfg <- list(
-      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
-      font   = list(family = FONT, color = "#8B949E", size = 11),
-      annotations = ann,
-      margin = list(t = 40, b = 10, l = 80, r = 80),
-      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
-    )
-    for (i in seq_along(countries)) {
-      xk  <- if (i == 1) "xaxis"  else paste0("xaxis",  i)
-      yk  <- if (i == 1) "yaxis"  else paste0("yaxis",  i)
-      dom <- c((i - 1) * domain_w, i * domain_w - 0.04)
-      cfg[[xk]] <- list(
-        domain   = dom,
-        gridcolor = "rgba(0,0,0,0)",
-        tickvals = c(yr_min, yr_max),
-        ticktext = c(as.character(yr_min), as.character(yr_max)),
-        tickfont = list(color = "#8B949E"),
-        anchor = if (i == 1) "y" else paste0("y", i)
-      )
-      cfg[[yk]] <- list(
-        title = "Share during peak (%)", ticksuffix = "%",
-        gridcolor = GR,
-        tickfont = list(color = "#8B949E"),
-        anchor = if (i == 1) "x" else paste0("x", i)
-      )
-    }
     do.call(layout, c(list(p), cfg))
   })
 }

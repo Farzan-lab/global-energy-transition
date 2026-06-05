@@ -326,24 +326,26 @@ ui <- fluidPage(
           plotlyOutput("p_waterfall", height = "380px")
       ),
       
-      # ── ROW 7: Sunburst ───────────────────────────────────────────────────
+      # ── ROW 7 (Advanced): Streamgraph ─────────────────────────────────────
+      # استک آریا انباشته که شکل رودخانه‌ای داره — موج‌های هر منبع در طول زمان
       div(class = "cc",
           div(class = "cc-lbl",
-              "Generation hierarchy \u2014 sunburst (Country \u2192 Source)"),
-          plotlyOutput("p_sunburst", height = "500px")
+              "Streamgraph \u2014 generation mix flow over time (stacked, centered baseline)"),
+          div(
+            selectInput("stream_country", "Select country:",
+                        choices  = c("United Kingdom", "United States", "Australia"),
+                        selected = "Australia", width = "220px")
+          ),
+          plotlyOutput("p_streamgraph", height = "480px")
       ),
       
-      # ── ROW 8: Bump Chart ─────────────────────────────────────────────────
+      # ── ROW 8 (Advanced): Animated Scatter Race ────────────────────────────
+      # نمودار scatter متحرک — هر فریم یک ماه، هر نقطه یک کشور
+      # محورها: fossil_share vs ws_share، اندازه = total_gwh
       div(class = "cc",
           div(class = "cc-lbl",
-              "Source ranking over time \u2014 bump chart (1 = largest share)"),
-          div(
-            selectInput("bump_country", "Select country:",
-                        choices  = c("United Kingdom", "United States", "Australia"),
-                        selected = "Australia",
-                        width = "220px")
-          ),
-          plotlyOutput("p_bump", height = "460px")
+              "Animated transition race \u2014 fossil vs. W+S share per country (frame = month)"),
+          plotlyOutput("p_animated", height = "500px")
       ),
       
       div(class = "pg-footer",
@@ -827,120 +829,194 @@ server <- function(input, output, session) {
     do.call(layout, c(list(p), cfg))
   })
   
-  # ── CHART 11 (Advanced): Sunburst ─────────────────────────────────────────
-  output$p_sunburst <- renderPlotly({
-    req(input$countries)
+  # ══════════════════════════════════════════════════════════════════════════
+  # ADVANCED CHART 1: Streamgraph
+  # استک آریا با baseline مرکزی — شکل رودخانه‌ای تجسم منابع
+  # ══════════════════════════════════════════════════════════════════════════
+  output$p_streamgraph <- renderPlotly({
+    req(input$stream_country)
     
     dat <- combined |>
-      filter(
-        country %in% input$countries,
-        year(date) >= input$years[1],
-        year(date) <= input$years[2]
-      )
-    
-    yr_max <- max(year(dat$date))
-    
-    latest <- dat |>
-      filter(year(date) == yr_max) |>
-      group_by(country, source) |>
-      summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop")
-    
-    countries_agg <- latest |>
-      group_by(country) |>
-      summarise(gwh = sum(gwh), .groups = "drop")
-    
-    labels  <- c("All", countries_agg$country, latest$source)
-    parents <- c("", rep("All", nrow(countries_agg)), latest$country)
-    values  <- c(sum(countries_agg$gwh), countries_agg$gwh, latest$gwh)
-    colors  <- c(
-      BG2,
-      sapply(countries_agg$country, function(x) unname(COUNTRY_COL[x])),
-      sapply(latest$source, function(s) {
-        if (s %in% names(SOURCE_PAL)) unname(SOURCE_PAL[s]) else "#555555"
-      })
-    )
-    
-    plot_ly(
-      type     = "sunburst",
-      labels   = labels,
-      parents  = parents,
-      values   = values,
-      branchvalues = "total",
-      marker   = list(colors = colors, line = list(color = BG, width = 1.5)),
-      textinfo = "label+percent parent",
-      insidetextorientation = "radial"
-    ) |>
-      layout(
-        paper_bgcolor = "rgba(0,0,0,0)",
-        font  = list(family = FONT, color = FG),
-        title = list(
-          text = paste0("GENERATION HIERARCHY \u2014 ", yr_max,
-                        " (inner = country, outer = source)"),
-          font = list(size = 13, color = FG2)
-        ),
-        margin = list(t = 50, b = 10, l = 10, r = 10)
-      )
-  })
-  
-  # ── CHART 12 (Advanced): Bump Chart ───────────────────────────────────────
-  output$p_bump <- renderPlotly({
-    req(input$bump_country)
-    
-    dat <- combined |>
-      filter(
-        country == input$bump_country,
-        year(date) >= input$years[1],
-        year(date) <= input$years[2]
-      )
-    
-    annual <- dat |>
-      mutate(year = year(date)) |>
-      group_by(year, source) |>
+      filter(country == input$stream_country,
+             year(date) >= input$years[1],
+             year(date) <= input$years[2]) |>
+      group_by(date, source) |>
       summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop") |>
-      group_by(year) |>
+      group_by(date) |>
       mutate(share = gwh / sum(gwh) * 100) |>
-      arrange(year, desc(share)) |>
-      mutate(rank = row_number()) |>
       ungroup()
     
+    # Sort sources by total share descending for visual stability
+    src_order <- dat |>
+      group_by(source) |>
+      summarise(total = sum(share, na.rm = TRUE)) |>
+      arrange(desc(total)) |>
+      pull(source)
+    
+    dat <- dat |> mutate(source = factor(source, levels = src_order))
+    
+    # Compute silhouette (wiggle) baseline to centre the stream
+    # For plotly we approximate with offsetting — use stackgroup + visible area
     p <- plot_ly()
-    for (src in unique(annual$source)) {
-      d   <- annual |> filter(source == src)
-      col <- if (src %in% names(SOURCE_PAL)) unname(SOURCE_PAL[src]) else "#888888"
+    shown_src <- unique(dat$source)
+    
+    for (src in levels(dat$source)) {
+      if (!src %in% shown_src) next
+      sub <- filter(dat, source == src)
+      col <- if (as.character(src) %in% names(SOURCE_PAL)) unname(SOURCE_PAL[as.character(src)]) else "#666666"
       
-      p <- p |> add_trace(
-        data = d, x = ~year, y = ~rank,
-        type = "scatter", mode = "lines+markers",
-        line   = list(color = col, width = 3),
-        marker = list(color = col, size = 10,
-                      line = list(color = BG, width = 1)),
-        text   = ~paste0(source, "\nRank #", rank,
-                         "\nShare: ", round(share, 1), "%"),
-        hoverinfo = "text",
-        name = src
+      p <- add_trace(p, data = sub,
+                     x = ~date, y = ~share,
+                     type = "scatter", mode = "none",
+                     stackgroup = "stream",
+                     fillcolor = paste0(col, "CC"),   # slight transparency for layered glow
+                     name = as.character(src),
+                     legendgroup = as.character(src),
+                     hovertemplate = paste0(
+                       "<b>", src, "</b><br>%{x|%b %Y}<br>",
+                       "Share: %{y:.1f}%<extra></extra>")
       )
     }
     
-    max_rank <- max(annual$rank, na.rm = TRUE)
-    
     p |> layout(
-      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
-      font  = list(family = FONT, color = "#8B949E"),
-      title = list(
-        text = paste0("SOURCE RANKING \u2014 ", input$bump_country, " (1 = largest share)"),
+      paper_bgcolor = "rgba(0,0,0,0)",
+      plot_bgcolor  = "rgba(0,0,0,0)",
+      font    = list(family = FONT, color = "#8B949E", size = 11),
+      title   = list(
+        text = paste0("GENERATION MIX FLOW \u2014 ", input$stream_country),
         font = list(size = 13, color = FG2)
       ),
-      xaxis = list(title = "Year", gridcolor = GR, dtick = 1,
-                   tickfont = list(color = "#8B949E")),
-      yaxis = list(title = "Rank", gridcolor = GR,
-                   autorange = "reversed", dtick = 1,
-                   range = c(max_rank + 0.5, 0.5),
-                   tickfont = list(color = "#8B949E")),
-      margin = list(t = 50, b = 50, l = 50, r = 20),
-      legend = list(font = list(size = 10, color = FG),
-                    bgcolor = "rgba(0,0,0,0)"),
+      xaxis   = list(title = "", gridcolor = GR, tickfont = list(color = "#8B949E")),
+      yaxis   = list(title = "Share (%)", ticksuffix = "%",
+                     gridcolor = GR, tickfont = list(color = "#8B949E")),
+      legend  = list(orientation = "h", y = -0.18,
+                     bgcolor = "rgba(0,0,0,0)",
+                     font = list(color = FG, size = 10)),
+      margin  = list(t = 50, b = 10, l = 10, r = 10),
       hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
     )
+  })
+  
+  # ══════════════════════════════════════════════════════════════════════════
+  # ADVANCED CHART 2: Animated Scatter Race
+  # هر فریم = یک ماه، هر نقطه = یک کشور
+  # x = fossil_share, y = ws_share, size = total_gwh (نرمالایز شده)
+  # ══════════════════════════════════════════════════════════════════════════
+  output$p_animated <- renderPlotly({
+    req(input$countries)
+    
+    dat <- monthly_shares |>
+      filter(country %in% input$countries,
+             year    >= input$years[1],
+             year    <= input$years[2]) |>
+      arrange(date) |>
+      mutate(
+        frame_lbl = format(date, "%b %Y"),
+        size_norm = pmin(total_gwh / max(total_gwh, na.rm = TRUE) * 60 + 18, 80)
+      )
+    
+    if (nrow(dat) == 0) return(plot_ly())
+    
+    frames_list <- unique(dat$frame_lbl)
+    
+    # Build one plotly frame per month
+    fig <- plot_ly()
+    
+    for (ctry in unique(dat$country)) {
+      sub_all <- filter(dat, country == ctry)
+      col     <- unname(COUNTRY_COL[ctry])
+      
+      # Ghost trail (full time range, very faint)
+      fig <- add_trace(fig, data = sub_all,
+                       x = ~fossil_share, y = ~ws_share,
+                       type = "scatter", mode = "lines",
+                       line = list(color = paste0(col, "30"), width = 1.5),
+                       showlegend = FALSE, hoverinfo = "skip",
+                       name = paste0(ctry, "_trail")
+      )
+    }
+    
+    # Animated dots per country
+    for (ctry in unique(dat$country)) {
+      sub_all <- filter(dat, country == ctry)
+      col     <- unname(COUNTRY_COL[ctry])
+      
+      fig <- add_trace(fig, data = sub_all,
+                       x = ~fossil_share, y = ~ws_share,
+                       frame = ~frame_lbl,
+                       type = "scatter", mode = "markers+text",
+                       text = ~country, textposition = "top center",
+                       textfont = list(color = FG2, size = 10),
+                       marker = list(
+                         color  = col,
+                         size   = ~size_norm,
+                         sizemode = "diameter",
+                         opacity  = 0.9,
+                         line   = list(color = BG, width = 2)
+                       ),
+                       name = ctry,
+                       hovertemplate = paste0(
+                         "<b>", ctry, "</b><br>%{meta}<br>",
+                         "Fossil: %{x:.1f}%<br>W+S: %{y:.1f}%<extra></extra>"),
+                       meta = ~frame_lbl
+      )
+    }
+    
+    fig |> layout(
+      paper_bgcolor = "rgba(0,0,0,0)",
+      plot_bgcolor  = "rgba(0,0,0,0)",
+      font  = list(family = FONT, color = "#8B949E", size = 11),
+      title = list(
+        text = "TRANSITION RACE \u2014 Fossil vs W+S share (animated by month)",
+        font = list(size = 13, color = FG2)
+      ),
+      xaxis = list(
+        title = "Fossil share (%)", ticksuffix = "%",
+        gridcolor = GR, range = c(0, 100),
+        tickfont = list(color = "#8B949E")
+      ),
+      yaxis = list(
+        title = "Wind + Solar share (%)", ticksuffix = "%",
+        gridcolor = GR, range = c(0, 70),
+        tickfont = list(color = "#8B949E")
+      ),
+      # Diagonal reference line: fossil + ws = 100
+      shapes = list(list(
+        type = "line", x0 = 100, y0 = 0, x1 = 0, y1 = 100,
+        line = list(color = "#484F58", width = 1, dash = "dot")
+      )),
+      annotations = list(list(
+        x = 50, y = 52, xref = "x", yref = "y",
+        text = "fossil + W+S = 100%", showarrow = FALSE,
+        font = list(color = "#484F58", size = 9),
+        angle = -45
+      )),
+      legend = list(orientation = "h", y = -0.15,
+                    bgcolor = "rgba(0,0,0,0)",
+                    font = list(color = FG, size = 11)),
+      margin = list(t = 50, b = 60, l = 10, r = 10),
+      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
+    ) |>
+      animation_opts(
+        frame     = 120,
+        transition = 80,
+        easing    = "cubic-in-out",
+        redraw    = FALSE
+      ) |>
+      animation_slider(
+        currentvalue = list(
+          prefix = "Month: ",
+          font   = list(color = FG2, size = 12)
+        ),
+        bgcolor = BG2,
+        bordercolor = GR,
+        font = list(color = "#8B949E", size = 10)
+      ) |>
+      animation_button(
+        x = 0.05, y = -0.12,
+        bgcolor = "#2196F3",
+        font = list(color = FG2)
+      )
   })
 }
 
