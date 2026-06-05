@@ -12,7 +12,7 @@ library(lubridate)
 
 # ── DATA PREPARATION ──────────────────────────────────────────────────────────
 au_raw <- read_csv(
-  "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/raw/19990101 All Regions Australia.csv",
+  "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/Datasets/raw/19990101 All Regions Australia.csv",
   show_col_types = FALSE
 ) |>
   rename(

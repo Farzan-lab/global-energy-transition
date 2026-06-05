@@ -10,8 +10,9 @@ library(plotly)
 library(lubridate)
 
 # ── DATA ──────────────────────────────────────────────────────────────────────
-combined <- read_csv("C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/data/processed/combined_energy.csv",
-                     show_col_types = FALSE) |>
+combined <- read_csv(
+  "C:/Users/farza/Uni/S2/Data visualization/global-energy-transition/Datasets/processed/combined_energy.csv",
+  show_col_types = FALSE) |>
   mutate(date = as.Date(date))
 
 # Fossil sources & Wind+Solar per RQ1 definition
@@ -38,7 +39,8 @@ monthly_shares <- combined |>
     gas_share    = gas_gwh    / total_gwh * 100,
     wind_share   = wind_gwh   / total_gwh * 100,
     solar_share  = solar_gwh  / total_gwh * 100,
-    year         = year(date)
+    year         = year(date),
+    month        = month(date)
   )
 
 # Annual averages
@@ -50,7 +52,7 @@ annual_shares <- monthly_shares |>
 compute_slopes <- function(data) {
   data |>
     group_by(country) |>
-    mutate(t = as.numeric(date - min(date)) / 30) |>   # months since start
+    mutate(t = as.numeric(date - min(date)) / 30) |>
     summarise(
       fossil_slope  = coef(lm(fossil_share ~ t))[2],
       ws_slope      = coef(lm(ws_share ~ t))[2],
@@ -73,23 +75,38 @@ COUNTRY_COL <- c(
   "Australia"      = "#66BB6A"
 )
 
+SOURCE_PAL <- c(
+  Gas        = "#FF6B2B", Coal      = "#8B949E", Wind  = "#4FC3F7",
+  Solar      = "#FFD54F", Nuclear   = "#AB47BC", Hydro = "#26C6DA",
+  Biomass    = "#66BB6A", Bioenergy = "#66BB6A", Oil   = "#A1887F",
+  Distillate = "#78909C", Geothermal= "#EF5350", Other = "#9E9E9E"
+)
+
+# ── THEME CONSTANTS ───────────────────────────────────────────────────────────
+BG   <- "#0D1117"
+BG2  <- "#161B22"
+FG   <- "#C9D1D9"
+FG2  <- "#E6EDF3"
+GR   <- "#21262D"
+FONT <- "IBM Plex Sans"
+
 # ── PLOTLY BASE LAYOUT ────────────────────────────────────────────────────────
 base_layout <- function(p, ytitle = "", ytickformat = ".0f", ysuffix = "%") {
   p |> layout(
     paper_bgcolor = "rgba(0,0,0,0)",
     plot_bgcolor  = "rgba(0,0,0,0)",
-    font          = list(family = "IBM Plex Sans", color = "#8B949E", size = 11),
-    xaxis         = list(gridcolor = "#21262D", zerolinecolor = "#21262D",
+    font          = list(family = FONT, color = "#8B949E", size = 11),
+    xaxis         = list(gridcolor = GR, zerolinecolor = GR,
                          tickfont  = list(color = "#8B949E"), title = ""),
-    yaxis         = list(gridcolor = "#21262D", zerolinecolor = "#21262D",
+    yaxis         = list(gridcolor = GR, zerolinecolor = GR,
                          tickfont  = list(color = "#8B949E"),
                          title     = ytitle,
                          ticksuffix = ysuffix),
     legend        = list(bgcolor = "rgba(0,0,0,0)",
-                         font    = list(color = "#C9D1D9", size = 11),
+                         font    = list(color = FG, size = 11),
                          orientation = "h", y = -0.18),
     margin        = list(t = 30, b = 10, l = 10, r = 10),
-    hoverlabel    = list(bgcolor = "#161B22", font = list(color = "#E6EDF3"))
+    hoverlabel    = list(bgcolor = BG2, font = list(color = FG2))
   )
 }
 
@@ -97,13 +114,13 @@ base_layout <- function(p, ytitle = "", ytickformat = ".0f", ysuffix = "%") {
 ui <- fluidPage(
   theme = bs_theme(
     version      = 5,
-    bg           = "#0D1117",
-    fg           = "#C9D1D9",
+    bg           = BG,
+    fg           = FG,
     primary      = "#2196F3",
     base_font    = font_google("IBM Plex Sans"),
     heading_font = font_google("Space Grotesk")
   ),
-
+  
   tags$head(tags$style(HTML("
     body { background:#0D1117; }
 
@@ -188,22 +205,22 @@ ui <- fluidPage(
     .shiny-input-checkboxgroup label { color: #8B949E !important; }
     .pg-footer { text-align:center; color:#484F58; font-size:.73rem; padding:1.5rem; }
   "))),
-
+  
   # ── HEADER ────────────────────────────────────────────────────────────────
   div(class = "rq-header",
-    div(class = "badge-rq", "RQ 1 — Transition Velocity"),
-    h2(class = "rq-title",
-       "Which country moved away from fossil fuels the fastest?"),
-    p(class = "rq-subtitle",
-      "Fossil fuel (Coal + Gas) decline vs. Wind + Solar growth \u00B7 2019\u20132025 \u00B7 UK, US, Australia")
+      div(class = "badge-rq", "RQ 1 — Transition Velocity"),
+      h2(class = "rq-title",
+         "Which country moved away from fossil fuels the fastest?"),
+      p(class = "rq-subtitle",
+        "Fossil fuel (Coal + Gas) decline vs. Wind + Solar growth \u00B7 2019\u20132025 \u00B7 UK, US, Australia")
   ),
-
+  
   div(class = "page-wrap",
-    br(),
-
-    # ── INSIGHT BOX ─────────────────────────────────────────────────────────
-    div(class = "insight",
-      HTML("<strong>How to read this dashboard:</strong>
+      br(),
+      
+      # ── INSIGHT BOX ─────────────────────────────────────────────────────────
+      div(class = "insight",
+          HTML("<strong>How to read this dashboard:</strong>
       Each chart measures a different dimension of the energy transition.
       <em>Share (%)</em> is used throughout instead of absolute GWh — because the US grid is
       ~260\u00D7 larger than UK or Australia, only percentage share allows fair cross-country comparison.
@@ -213,96 +230,130 @@ ui <- fluidPage(
       and continued declining steadily. <strong>US</strong> shows the slowest rate of change (\u22126.0 pp fossil),
       reflecting the scale and structural inertia of its grid.
       Note: Coal is absent from UK data \u2014 Great Britain completed its coal phase-out during this period.")
-    ),
-
-    # ── CONTROLS ──────────────────────────────────────────────────────────
-    div(class = "ctrl-bar",
-      div(
-        tags$label("Countries", class = "form-label"),
-        checkboxGroupInput("countries", NULL,
-          choices  = c("United Kingdom", "United States", "Australia"),
-          selected = c("United Kingdom", "United States", "Australia"),
-          inline   = TRUE)
       ),
-      div(style = "min-width: 260px",
-        tags$label("Year range", class = "form-label"),
-        sliderInput("years", NULL,
-          min = 2019, max = 2025, value = c(2019, 2025), step = 1, sep = "")
+      
+      # ── CONTROLS ──────────────────────────────────────────────────────────
+      div(class = "ctrl-bar",
+          div(
+            tags$label("Countries", class = "form-label"),
+            checkboxGroupInput("countries", NULL,
+                               choices  = c("United Kingdom", "United States", "Australia"),
+                               selected = c("United Kingdom", "United States", "Australia"),
+                               inline   = TRUE)
+          ),
+          div(style = "min-width: 260px",
+              tags$label("Year range", class = "form-label"),
+              sliderInput("years", NULL,
+                          min = 2019, max = 2025, value = c(2019, 2025), step = 1, sep = "")
+          ),
+          div(
+            tags$label("Trend line", class = "form-label"),
+            checkboxInput("show_trend", "Show linear trend", value = TRUE)
+          )
       ),
-      div(
-        tags$label("Trend line", class = "form-label"),
-        checkboxInput("show_trend", "Show linear trend", value = TRUE)
-      )
-    ),
-
-    # ── KPI CARDS ─────────────────────────────────────────────────────────
-    uiOutput("kpi_cards"),
-
-    # ── ROW 1: Fossil & Wind+Solar share over time ─────────────────────────
-    fluidRow(
-      column(6,
-        div(class = "cc",
-          div(class = "cc-lbl", "Fossil share (Coal + Gas) \u2014 % of monthly generation"),
-          plotlyOutput("p_fossil_line", height = "300px")
+      
+      # ── KPI CARDS ─────────────────────────────────────────────────────────
+      uiOutput("kpi_cards"),
+      
+      # ── ROW 1: Fossil & Wind+Solar share over time ─────────────────────────
+      fluidRow(
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl", "Fossil share (Coal + Gas) \u2014 % of monthly generation"),
+                   plotlyOutput("p_fossil_line", height = "300px")
+               )
+        ),
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl", "Wind + Solar share \u2014 % of monthly generation"),
+                   plotlyOutput("p_ws_line", height = "300px")
+               )
         )
       ),
-      column(6,
-        div(class = "cc",
-          div(class = "cc-lbl", "Wind + Solar share \u2014 % of monthly generation"),
-          plotlyOutput("p_ws_line", height = "300px")
+      
+      # ── ROW 2: Speed comparison (slopes) ──────────────────────────────────
+      fluidRow(
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl",
+                       "Transition speed \u2014 percentage point change per month (slope of trend)"),
+                   plotlyOutput("p_slopes", height = "300px")
+               )
+        ),
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl",
+                       "Start vs. end \u2014 fossil share 2019 vs. 2025 (dumbbell)"),
+                   plotlyOutput("p_dumbbell", height = "300px")
+               )
         )
-      )
-    ),
-
-    # ── ROW 2: Speed comparison (slopes) ──────────────────────────────────
-    fluidRow(
-      column(6,
-        div(class = "cc",
+      ),
+      
+      # ── ROW 3: Annual averages bar ──────────────────────────────────────────
+      fluidRow(
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl", "Annual average fossil share \u2014 grouped bar"),
+                   plotlyOutput("p_annual_bar", height = "300px")
+               )
+        ),
+        column(6,
+               div(class = "cc",
+                   div(class = "cc-lbl", "Annual average Wind + Solar share \u2014 grouped bar"),
+                   plotlyOutput("p_ws_bar", height = "300px")
+               )
+        )
+      ),
+      
+      # ── ROW 4: Coal vs Gas breakdown ──────────────────────────────────────
+      div(class = "cc",
           div(class = "cc-lbl",
-              "Transition speed \u2014 percentage point change per month (slope of trend)"),
-          plotlyOutput("p_slopes", height = "300px")
-        )
+              "Fossil breakdown \u2014 Coal vs. Gas share over time (stacked area per country)"),
+          plotlyOutput("p_fossil_stack", height = "340px")
       ),
-      column(6,
-        div(class = "cc",
+      
+      # ── ROW 5: Heatmap month × year × fossil share ────────────────────────
+      div(class = "cc",
           div(class = "cc-lbl",
-              "Start vs. end \u2014 fossil share 2019 vs. 2025 (dumbbell)"),
-          plotlyOutput("p_dumbbell", height = "300px")
-        )
-      )
-    ),
-
-    # ── ROW 3: Annual averages bar + stacked area ──────────────────────────
-    fluidRow(
-      column(6,
-        div(class = "cc",
-          div(class = "cc-lbl", "Annual average fossil share \u2014 grouped bar"),
-          plotlyOutput("p_annual_bar", height = "300px")
-        )
+              "Seasonal pattern \u2014 fossil share heatmap (month \u00D7 year per country)"),
+          plotlyOutput("p_heatmap", height = "420px")
       ),
-      column(6,
-        div(class = "cc",
-          div(class = "cc-lbl", "Annual average Wind + Solar share \u2014 grouped bar"),
-          plotlyOutput("p_ws_bar", height = "300px")
-        )
-      )
-    ),
-
-    # ── ROW 4: Coal vs Gas breakdown ──────────────────────────────────────
-    div(class = "cc",
-      div(class = "cc-lbl",
-          "Fossil breakdown \u2014 Coal vs. Gas share over time (stacked area per country)"),
-      plotlyOutput("p_fossil_stack", height = "340px")
-    ),
-
-    div(class = "pg-footer",
-        "Data: GridWatch (UK) \u00B7 EIA (US) \u00B7 AEMO/OpenNEM (AU) | RQ1 \u2014 Transition Velocity")
+      
+      # ── ROW 6: Waterfall ──────────────────────────────────────────────────
+      div(class = "cc",
+          div(class = "cc-lbl",
+              "Source contribution change \u2014 waterfall from 2019 to 2025"),
+          plotlyOutput("p_waterfall", height = "380px")
+      ),
+      
+      # ── ROW 7: Sunburst ───────────────────────────────────────────────────
+      div(class = "cc",
+          div(class = "cc-lbl",
+              "Generation hierarchy \u2014 sunburst (Country \u2192 Source)"),
+          plotlyOutput("p_sunburst", height = "500px")
+      ),
+      
+      # ── ROW 8: Bump Chart ─────────────────────────────────────────────────
+      div(class = "cc",
+          div(class = "cc-lbl",
+              "Source ranking over time \u2014 bump chart (1 = largest share)"),
+          div(
+            selectInput("bump_country", "Select country:",
+                        choices  = c("United Kingdom", "United States", "Australia"),
+                        selected = "Australia",
+                        width = "220px")
+          ),
+          plotlyOutput("p_bump", height = "460px")
+      ),
+      
+      div(class = "pg-footer",
+          "Data: GridWatch (UK) \u00B7 EIA (US) \u00B7 AEMO/OpenNEM (AU) | RQ1 \u2014 Transition Velocity")
   )
 )
 
 # ── SERVER ────────────────────────────────────────────────────────────────────
 server <- function(input, output, session) {
-
+  
   # Filtered reactive data
   monthly_f <- reactive({
     monthly_shares |>
@@ -312,7 +363,7 @@ server <- function(input, output, session) {
         year    <= input$years[2]
       )
   })
-
+  
   annual_f <- reactive({
     annual_shares |>
       filter(
@@ -321,7 +372,7 @@ server <- function(input, output, session) {
         year    <= input$years[2]
       )
   })
-
+  
   slopes_f <- reactive({
     monthly_f() |>
       group_by(country) |>
@@ -338,46 +389,43 @@ server <- function(input, output, session) {
         .groups = "drop"
       )
   })
-
+  
   # ── KPI CARDS ─────────────────────────────────────────────────────────────
   output$kpi_cards <- renderUI({
     s <- slopes_f()
     if (nrow(s) == 0) return(NULL)
-
-    # Fastest fossil decline
+    
     best_fossil <- s |> slice_min(fossil_slope, n = 1)
-    # Fastest W+S growth
     best_ws     <- s |> slice_max(ws_slope, n = 1)
-    # Largest absolute fossil drop
     best_delta  <- s |> slice_min(fossil_delta, n = 1)
-
+    
     mk <- function(val, lbl, sub, col)
       div(class = "kpi",
           div(class = "kpi-val", style = paste0("color:", col), val),
           div(class = "kpi-lbl", lbl),
           div(class = "kpi-sub", sub))
-
+    
     div(class = "kpi-row",
-      mk(best_fossil$country,
-         "Fastest fossil decline",
-         paste0(round(best_fossil$fossil_slope, 3), " pp/month"),
-         COUNTRY_COL[best_fossil$country]),
-      mk(best_ws$country,
-         "Fastest W+Solar growth",
-         paste0("+", round(best_ws$ws_slope, 3), " pp/month"),
-         COUNTRY_COL[best_ws$country]),
-      mk(best_delta$country,
-         "Largest fossil drop (total)",
-         paste0(round(best_delta$fossil_delta, 1), " pp"),
-         COUNTRY_COL[best_delta$country]),
-      mk(paste0(round(max(abs(s$ws_delta)), 1), " pp"),
-         "Largest W+Solar gain (total)",
-         s$country[which.max(abs(s$ws_delta))],
-         "#FFB74D")
+        mk(best_fossil$country,
+           "Fastest fossil decline",
+           paste0(round(best_fossil$fossil_slope, 3), " pp/month"),
+           COUNTRY_COL[best_fossil$country]),
+        mk(best_ws$country,
+           "Fastest W+Solar growth",
+           paste0("+", round(best_ws$ws_slope, 3), " pp/month"),
+           COUNTRY_COL[best_ws$country]),
+        mk(best_delta$country,
+           "Largest fossil drop (total)",
+           paste0(round(best_delta$fossil_delta, 1), " pp"),
+           COUNTRY_COL[best_delta$country]),
+        mk(paste0(round(max(abs(s$ws_delta)), 1), " pp"),
+           "Largest W+Solar gain (total)",
+           s$country[which.max(abs(s$ws_delta))],
+           "#FFB74D")
     )
   })
-
-  # ── HELPER: add trend line to a plotly object ──────────────────────────────
+  
+  # ── HELPER: add trend line ─────────────────────────────────────────────────
   add_trend <- function(p, data, y_col, country_col = "country") {
     if (!input$show_trend) return(p)
     for (ctry in unique(data[[country_col]])) {
@@ -385,12 +433,10 @@ server <- function(input, output, session) {
       if (nrow(sub) < 3) next
       t_num <- as.numeric(sub$date - min(sub$date))
       fit   <- lm(sub[[y_col]] ~ t_num)
-      pred  <- data.frame(date = sub$date,
-                          y    = predict(fit))
+      pred  <- data.frame(date = sub$date, y = predict(fit))
       p <- add_trace(p, data = pred, x = ~date, y = ~y,
                      type = "scatter", mode = "lines",
-                     line = list(color = COUNTRY_COL[ctry],
-                                 dash  = "dash", width = 1.5),
+                     line = list(color = COUNTRY_COL[ctry], dash = "dash", width = 1.5),
                      name = paste0(ctry, " trend"),
                      legendgroup = paste0(ctry, "_trend"),
                      showlegend  = FALSE,
@@ -398,7 +444,7 @@ server <- function(input, output, session) {
     }
     p
   }
-
+  
   # ── CHART 1: Fossil share line ─────────────────────────────────────────────
   output$p_fossil_line <- renderPlotly({
     d <- monthly_f()
@@ -417,9 +463,9 @@ server <- function(input, output, session) {
     p <- add_trend(p, d, "fossil_share")
     base_layout(p) |>
       layout(yaxis = list(title = "Share (%)", ticksuffix = "%",
-                          gridcolor = "#21262D", zerolinecolor = "#21262D"))
+                          gridcolor = GR, zerolinecolor = GR))
   })
-
+  
   # ── CHART 2: Wind+Solar share line ────────────────────────────────────────
   output$p_ws_line <- renderPlotly({
     d <- monthly_f()
@@ -438,19 +484,16 @@ server <- function(input, output, session) {
     p <- add_trend(p, d, "ws_share")
     base_layout(p) |>
       layout(yaxis = list(title = "Share (%)", ticksuffix = "%",
-                          gridcolor = "#21262D", zerolinecolor = "#21262D"))
+                          gridcolor = GR, zerolinecolor = GR))
   })
-
+  
   # ── CHART 3: Slope comparison bar ─────────────────────────────────────────
   output$p_slopes <- renderPlotly({
     s <- slopes_f()
-
-    # Long format for grouped bar
     slope_long <- bind_rows(
       mutate(s, metric = "Fossil decline (pp/month)", slope = fossil_slope),
       mutate(s, metric = "Wind+Solar growth (pp/month)", slope = ws_slope)
     )
-
     plot_ly(slope_long,
             x = ~country, y = ~slope, color = ~metric,
             colors = c("Fossil decline (pp/month)"     = "#EF5350",
@@ -460,56 +503,49 @@ server <- function(input, output, session) {
       base_layout() |>
       layout(
         yaxis = list(title = "pp / month", ticksuffix = "",
-                     gridcolor = "#21262D", zerolinecolor = "#21262D"),
-        xaxis = list(title = "", gridcolor = "#21262D"),
+                     gridcolor = GR, zerolinecolor = GR),
+        xaxis = list(title = "", gridcolor = GR),
         shapes = list(list(type = "line", x0 = -0.5, x1 = 2.5,
                            y0 = 0, y1 = 0,
                            line = list(color = "#484F58", width = 1)))
       )
   })
-
+  
   # ── CHART 4: Dumbbell — start vs end fossil share ─────────────────────────
   output$p_dumbbell <- renderPlotly({
     s <- slopes_f()
     p <- plot_ly()
-
-    # Connecting lines
     for (i in seq_len(nrow(s))) {
       p <- add_trace(p,
-        x = c(s$fossil_start[i], s$fossil_end[i]),
-        y = c(s$country[i], s$country[i]),
-        type = "scatter", mode = "lines",
-        line = list(color = "#30363D", width = 3),
-        showlegend = FALSE, hoverinfo = "skip")
+                     x = c(s$fossil_start[i], s$fossil_end[i]),
+                     y = c(s$country[i], s$country[i]),
+                     type = "scatter", mode = "lines",
+                     line = list(color = "#30363D", width = 3),
+                     showlegend = FALSE, hoverinfo = "skip")
     }
-
-    # Start dots
     p <- add_trace(p, data = s,
-      x = ~fossil_start, y = ~country,
-      type = "scatter", mode = "markers",
-      name = "2019 start",
-      marker = list(color = "#FF9800", size = 14,
-                    line = list(color = "#0D1117", width = 2)),
-      hovertemplate = "<b>%{y}</b><br>2019 fossil: %{x:.1f}%<extra></extra>")
-
-    # End dots
+                   x = ~fossil_start, y = ~country,
+                   type = "scatter", mode = "markers",
+                   name = "2019 start",
+                   marker = list(color = "#FF9800", size = 14,
+                                 line = list(color = BG, width = 2)),
+                   hovertemplate = "<b>%{y}</b><br>2019 fossil: %{x:.1f}%<extra></extra>")
     p <- add_trace(p, data = s,
-      x = ~fossil_end, y = ~country,
-      type = "scatter", mode = "markers",
-      name = "2025 end",
-      marker = list(color = "#EF5350", size = 14,
-                    line = list(color = "#0D1117", width = 2)),
-      hovertemplate = "<b>%{y}</b><br>2025 fossil: %{x:.1f}%<extra></extra>")
-
+                   x = ~fossil_end, y = ~country,
+                   type = "scatter", mode = "markers",
+                   name = "2025 end",
+                   marker = list(color = "#EF5350", size = 14,
+                                 line = list(color = BG, width = 2)),
+                   hovertemplate = "<b>%{y}</b><br>2025 fossil: %{x:.1f}%<extra></extra>")
     base_layout(p) |>
       layout(
         xaxis = list(title = "Fossil share (%)", ticksuffix = "%",
-                     gridcolor = "#21262D", range = c(0, 90)),
-        yaxis = list(title = "", gridcolor = "#21262D"),
+                     gridcolor = GR, range = c(0, 90)),
+        yaxis = list(title = "", gridcolor = GR),
         legend = list(orientation = "h", y = -0.2)
       )
   })
-
+  
   # ── CHART 5 & 6: Annual grouped bar ───────────────────────────────────────
   output$p_annual_bar <- renderPlotly({
     d <- annual_f()
@@ -518,12 +554,11 @@ server <- function(input, output, session) {
             type = "bar", barmode = "group",
             hovertemplate = "<b>%{fullData.name}</b><br>%{x}<br>Fossil: %{y:.1f}%<extra></extra>") |>
       base_layout() |>
-      layout(yaxis = list(title = "Fossil share (%)", ticksuffix = "%",
-                          gridcolor = "#21262D"),
-             xaxis = list(title = "Year", gridcolor = "#21262D"),
+      layout(yaxis = list(title = "Fossil share (%)", ticksuffix = "%", gridcolor = GR),
+             xaxis = list(title = "Year", gridcolor = GR),
              bargap = 0.2)
   })
-
+  
   output$p_ws_bar <- renderPlotly({
     d <- annual_f()
     plot_ly(d, x = ~year, y = ~ws_share, color = ~country,
@@ -531,30 +566,28 @@ server <- function(input, output, session) {
             type = "bar", barmode = "group",
             hovertemplate = "<b>%{fullData.name}</b><br>%{x}<br>Wind+Solar: %{y:.1f}%<extra></extra>") |>
       base_layout() |>
-      layout(yaxis = list(title = "Wind+Solar share (%)", ticksuffix = "%",
-                          gridcolor = "#21262D"),
-             xaxis = list(title = "Year", gridcolor = "#21262D"),
+      layout(yaxis = list(title = "Wind+Solar share (%)", ticksuffix = "%", gridcolor = GR),
+             xaxis = list(title = "Year", gridcolor = GR),
              bargap = 0.2)
   })
-
+  
   # ── CHART 7: Fossil breakdown stacked area ────────────────────────────────
   output$p_fossil_stack <- renderPlotly({
     d <- monthly_f()
     countries <- unique(d$country)
     n <- length(countries)
     if (n == 0) return(plot_ly())
-
+    
     p <- plot_ly()
     domain_w <- 1 / n
     shown <- character(0)
-
+    
     for (i in seq_along(countries)) {
       ctry <- countries[i]
       sub  <- filter(d, country == ctry)
       xa   <- if (i == 1) "x"  else paste0("x", i)
       ya   <- if (i == 1) "y"  else paste0("y", i)
-
-      # Coal (not all countries have it)
+      
       has_coal <- any(sub$coal_share > 0)
       if (has_coal) {
         p <- add_trace(p, data = sub, x = ~date, y = ~coal_share,
@@ -567,8 +600,6 @@ server <- function(input, output, session) {
                        hovertemplate = paste0("<b>Coal</b> (", ctry, ")<br>%{x|%b %Y}<br>%{y:.1f}%<extra></extra>"))
         if (!("Coal" %in% shown)) shown <- c(shown, "Coal")
       }
-
-      # Gas
       p <- add_trace(p, data = sub, x = ~date, y = ~gas_share,
                      type = "scatter", mode = "none",
                      stackgroup = paste0("s", i),
@@ -579,40 +610,337 @@ server <- function(input, output, session) {
                      hovertemplate = paste0("<b>Gas</b> (", ctry, ")<br>%{x|%b %Y}<br>%{y:.1f}%<extra></extra>"))
       if (!("Gas" %in% shown)) shown <- c(shown, "Gas")
     }
-
-    # Build multi-panel axes
+    
     axis_cfg <- list(
       paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
-      font   = list(family = "IBM Plex Sans", color = "#8B949E", size = 11),
+      font   = list(family = FONT, color = "#8B949E", size = 11),
       legend = list(orientation = "h", y = -0.15,
                     bgcolor = "rgba(0,0,0,0)",
-                    font    = list(color = "#C9D1D9", size = 11)),
+                    font    = list(color = FG, size = 11)),
       margin = list(t = 30, b = 10)
     )
-
     ann <- lapply(seq_along(countries), function(i) {
       list(text = countries[i],
            xref = paste0("x", if (i == 1) "" else i, " domain"),
            yref = paste0("y", if (i == 1) "" else i, " domain"),
            x = 0.5, y = 1.06, showarrow = FALSE,
-           font = list(color = "#E6EDF3", size = 11, family = "Space Grotesk"))
+           font = list(color = FG2, size = 11, family = "Space Grotesk"))
     })
     axis_cfg[["annotations"]] <- ann
-
+    
     for (i in seq_along(countries)) {
       xk <- if (i == 1) "xaxis"  else paste0("xaxis",  i)
       yk <- if (i == 1) "yaxis"  else paste0("yaxis",  i)
       dom <- c((i - 1) * domain_w, i * domain_w - 0.04)
-      axis_cfg[[xk]] <- list(domain = dom, gridcolor = "#21262D",
+      axis_cfg[[xk]] <- list(domain = dom, gridcolor = GR,
                              tickfont = list(color = "#8B949E"),
                              anchor = if (i == 1) "y" else paste0("y", i))
       axis_cfg[[yk]] <- list(title = "Share (%)", ticksuffix = "%",
-                             gridcolor = "#21262D",
+                             gridcolor = GR,
                              tickfont  = list(color = "#8B949E"),
                              anchor = if (i == 1) "x" else paste0("x", i))
     }
-
     do.call(layout, c(list(p), axis_cfg))
+  })
+  
+  # ── CHART 9: Heatmap — month × year × fossil share ────────────────────────
+  output$p_heatmap <- renderPlotly({
+    d <- monthly_f()
+    countries <- unique(d$country)
+    n <- length(countries)
+    if (n == 0) return(plot_ly())
+    
+    p <- plot_ly()
+    domain_w <- 1 / n
+    
+    month_lbls <- c("Jan","Feb","Mar","Apr","May","Jun",
+                    "Jul","Aug","Sep","Oct","Nov","Dec")
+    
+    for (i in seq_along(countries)) {
+      ctry <- countries[i]
+      sub  <- filter(d, country == ctry) |>
+        mutate(month_lbl = factor(month_lbls[month], levels = month_lbls))
+      
+      mat <- sub |>
+        select(year, month, fossil_share) |>
+        pivot_wider(names_from = year, values_from = fossil_share, values_fn = mean)
+      
+      years_here <- sort(unique(sub$year))
+      months_mat <- month_lbls[1:12]
+      
+      z_vals <- matrix(NA_real_, nrow = 12, ncol = length(years_here))
+      for (yr_i in seq_along(years_here)) {
+        for (mo_i in 1:12) {
+          v <- sub$fossil_share[sub$year == years_here[yr_i] & sub$month == mo_i]
+          if (length(v) > 0) z_vals[mo_i, yr_i] <- mean(v)
+        }
+      }
+      
+      xa <- if (i == 1) "x" else paste0("x", i)
+      ya <- if (i == 1) "y" else paste0("y", i)
+      
+      p <- add_trace(p,
+                     z         = z_vals,
+                     x         = years_here,
+                     y         = months_mat,
+                     type      = "heatmap",
+                     colorscale = list(
+                       c(0, "#1a2744"), c(0.25, "#1565C0"),
+                       c(0.5, "#FF9800"), c(0.75, "#EF5350"), c(1, "#B71C1C")),
+                     zmin = 0, zmax = 100,
+                     showscale = (i == 1),
+                     colorbar  = list(title = "Fossil %", ticksuffix = "%",
+                                      tickfont = list(color = "#8B949E"),
+                                      titlefont = list(color = "#8B949E")),
+                     xaxis = xa, yaxis = ya,
+                     hovertemplate = paste0("<b>", ctry, "</b><br>",
+                                            "%{y} %{x}<br>Fossil: %{z:.1f}%<extra></extra>"),
+                     name = ctry
+      )
+    }
+    
+    ann <- lapply(seq_along(countries), function(i) {
+      list(text = countries[i],
+           xref = paste0("x", if (i == 1) "" else i, " domain"),
+           yref = paste0("y", if (i == 1) "" else i, " domain"),
+           x = 0.5, y = 1.06, showarrow = FALSE,
+           font = list(color = FG2, size = 11, family = "Space Grotesk"))
+    })
+    
+    cfg <- list(
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
+      font   = list(family = FONT, color = "#8B949E", size = 11),
+      annotations = ann,
+      margin = list(t = 40, b = 10, l = 10, r = 60),
+      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
+    )
+    for (i in seq_along(countries)) {
+      xk  <- if (i == 1) "xaxis"  else paste0("xaxis",  i)
+      yk  <- if (i == 1) "yaxis"  else paste0("yaxis",  i)
+      dom <- c((i - 1) * domain_w, i * domain_w - 0.04)
+      cfg[[xk]] <- list(domain = dom, gridcolor = GR,
+                        tickfont = list(color = "#8B949E"), dtick = 1,
+                        anchor = if (i == 1) "y" else paste0("y", i))
+      cfg[[yk]] <- list(gridcolor = GR, tickfont = list(color = "#8B949E"),
+                        anchor = if (i == 1) "x" else paste0("x", i))
+    }
+    do.call(layout, c(list(p), cfg))
+  })
+  
+  # ── CHART 10: Waterfall — source contribution change ──────────────────────
+  output$p_waterfall <- renderPlotly({
+    d <- monthly_f()
+    if (nrow(d) == 0) return(plot_ly())
+    
+    countries <- unique(d$country)
+    n <- length(countries)
+    domain_w <- 1 / n
+    p <- plot_ly()
+    ann <- list()
+    
+    for (i in seq_along(countries)) {
+      ctry <- countries[i]
+      sub  <- filter(d, country == ctry)
+      
+      yr_min <- min(sub$year)
+      yr_max <- max(sub$year)
+      
+      start_avg <- sub |> filter(year == yr_min) |>
+        summarise(fossil = mean(fossil_share), ws = mean(ws_share),
+                  coal = mean(coal_share), gas = mean(gas_share),
+                  wind = mean(wind_share), solar = mean(solar_share))
+      end_avg <- sub |> filter(year == yr_max) |>
+        summarise(fossil = mean(fossil_share), ws = mean(ws_share),
+                  coal = mean(coal_share), gas = mean(gas_share),
+                  wind = mean(wind_share), solar = mean(solar_share))
+      
+      deltas <- data.frame(
+        source = c("Coal", "Gas", "Wind", "Solar"),
+        delta  = c(
+          end_avg$coal  - start_avg$coal,
+          end_avg$gas   - start_avg$gas,
+          end_avg$wind  - start_avg$wind,
+          end_avg$solar - start_avg$solar
+        )
+      ) |>
+        filter(abs(delta) > 0.1) |>
+        mutate(
+          col = case_when(
+            delta > 0  ~ "#66BB6A",
+            delta < 0  ~ "#EF5350",
+            TRUE       ~ "#888888"
+          ),
+          label = paste0(ifelse(delta > 0, "+", ""), round(delta, 1), " pp")
+        )
+      
+      xa <- if (i == 1) "x" else paste0("x", i)
+      ya <- if (i == 1) "y" else paste0("y", i)
+      
+      p <- add_trace(p,
+                     x = ~source, y = ~delta, type = "bar",
+                     data = deltas,
+                     marker = list(color = ~col,
+                                   line = list(color = BG, width = 1)),
+                     text = ~label, textposition = "outside",
+                     textfont = list(color = FG, size = 10),
+                     name = ctry,
+                     xaxis = xa, yaxis = ya,
+                     showlegend = FALSE,
+                     hovertemplate = paste0("<b>%{x}</b> (", ctry, ")<br>",
+                                            "Change: %{y:+.1f} pp<extra></extra>")
+      )
+      
+      ann[[i]] <- list(
+        text = countries[i],
+        xref = paste0("x", if (i == 1) "" else i, " domain"),
+        yref = paste0("y", if (i == 1) "" else i, " domain"),
+        x = 0.5, y = 1.06, showarrow = FALSE,
+        font = list(color = FG2, size = 11, family = "Space Grotesk")
+      )
+    }
+    
+    cfg <- list(
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
+      font   = list(family = FONT, color = "#8B949E", size = 11),
+      annotations = ann,
+      margin = list(t = 40, b = 50, l = 10, r = 10),
+      hoverlabel = list(bgcolor = BG2, font = list(color = FG2)),
+      shapes = lapply(seq_along(countries), function(i) {
+        list(type = "line", xref = paste0("x", if (i==1) "" else i),
+             yref = paste0("y", if (i==1) "" else i),
+             x0 = -0.5, x1 = 3.5, y0 = 0, y1 = 0,
+             line = list(color = "#484F58", width = 1, dash = "dot"))
+      })
+    )
+    for (i in seq_along(countries)) {
+      xk  <- if (i == 1) "xaxis"  else paste0("xaxis",  i)
+      yk  <- if (i == 1) "yaxis"  else paste0("yaxis",  i)
+      dom <- c((i - 1) * domain_w, i * domain_w - 0.04)
+      cfg[[xk]] <- list(domain = dom, gridcolor = GR,
+                        tickfont = list(color = "#8B949E"),
+                        anchor = if (i == 1) "y" else paste0("y", i))
+      cfg[[yk]] <- list(title = "Change (pp)", ticksuffix = " pp",
+                        gridcolor = GR, zerolinecolor = "#484F58",
+                        tickfont = list(color = "#8B949E"),
+                        anchor = if (i == 1) "x" else paste0("x", i))
+    }
+    do.call(layout, c(list(p), cfg))
+  })
+  
+  # ── CHART 11 (Advanced): Sunburst ─────────────────────────────────────────
+  output$p_sunburst <- renderPlotly({
+    req(input$countries)
+    
+    dat <- combined |>
+      filter(
+        country %in% input$countries,
+        year(date) >= input$years[1],
+        year(date) <= input$years[2]
+      )
+    
+    yr_max <- max(year(dat$date))
+    
+    latest <- dat |>
+      filter(year(date) == yr_max) |>
+      group_by(country, source) |>
+      summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop")
+    
+    countries_agg <- latest |>
+      group_by(country) |>
+      summarise(gwh = sum(gwh), .groups = "drop")
+    
+    labels  <- c("All", countries_agg$country, latest$source)
+    parents <- c("", rep("All", nrow(countries_agg)), latest$country)
+    values  <- c(sum(countries_agg$gwh), countries_agg$gwh, latest$gwh)
+    colors  <- c(
+      BG2,
+      sapply(countries_agg$country, function(x) unname(COUNTRY_COL[x])),
+      sapply(latest$source, function(s) {
+        if (s %in% names(SOURCE_PAL)) unname(SOURCE_PAL[s]) else "#555555"
+      })
+    )
+    
+    plot_ly(
+      type     = "sunburst",
+      labels   = labels,
+      parents  = parents,
+      values   = values,
+      branchvalues = "total",
+      marker   = list(colors = colors, line = list(color = BG, width = 1.5)),
+      textinfo = "label+percent parent",
+      insidetextorientation = "radial"
+    ) |>
+      layout(
+        paper_bgcolor = "rgba(0,0,0,0)",
+        font  = list(family = FONT, color = FG),
+        title = list(
+          text = paste0("GENERATION HIERARCHY \u2014 ", yr_max,
+                        " (inner = country, outer = source)"),
+          font = list(size = 13, color = FG2)
+        ),
+        margin = list(t = 50, b = 10, l = 10, r = 10)
+      )
+  })
+  
+  # ── CHART 12 (Advanced): Bump Chart ───────────────────────────────────────
+  output$p_bump <- renderPlotly({
+    req(input$bump_country)
+    
+    dat <- combined |>
+      filter(
+        country == input$bump_country,
+        year(date) >= input$years[1],
+        year(date) <= input$years[2]
+      )
+    
+    annual <- dat |>
+      mutate(year = year(date)) |>
+      group_by(year, source) |>
+      summarise(gwh = sum(generation_gwh, na.rm = TRUE), .groups = "drop") |>
+      group_by(year) |>
+      mutate(share = gwh / sum(gwh) * 100) |>
+      arrange(year, desc(share)) |>
+      mutate(rank = row_number()) |>
+      ungroup()
+    
+    p <- plot_ly()
+    for (src in unique(annual$source)) {
+      d   <- annual |> filter(source == src)
+      col <- if (src %in% names(SOURCE_PAL)) unname(SOURCE_PAL[src]) else "#888888"
+      
+      p <- p |> add_trace(
+        data = d, x = ~year, y = ~rank,
+        type = "scatter", mode = "lines+markers",
+        line   = list(color = col, width = 3),
+        marker = list(color = col, size = 10,
+                      line = list(color = BG, width = 1)),
+        text   = ~paste0(source, "\nRank #", rank,
+                         "\nShare: ", round(share, 1), "%"),
+        hoverinfo = "text",
+        name = src
+      )
+    }
+    
+    max_rank <- max(annual$rank, na.rm = TRUE)
+    
+    p |> layout(
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)",
+      font  = list(family = FONT, color = "#8B949E"),
+      title = list(
+        text = paste0("SOURCE RANKING \u2014 ", input$bump_country, " (1 = largest share)"),
+        font = list(size = 13, color = FG2)
+      ),
+      xaxis = list(title = "Year", gridcolor = GR, dtick = 1,
+                   tickfont = list(color = "#8B949E")),
+      yaxis = list(title = "Rank", gridcolor = GR,
+                   autorange = "reversed", dtick = 1,
+                   range = c(max_rank + 0.5, 0.5),
+                   tickfont = list(color = "#8B949E")),
+      margin = list(t = 50, b = 50, l = 50, r = 20),
+      legend = list(font = list(size = 10, color = FG),
+                    bgcolor = "rgba(0,0,0,0)"),
+      hoverlabel = list(bgcolor = BG2, font = list(color = FG2))
+    )
   })
 }
 
